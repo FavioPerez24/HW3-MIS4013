@@ -4,7 +4,7 @@ require_once("model-potential-industry-by-majors.php");
 
 $pageTitle= "Potential Industry by Major";
 Include "view-header.php";
-$majors = selectPotentialIndustryByMajor($_GET['ID']);
+$majors = selectPotentialIndustryByMajor($_GET['program_code']);
 Include "view-potential-industry-by-major.php";
 Include "view-footer.php";
 ?>
