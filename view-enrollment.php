@@ -1,4 +1,4 @@
-<h1>Majors</h1>
+<h1>Enrollment</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -7,7 +7,7 @@
       <th>Major</th>
       <th>Division</th>
       <th>Minimum Credit Hours</th>
-      <th>1</th>
+      <th>Potential Industry ID</th>
       </tr>
     </thead>
     <tbody>
@@ -19,7 +19,7 @@
         <td><?php echo $major['major_name']; ?></td>
         <td><?php echo $major['division']; ?></td>
         <td><?php echo $major['minimum_credit_hours']; ?></td>
-        <td><a href="potential-industry-by-major.php?code=<?php echo $major['program_code']; ?>">Industry</a></td>
+        <td><?php echo $major['Potential_Industry_ID']; ?></td>
       </tr>
       }
       ?>
