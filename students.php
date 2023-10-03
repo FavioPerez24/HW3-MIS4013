@@ -4,7 +4,7 @@ require_once("model-students.php");
 
 $pageTitle= "Students";
 Include "view-header.php";
-$students = selectStudent();
+$students = selectStudents();
 Include "view-students.php";
 Include "view-footer.php";
 ?>
