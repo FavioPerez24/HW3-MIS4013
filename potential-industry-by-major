@@ -1,0 +1,10 @@
+<?php
+require_once("util-db.php");
+require_once("model-potential-industry-by-majors.php");
+
+$pageTitle= "Potential Industry by Major";
+Include "view-header.php";
+$majors = selectPotentialIndustryByMajor($_GET['ID']);
+Include "view-potential-industry-by-major.php";
+Include "view-footer.php";
+?>
