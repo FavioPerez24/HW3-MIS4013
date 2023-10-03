@@ -1,5 +1,5 @@
 <?php
-function selectInstructors() {
+function selectStudents() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("");
