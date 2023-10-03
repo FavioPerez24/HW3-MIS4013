@@ -1,5 +1,5 @@
 <?php
-function selectEnrollment() {
+function selectMajors() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT major_name, division, program_code, minimum_credit_hours FROM `Business_Major`");
