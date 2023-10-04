@@ -7,7 +7,7 @@
       <th>First Name</th>
       <th>Last Name</th>
       <th>Graduation Year</th>
-      <th>Potential Industry</th>
+      <th>Major</th>
       </tr>
     </thead>
     <tbody>
