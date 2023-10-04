@@ -7,7 +7,6 @@
       <th>Major</th>
       <th>Division</th>
       <th>Minimum Credit Hours</th>
-      <th>Potential Industry</th>
       </tr>
     </thead>
     <tbody>
