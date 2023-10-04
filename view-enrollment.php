@@ -15,11 +15,10 @@
         $majors= selectStudentbyMajor($student['Student_ID']);
         while ($major = $majors->fetch_assoc()) {
       ?>
-      <li class="list-group-item"><td><?php echo $major['program_code']; ?></td></li>
+      <li class="list-group-item">Code:</li> ><td><?php echo $major['program_code']; ?></td></li>
+      <li class="list-group-item"></li>
       <li class="list-group-item"><td><?php echo $major['major_name']; ?></td></li>
       <li class="list-group-item"><td><?php echo $major['minimum_credit_hours']; ?></td></li>
-      <li class="list-group-item"><td><?php echo $major['division']; ?></td></li>
-
       <?php
         }
       ?>
