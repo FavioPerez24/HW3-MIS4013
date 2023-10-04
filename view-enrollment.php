@@ -7,7 +7,7 @@
 
    <div class="card">
     <div class="card-body">
-      <h5 class="card-title"><td><?php echo $student['Student_FirstName','Student_LastName']; ?></td></h5>
+      <h5 class="card-title"><td><?php echo $student['Student_FirstName'],['Student_LastName']; ?></td></h5>
       <p class="card-text"> 
       <?php
         $majors= selectStudentbyMajor($student['Student_ID']);
