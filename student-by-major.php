@@ -5,6 +5,6 @@ require_once("model-student-by-major.php");
 $pageTitle= "Student by Major";
 Include "view-header.php";
 $majors = selectStudentbyMajor($_GET['id']);
-Include "view-studentbymajor.php";
+Include "view-student-by-major.php";
 Include "view-footer.php";
 ?>
