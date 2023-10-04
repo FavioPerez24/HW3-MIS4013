@@ -19,6 +19,7 @@
         <td><?php echo $student['Student_LastName']; ?></td>
         <td><?php echo $student['Graduation_Year']; ?></td>
       </tr>
+      <?php
       }
       ?>
     </tbody>
