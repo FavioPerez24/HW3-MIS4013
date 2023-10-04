@@ -19,7 +19,7 @@
         <td><?php echo $student['Student_FirstName']; ?></td>
         <td><?php echo $student['Student_LastName']; ?></td>
         <td><?php echo $student['Graduation_Year']; ?></td>
-        <td><a href="student-by-major.php?code=<?php echo $major['program_code']; ?>">Major</a></td>
+        <td><a href="student-by-major.php?id=<?php echo $student['Student_ID']; ?>">Major</a></td>
       </tr>
       <?php
       }
