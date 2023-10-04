@@ -12,14 +12,14 @@
     </thead>
     <tbody>
       <?php 
-      while ($major = $majors->fetch_assoc()) {
+      while ($industry = $industries->fetch_assoc()) {
       ?>
       <tr>
-        <td><?php echo $major['program_code']; ?></td>
-        <td><?php echo $major['major_name']; ?></td>
-        <td><?php echo $major['division']; ?></td>
-        <td><?php echo $major['minimum_credit_hours']; ?></td>
-        <td><?php echo $major['Industry_Name']; ?></td>
+        <td><?php echo $industry['program_code']; ?></td>
+        <td><?php echo $industry['major_name']; ?></td>
+        <td><?php echo $industry['division']; ?></td>
+        <td><?php echo $industry['minimum_credit_hours']; ?></td>
+        <td><?php echo $industry['Industry_Name']; ?></td>
       </tr>
       <?php
       }
