@@ -21,7 +21,7 @@
         <td><?php echo $major['minimum_credit_hours']; ?></td>
         <td>
           <form method="post" action="industry-by-major.php">
-          <input type="hidden" name="mid" value="<?php echo $major['Potential_Indsutry_ID']; ?>"> 
+          <input type="hidden" name="mid" value="<?php echo $major['program_code']; ?>"> 
           <button type="submit" class="btn btn-primary">Industries</button>
           </form>
         </td>
