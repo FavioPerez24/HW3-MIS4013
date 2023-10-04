@@ -21,6 +21,7 @@
         <td><?php echo $major['minimum_credit_hours']; ?></td>
         <td><?php echo $major['Potential_Industry_ID']; ?></td>
       </tr>
+      <?php
       }
       ?>
     </tbody>
