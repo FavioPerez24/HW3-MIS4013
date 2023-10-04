@@ -7,6 +7,7 @@
       <th>Major</th>
       <th>Division</th>
       <th>Minimum Credit Hours</th>
+      <th></th>
       </tr>
     </thead>
     <tbody>
@@ -18,6 +19,12 @@
         <td><?php echo $major['major_name']; ?></td>
         <td><?php echo $major['division']; ?></td>
         <td><?php echo $major['minimum_credit_hours']; ?></td>
+        <td>
+          <form method="post" action="industry-by-major.php">
+          <input type="hidden" name="mid" value="<?php echo $major['Potential_Indsutry_ID']; ?>"> 
+          <button type="submit" class="btn btn-primary">Industries</button>
+          </form>
+        </td>
       </tr>
       <?php
       }
