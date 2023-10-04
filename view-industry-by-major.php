@@ -12,7 +12,7 @@
     </thead>
     <tbody>
       <?php 
-      while ($industry = $courses->fetch_assoc()) {
+      while ($industry = $industries->fetch_assoc()) {
       ?>
       <tr>
         <td><?php echo $industry['program_code']; ?></td>
