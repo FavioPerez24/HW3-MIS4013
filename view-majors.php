@@ -18,7 +18,6 @@
         <td><?php echo $major['major_name']; ?></td>
         <td><?php echo $major['division']; ?></td>
         <td><?php echo $major['minimum_credit_hours']; ?></td>
-        <td><a href="potential-industry-by-major.php?code=<?php echo $major['program_code']; ?>">Industry</a></td>
       </tr>
       <?php
       }
