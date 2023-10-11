@@ -1,13 +1,4 @@
-<div class="row">
-  <div class="col">
 <h1>Majors</h1>
-  </div>
-  <div class="col-auto">
-<?php
-include "view-major-newform.php";
-?>
-  </div>
-</div>
 <div class="table-responsive">
   <table class="table">
     <thead>
