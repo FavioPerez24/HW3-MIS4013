@@ -26,4 +26,46 @@ function selectStudentbyMajor($sid) {
         throw $e;
     }
 }
+
+function insertEnrollment($mID, $sID) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `Enrollment` (`program_code`, `Student_ID`) VALUES (?, ?)");
+        $stmt->bind_param("ii", $mID, $sID);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function updateEnrollment($mID, $sID, $eID) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("update `Enrollment` set `program_code` = ?, `Student_ID` = ? where Enrollment_ID = ?");
+        $stmt->bind_param("iii", $mID, $sID, $eID);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function deleteEnrollment($eID) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("delete from Enrollment where Enrollment_ID= ?");
+        $stmt->bind_param("i", $eID);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
