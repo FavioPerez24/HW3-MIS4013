@@ -26,7 +26,7 @@
           </div>
           <div class="mb-3">
             <label for="mCred" class="form-label">Minimum Credit Hours</label>
-            <input type="text" class="form-control" id="mCred" name="mCred">
+            <input type="number" class="form-control" id="mCred" name="mCred">
           </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
