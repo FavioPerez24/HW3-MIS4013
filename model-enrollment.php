@@ -27,11 +27,11 @@ function selectStudentbyMajor($sid) {
     }
 }
 
-function insertEnrollment($mID, $sID) {
+function insertEnrollment($mid, $sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `Enrollment` (`program_code`, `Student_ID`) VALUES (?, ?)");
-        $stmt->bind_param("ii", $mID, $sID);
+        $stmt->bind_param("ii", $mid, $sid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -41,11 +41,11 @@ function insertEnrollment($mID, $sID) {
     }
 }
 
-function updateEnrollment($mID, $sID, $eID) {
+function updateEnrollment($mid, $sid, $eid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Enrollment` set `program_code` = ?, `Student_ID` = ? where Enrollment_ID = ?");
-        $stmt->bind_param("iii", $mID, $sID, $eID);
+        $stmt->bind_param("iii", $mid, $sid, $eid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -55,11 +55,11 @@ function updateEnrollment($mID, $sID, $eID) {
     }
 }
 
-function deleteEnrollment($eID) {
+function deleteEnrollment($eid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from Enrollment where Enrollment_ID= ?");
-        $stmt->bind_param("i", $eID);
+        $stmt->bind_param("i", $eid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
