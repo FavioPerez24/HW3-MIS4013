@@ -26,7 +26,7 @@
           </div>
           <div class="mb-3">
             <label for="sGrad<?php echo $student['Student_ID']; ?>" class="form-label">Graduation Year</label>
-            <input type="text" class="form-control" id="sGrad<?php echo $student['Student_ID']; ?>" name="sGrad" value="<?php echo $student['Graduation_Year']; ?>">
+            <input type="number" class="form-control" id="sGrad<?php echo $student['Student_ID']; ?>" name="sGrad" value="<?php echo $student['Graduation_Year']; ?>">
           </div>
             <div class="mb-3">
             <label for="aid<?php echo $student['Student_ID']; ?>" class="form-label">Advisor</label>
