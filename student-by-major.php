@@ -8,22 +8,22 @@ Include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      if (insertChoice($_POST['mID'], $_POST['cid'], $_POST['sem'], $_POST['room'], $_POST['daytime'])) {
-        echo '<div class="alert alert-success" role="alert">Section added.</div>';
+      if (insertMajor($_POST['mName'], $_POST['mDiv'], $_POST['mCred'])) {
+        echo '<div class="alert alert-success" role="alert">Major added.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
       break;
     case "Edit":
-      if (updateChoice($_POST['iid'], $_POST['cid'], $_POST['sem'], $_POST['room'], $_POST['daytime'], $_POST['sid'])) {
-        echo '<div class="alert alert-success" role="alert">Section edited.</div>';
+      if (updateMajor($_POST['mName'], $_POST['mDiv'], $_POST['mCred'], $_POST['mID'])) {
+        echo '<div class="alert alert-success" role="alert">Major edited.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
       break;
     case "Delete":
-      if (deleteChoice($_POST['sid'])) {
-        echo '<div class="alert alert-success" role="alert">Section deleted.</div>';
+      if (deleteMajor($_POST['mID'])) {
+        echo '<div class="alert alert-success" role="alert">Major deleted.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
