@@ -28,9 +28,13 @@
             <label for="sGrad<?php echo $student['Student_ID']; ?>" class="form-label">Graduation Year</label>
             <input type="text" class="form-control" id="sGrad<?php echo $student['Student_ID']; ?>" name="sGrad" value="<?php echo $student['Graduation_Year']; ?>">
           </div>
-          <div class="mb-3">
-            <label for="aID<?php echo $student['Student_ID']; ?>" class="form-label">Advisor</label>
-            <input type="text" class="form-control" id="aID<?php echo $student['Student_ID']; ?>" name="aID" value="<?php echo $student['Advisor_ID']; ?>">
+            <div class="mb-3">
+            <label for="aID<?php echo $student['Advisor_ID']; ?>" class="form-label">Advisor</label>
+<?php
+$advisorList = selectAdvisorsForInput();
+$selectedAdvisor = 0;
+include "advisor-input-list.php";
+?>            
           </div>
             <input type="hidden" name="sID" value="<?php echo $student['Student_ID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
