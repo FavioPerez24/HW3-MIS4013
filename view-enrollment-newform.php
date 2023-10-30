@@ -17,12 +17,12 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="sID" class="form-label">Student</label>
-            <input type="text" class="form-control" id="sID" name="sID">
+            <label for="sid" class="form-label">Student</label>
+            <input type="text" class="form-control" id="sid" name="sid">
           </div>
           <div class="mb-3">
-            <label for="mID" class="form-label">Major</label>
-            <input type="text" class="form-control" id="mID" name="mID">
+            <label for="mid" class="form-label">Major</label>
+            <input type="text" class="form-control" id="mid" name="mid">
           </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
