@@ -1,8 +1,9 @@
+<h1>Enrollment</h1>
+
 <td><?php
 include "view-student-newform.php";
 ?></td>
 
-<h1>Enrollment</h1>
 <div class="row row-cols-1 row-cols-md-2 g-7">
       <?php 
       while ($student = $students->fetch_assoc()) {
