@@ -15,14 +15,14 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Edit":
-      if (updateMajor($_POST['mName'], $_POST['mDiv'], $_POST['mCred'], $_POST['mID'])) {
+      if (updateMajor($_POST['mName'], $_POST['mDiv'], $_POST['mCred'], $_POST['mid'])) {
         echo '<div class="alert alert-success" role="alert">Major edited.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
       break;
     case "Delete":
-      if (deleteMajor($_POST['mID'])) {
+      if (deleteMajor($_POST['mid'])) {
         echo '<div class="alert alert-success" role="alert">Major deleted.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
