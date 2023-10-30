@@ -26,7 +26,7 @@ include "view-enrollment-newform.php";
       <li class="list-group-item">Code: <td><?php echo $major['program_code']; ?></td></li>
       <li class="list-group-item">Major: <td><?php echo $major['major_name']; ?></td></li>
       <li class="list-group-item">Minimum credits: <td><?php echo $major['minimum_credit_hours']; ?></td></li>
-      <li class="list-group-item"><td><?php include "view-student-editform.php"; ?></td></li>
+      <li class="list-group-item"><td><?php include "view-enrollment-editform.php"; ?></td></li>
       <li class="list-group-item"><td>  
       <form method="post" action="">
         <input type="hidden" name="eid" value="<?php echo $enrollment['Enrollment_ID']; ?>">
