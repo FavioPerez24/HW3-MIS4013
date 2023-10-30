@@ -17,7 +17,7 @@ function insertStudent($sFName, $sLName, $sGrad, $aID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `Student` (`Student_FirstName`, `Student_LastName`, `Graduation_Year`, `Advisor_ID`) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssi", $sFName, $sLName, $sGrad, $aID);
+        $stmt->bind_param("ssii", $sFName, $sLName, $sGrad, $aID);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -31,7 +31,7 @@ function updateStudent($sFName, $sLName, $sGrad, $sID, $aID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Student` set `Student_FirstName` = ?, `Student_LastName` = ?,  `Graduation_Year` = ?, `Advisor_ID` = ? where Student_ID = ?");
-        $stmt->bind_param("ssii", $sFName, $sLName, $sGrad, $sID, $aID);
+        $stmt->bind_param("ssiii", $sFName, $sLName, $sGrad, $sID, $aID);
         $success = $stmt->execute();
         $conn->close();
         return $success;
