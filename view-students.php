@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
 <?php
-include "view-students-newform.php";
+include "view-student-newform.php";
 ?>
   </div>
 </div>
