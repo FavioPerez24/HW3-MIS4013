@@ -27,7 +27,7 @@ function insertMajor($mName, $mDiv, $mCred) {
     }
 }
 
-function updateMajor($mName, $mDiv, $mCred, $mID) {
+function updateMajor($mName, $mDiv, $mCred, $mid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Business_Major` set `major_name` = ?, `division` = ?,  `minimum_credit_hours` = ? where program_code = ?");
@@ -41,7 +41,7 @@ function updateMajor($mName, $mDiv, $mCred, $mID) {
     }
 }
 
-function deleteMajor($mID) {
+function deleteMajor($mid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from Business_Major where program_code= ?");
