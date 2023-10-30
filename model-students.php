@@ -41,11 +41,11 @@ function insertStudent($sFName, $sLName, $sGrad, $aID) {
     }
 }
 
-function updateStudent($sFName, $sLName, $sGrad, $sID, $aID) {
+function updateStudent($sFName, $sLName, $sGrad, $aID, $sID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Student` set `Student_FirstName` = ?, `Student_LastName` = ?,  `Graduation_Year` = ?, `Advisor_ID` = ? where Student_ID = ?");
-        $stmt->bind_param("ssiii", $sFName, $sLName, $sGrad, $sID, $aID);
+        $stmt->bind_param("ssiii", $sFName, $sLName, $sGrad, , $aID, $sID);
         $success = $stmt->execute();
         $conn->close();
         return $success;
