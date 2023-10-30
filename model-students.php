@@ -13,6 +13,20 @@ function selectStudents() {
     }
 }
 
+function selectAdvisorsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT Advisor_ID, Advisor_Name FROM `Advisor` order by Advisor_Name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 function insertStudent($sFName, $sLName, $sGrad, $aID) {
     try {
         $conn = get_db_connection();
