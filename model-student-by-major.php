@@ -28,7 +28,7 @@ function insertChoice($mName, $mDiv, $mCred) {
     }
 }
 
-function updateChoice($mName, $mDiv, $mCred, $mID) {
+function updateChoice($mName, $mDiv, $mCred, $mid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Business_Major` set `major_name` = ?, `division` = ?,  `minimum_credit_hours` = ? where program_code = ?");
@@ -42,7 +42,7 @@ function updateChoice($mName, $mDiv, $mCred, $mID) {
     }
 }
 
-function deleteChoice($mID) {
+function deleteChoice($mid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from Business_Major where program_code= ?");
