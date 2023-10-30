@@ -8,21 +8,21 @@ Include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      if (insertMajor($_POST['mName'], $_POST['mDiv'], $_POST['mCred'])) {
-        echo '<div class="alert alert-success" role="alert">Major added.</div>';
+      if (insertChoice($_POST['mName'], $_POST['mDiv'], $_POST['mCred'])) {
+        echo '<div class="alert alert-success" role="alert"> New Major added.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
       break;
     case "Edit":
-      if (updateMajor($_POST['mName'], $_POST['mDiv'], $_POST['mCred'], $_POST['mID'])) {
+      if (updateChoice($_POST['mName'], $_POST['mDiv'], $_POST['mCred'], $_POST['mID'])) {
         echo '<div class="alert alert-success" role="alert">Major edited.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
       break;
     case "Delete":
-      if (deleteMajor($_POST['mID'])) {
+      if (deleteChoice($_POST['mID'])) {
         echo '<div class="alert alert-success" role="alert">Major deleted.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
