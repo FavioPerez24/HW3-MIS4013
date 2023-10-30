@@ -31,7 +31,7 @@ function updateMajor($mName, $mDiv, $mCred, $mid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Business_Major` set `major_name` = ?, `division` = ?,  `minimum_credit_hours` = ? where program_code = ?");
-        $stmt->bind_param("ssii", $mName, $mDiv, $mCred, $mID);
+        $stmt->bind_param("ssii", $mName, $mDiv, $mCred, $mid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -45,7 +45,7 @@ function deleteMajor($mid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from Business_Major where program_code= ?");
-        $stmt->bind_param("i", $mID);
+        $stmt->bind_param("i", $mid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
