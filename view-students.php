@@ -8,6 +8,7 @@
       <th>Last Name</th>
       <th>Graduation Year</th>
       <th>Major</th>
+      <th>Advisor</th>
       </tr>
     </thead>
     <tbody>
