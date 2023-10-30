@@ -29,7 +29,7 @@
             <input type="text" class="form-control" id="sGrad<?php echo $student['Student_ID']; ?>" name="sGrad" value="<?php echo $student['Graduation_Year']; ?>">
           </div>
             <div class="mb-3">
-            <label for="aID<?php echo $student['Advisor_ID']; ?>" class="form-label">Advisor</label>
+            <label for="aID<?php echo $student['Student_ID']; ?>" class="form-label">Advisor</label>
 <?php
 $advisorList = selectAdvisorsForInput();
 $selectedAdvisor = 0;
