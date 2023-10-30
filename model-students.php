@@ -27,7 +27,7 @@ function selectAdvisorsForInput() {
     }
 }
 
-function insertStudent($sFName, $sLName, $sGrad, $aID) {
+function insertStudent($sFName, $sLName, $sGrad, $aid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `Student` (`Student_FirstName`, `Student_LastName`, `Graduation_Year`, `Advisor_ID`) VALUES (?, ?, ?, ?)");
@@ -41,7 +41,7 @@ function insertStudent($sFName, $sLName, $sGrad, $aID) {
     }
 }
 
-function updateStudent($sFName, $sLName, $sGrad, $aID, $sID) {
+function updateStudent($sFName, $sLName, $sGrad, $aid, $sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Student` set `Student_FirstName` = ?, `Student_LastName` = ?,  `Graduation_Year` = ?, `Advisor_ID` = ? where Student_ID = ?");
@@ -55,7 +55,7 @@ function updateStudent($sFName, $sLName, $sGrad, $aID, $sID) {
     }
 }
 
-function deleteStudent($sID) {
+function deleteStudent($sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from Student where Student_ID= ?");
