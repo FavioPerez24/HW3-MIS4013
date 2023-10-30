@@ -1,10 +1,10 @@
 <?php
 require_once("util-db.php");
-require_once("model-industry-by-major.php");
+require_once("model-student-by-advisor.php");
 
-$pageTitle= "Industry by Major";
+$pageTitle= "Student's Advisor";
 Include "view-header.php";
-$industries = selectIndustrybyMajor($_POST['mid']);
-Include "view-industry-by-major.php";
+$industries = selectStudentbyAdvisor($_POST['aid']);
+Include "view-student-by-advisor.php";
 Include "view-footer.php";
 ?>
