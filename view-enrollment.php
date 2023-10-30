@@ -15,7 +15,7 @@ include "view-enrollment-newform.php";
       <div class="col">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title"><td><?php echo $student['Student_FirstName']; ?></td><td> <?php echo $student['Student_LastName']; ?></td></h5>
+        <h5 class="card-title"><td><?php echo $student['Student_FirstName']; ?></td> <td> <?php echo $student['Student_LastName']; ?></td></h5>
         <p class="card-text">
          
       <ul class="list-group">
