@@ -28,6 +28,10 @@
             <label for="sGrad<?php echo $student['Student_ID']; ?>" class="form-label">Graduation Year</label>
             <input type="text" class="form-control" id="sGrad<?php echo $student['Student_ID']; ?>" name="sGrad" value="<?php echo $student['Graduation_Year']; ?>">
           </div>
+          <div class="mb-3">
+            <label for="aID<?php echo $student['Student_ID']; ?>" class="form-label">Advisor</label>
+            <input type="text" class="form-control" id="aID<?php echo $student['Student_ID']; ?>" name="aID" value="<?php echo $student['Advisor_ID']; ?>">
+          </div>
             <input type="hidden" name="sid" value="<?php echo $student['Student_ID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
