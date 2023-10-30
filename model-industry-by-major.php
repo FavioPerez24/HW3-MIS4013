@@ -1,9 +1,9 @@
 <?php
-function selectIndustrybyMajor($mid) {
+function selectStudentbyAdvisor($aid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT major_name, division, M.program_code, minimum_credit_hours, Industry_Name FROM `Business_Major`M JOIN Industry I ON M.Potential_Industry_ID=I.Potential_Industry_ID WHERE I.Potential_Industry_ID=?;");
-        $stmt->bind_param("i", $mid);
+        $stmt = $conn->prepare("SELECT Advisor_Name, Meeting_Times FROM `Advisor`A JOIN Student S ON A.Advisor_ID=S.Advisor_ID WHERE A.Advisor_ID=?;");
+        $stmt->bind_param("i", $aid);
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
