@@ -28,6 +28,10 @@
             <label for="sGrad" class="form-label">Graduation Year</label>
             <input type="number" class="form-control" id="sGrad" name="sGrad">
           </div>
+          <div class="mb-3">
+            <label for="aID" class="form-label">Advisor</label>
+            <input type="text" class="form-control" id="aID" name="aID">
+          </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
