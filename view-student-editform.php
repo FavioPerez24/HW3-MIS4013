@@ -32,7 +32,7 @@
             <label for="aID<?php echo $student['Student_ID']; ?>" class="form-label">Advisor</label>
             <input type="text" class="form-control" id="aID<?php echo $student['Student_ID']; ?>" name="aID" value="<?php echo $student['Advisor_ID']; ?>">
           </div>
-            <input type="hidden" name="sid" value="<?php echo $student['Student_ID']; ?>">
+            <input type="hidden" name="sID" value="<?php echo $student['Student_ID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
