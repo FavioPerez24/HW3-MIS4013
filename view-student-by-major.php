@@ -1,4 +1,4 @@
-<h1>Student by Major</h1>
+<h1>Student's Major</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
