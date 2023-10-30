@@ -20,9 +20,9 @@
         <td><?php echo $major['division']; ?></td>
         <td><?php echo $major['minimum_credit_hours']; ?></td>
         <td>
-          <form method="post" action="industry-by-major.php">
+          <form method="post" action="student-by-major.php">
           <input type="hidden" name="mid" value="<?php echo $major['program_code']; ?>"> 
-          <button type="submit" class="btn btn-primary">Industries</button>
+          <button type="submit" class="btn btn-primary">Students</button>
           </form>
         </td>
       </tr>
