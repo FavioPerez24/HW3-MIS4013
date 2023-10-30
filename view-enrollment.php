@@ -1,9 +1,13 @@
+<div class="row">
+  <div class="col">
 <h1>Enrollment</h1>
-
+  </div>
+  <div class="col-auto">
 <td><?php
-include "view-student-newform.php";
+include "view-enrollment-newform.php";
 ?></td>
-
+  </div>
+</div>
 <div class="row row-cols-1 row-cols-md-2 g-7">
       <?php 
       while ($student = $students->fetch_assoc()) {
