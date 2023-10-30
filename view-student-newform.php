@@ -29,7 +29,7 @@
             <input type="number" class="form-control" id="sGrad" name="sGrad">
           </div>
           <div class="mb-3">
-            <label for="aID" class="form-label">Advisor</label>
+            <label for="aid" class="form-label">Advisor</label>
 <?php
 $advisorList = selectAdvisorsForInput();
 $selectedAdvisor = 0;
