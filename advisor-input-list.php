@@ -2,7 +2,7 @@
 <?php
 while ($advisorItem = $advisorList->fetch_assoc()) {
   $selText = "";
-  if ($selectedAdvisor == $AdvisorItem['Advisor_ID']) {
+  if ($selectedAdvisor == $advisorItem['Advisor_ID']) {
     $selText = " selected";
   }
 ?>
