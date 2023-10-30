@@ -20,7 +20,7 @@
         <td><?php echo $student['Student_FirstName']; ?></td>
         <td><?php echo $student['Student_LastName']; ?></td>
         <td><?php echo $student['Graduation_Year']; ?></td>
-        <td><a href="student-by-major.php?id=<?php echo $student['Student_ID']; ?>">Student</a></td>
+        <td><a href="student-by-major.php?id=<?php echo $student['Student_ID']; ?>">Major</a></td>
         <td>
           <form method="post" action="student-by-advisor.php">
           <input type="hidden" name="aid" value="<?php echo $advisor['Advisor_ID']; ?>"> 
