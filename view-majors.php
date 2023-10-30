@@ -21,7 +21,7 @@
         <td><?php echo $major['minimum_credit_hours']; ?></td>
         <td>
           <form method="post" action="student-by-major.php">
-          <input type="hidden" name="sid" value="<?php echo $student['program_code']; ?>"> 
+          <input type="hidden" name="sid" value="<?php echo $student['Student_ID']; ?>"> 
           <button type="submit" class="btn btn-primary">Students</button>
           </form>
         </td>
