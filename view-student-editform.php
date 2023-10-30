@@ -36,7 +36,7 @@ $selectedAdvisor = 0;
 include "advisor-input-list.php";
 ?>            
           </div>
-            <input type="hidden" name="sID" value="<?php echo $student['Student_ID']; ?>">
+            <input type="hidden" name="sid" value="<?php echo $student['Student_ID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
