@@ -19,12 +19,7 @@
         <td><?php echo $major['major_name']; ?></td>
         <td><?php echo $major['division']; ?></td>
         <td><?php echo $major['minimum_credit_hours']; ?></td>
-        <td>
-          <form method="post" action="student-by-major.php">
-          <input type="hidden" name="sid" value="<?php echo $student['Student_ID']; ?>"> 
-          <button type="submit" class="btn btn-primary">Students</button>
-          </form>
-        </td>
+        <td><a href="student-by-major.php?id=<?php echo $student['Student_ID']; ?>">Student</a></td>
       </tr>
       <?php
       }
