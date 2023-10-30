@@ -13,4 +13,46 @@ function selectStudentbyMajor($sid) {
         throw $e;
     }
 }
+
+function insertChoice($mName, $mDiv, $mCred) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `Business_Major` (`major_name`, `division`, `minimum_credit_hours`) VALUES (?, ?, ?)");
+        $stmt->bind_param("ssi", $mName, $mDiv, $mCred);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function updateChoice($mName, $mDiv, $mCred, $mID) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("update `Business_Major` set `major_name` = ?, `division` = ?,  `minimum_credit_hours` = ? where program_code = ?");
+        $stmt->bind_param("ssii", $mName, $mDiv, $mCred, $mID);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function deleteChoice($mID) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("delete from Business_Major where program_code= ?");
+        $stmt->bind_param("i", $mID);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
