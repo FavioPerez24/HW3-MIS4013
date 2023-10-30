@@ -19,7 +19,12 @@
         <td><?php echo $student['Student_FirstName']; ?></td>
         <td><?php echo $student['Student_LastName']; ?></td>
         <td><?php echo $student['Graduation_Year']; ?></td>
-        <td><a href="student-by-advisor.php?id=<?php echo $student['Student_ID']; ?>">Major</a></td>
+        <td>
+          <form method="post" action="student-by-advisor.php">
+          <input type="hidden" name="sid" value="<?php echo $advisor['Advisor_ID']; ?>"> 
+          <button type="submit" class="btn btn-primary">Advisor</button>
+          </form>
+        </td>      
       </tr>
       <?php
       }
