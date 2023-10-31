@@ -2,7 +2,7 @@
 function selectStudents() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Student_LastName, Graduation_Year FROM `Student`");
+        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Student_LastName, Graduation_Year, Advisor_ID FROM `Student`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -27,11 +27,11 @@ function selectAdvisorsForInput() {
     }
 }
 
-function insertStudent($sFName, $sLName, $sGrad) {
+function insertStudent($sFName, $sLName, $sGrad, $aid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Student` (`Student_FirstName`, `Student_LastName`, `Graduation_Year`) VALUES (?, ?, ?)");
-        $stmt->bind_param("ssi", $sFName, $sLName, $sGrad);
+        $stmt = $conn->prepare("INSERT INTO `Student` (`Student_FirstName`, `Student_LastName`, `Graduation_Year`, `Advisor_ID`) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssii", $sFName, $sLName, $sGrad, $aid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -41,11 +41,11 @@ function insertStudent($sFName, $sLName, $sGrad) {
     }
 }
 
-function updateStudent($sFName, $sLName, $sGrad, $sid) {
+function updateStudent($sFName, $sLName, $sGrad, $aid, $sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Student` set `Student_FirstName` = ?, `Student_LastName` = ?,  `Graduation_Year` = ?, `Advisor_ID` = ? where Student_ID = ?");
-        $stmt->bind_param("ssiii", $sFName, $sLName, $sGrad, $aid, $sid);
+        $stmt->bind_param("ssiiii", $sFName, $sLName, $sGrad, $aid, $sid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
