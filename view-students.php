@@ -45,7 +45,12 @@ include "view-student-newform.php";
       </form>
     </td>
         <td><a href="student-by-major.php?id=<?php echo $student['Student_ID']; ?>">Major</a></td>
-        <td><a href="student-by-advisor.php?id=<?php echo $student['Student_ID']; ?>">Advisor</a></td>
+        <td>
+          <form method="post" action="student-by-advisor.php">
+          <input type="hidden" name="id" value="<?php echo $student['Student_ID']; ?>"> 
+          <button type="submit" class="btn btn-primary">Advisor</button>
+          </form>
+        </td>  
       </tr>
       <?php
       }
