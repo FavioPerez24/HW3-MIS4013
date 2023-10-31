@@ -45,7 +45,7 @@ function updateStudent($sFName, $sLName, $sGrad, $aid, $sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Student` set `Student_FirstName` = ?, `Student_LastName` = ?,  `Graduation_Year` = ?, `Advisor_ID` = ? where Student_ID = ?");
-        $stmt->bind_param("ssiiii", $sFName, $sLName, $sGrad, $aid, $sid);
+        $stmt->bind_param("ssiii", $sFName, $sLName, $sGrad, $aid, $sid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
