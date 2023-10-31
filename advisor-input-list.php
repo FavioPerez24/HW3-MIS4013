@@ -1,4 +1,4 @@
-<select class="form-select" id="zid" name="zid">
+<select class="form-select" id="aid" name="aid">
 <?php
 while ($advisorItem = $advisorList->fetch_assoc()) {
   $selText = "";
