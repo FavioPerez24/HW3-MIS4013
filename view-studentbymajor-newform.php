@@ -18,7 +18,7 @@
         <form method="post" action="">
           <div class="mb-3">
             <label for="mName" class="form-label">Major Name</label>
-            <input type="text" class="form-control" id="mid" name="mid">
+            <input type="text" class="form-control" id="mName" name="mName">
           </div>
           <div class="mb-3">
             <label for="mDiv" class="form-label">Division</label>
