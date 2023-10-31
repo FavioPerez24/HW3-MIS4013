@@ -18,15 +18,15 @@
         <form method="post" action="">
           <div class="mb-3">
             <label for="mName" class="form-label">Major Name</label>
-            <input type="text" class="form-control" id="mID" name="mID">
+            <input type="text" class="form-control" id="mid" name="mid">
           </div>
           <div class="mb-3">
             <label for="mDiv" class="form-label">Division</label>
-            <input type="text" class="form-control" id="sem" name="sem">
+            <input type="text" class="form-control" id="mDiv" name="mDiv">
           </div>
           <div class="mb-3">
             <label for="mCred" class="form-label">Minimum Credit Hours</label>
-            <input type="text" class="form-control" id="mCred" name="mCred">
+            <input type="number" class="form-control" id="mCred" name="mCred">
           </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
