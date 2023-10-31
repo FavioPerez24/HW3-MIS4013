@@ -31,7 +31,7 @@ if (isset($_POST['actionType'])) {
   }
 }
 
-$majors = selectStudentbyMajor($_POST['id']);
+$majors = selectStudentbyMajor($_GET['id']);
 Include "view-student-by-major.php";
 Include "view-footer.php";
 ?>
