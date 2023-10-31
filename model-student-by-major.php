@@ -14,11 +14,11 @@ function selectStudentbyMajor($sid) {
     }
 }
 
-function insertChoice($mName, $mDiv, $mCred) {
+function insertChoice($mName2, $mDiv2, $mCred2) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `Business_Major` (`major_name`, `division`, `minimum_credit_hours`) VALUES (?, ?, ?)");
-        $stmt->bind_param("ssi", $mName, $mDiv, $mCred);
+        $stmt->bind_param("ssi", $mName2, $mDiv2, $mCred2);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -28,11 +28,11 @@ function insertChoice($mName, $mDiv, $mCred) {
     }
 }
 
-function updateChoice($mName, $mDiv, $mCred, $mid) {
+function updateChoice($mName2, $mDiv2, $mCred2, $mid2) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Business_Major` set `major_name` = ?, `division` = ?,  `minimum_credit_hours` = ? where program_code = ?");
-        $stmt->bind_param("ssii", $mName, $mDiv, $mCred, $mid);
+        $stmt->bind_param("ssii", $mName2, $mDiv2, $mCred2, $mid2);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -42,11 +42,11 @@ function updateChoice($mName, $mDiv, $mCred, $mid) {
     }
 }
 
-function deleteChoice($mid) {
+function deleteChoice($mid2) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from Business_Major where program_code= ?");
-        $stmt->bind_param("i", $mid);
+        $stmt->bind_param("i", $mid2);
         $success = $stmt->execute();
         $conn->close();
         return $success;
