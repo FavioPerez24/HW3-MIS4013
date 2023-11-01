@@ -7,7 +7,7 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="editEnrollmentModal<?php echo $major['program_code']; ?>" tabindex="-1" aria-labelledby="editEnrollmentModalLabel<?php echo $major['Enrollment_ID']; ?>" aria-hidden="true">
+<div class="modal fade" id="editEnrollmentModal<?php echo $major['Enrollment_ID']; ?>" tabindex="-1" aria-labelledby="editEnrollmentModalLabel<?php echo $major['Enrollment_ID']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
