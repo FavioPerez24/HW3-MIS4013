@@ -30,7 +30,7 @@ function selectStudentbyMajor($sid) {
 function selectStudentsForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT S.Student_ID, Student_FirstName, Student_LastName FROM `Student` order by Student_LastName");
+        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Student_LastName FROM `Student` order by Student_LastName");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
