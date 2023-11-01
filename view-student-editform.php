@@ -29,12 +29,12 @@
             <input type="number" class="form-control" id="sGrad<?php echo $student['Student_ID']; ?>" name="sGrad" value="<?php echo $student['Graduation_Year']; ?>">
           </div>
             <div class="mb-3">
-            <label for="aid<?php echo $advisor['Advisor_ID']; ?>" class="form-label">Advisor</label>
+            <label for="aid<?php echo $student['Advisor_ID']; ?>" class="form-label">Advisor</label>
 <?php
 $advisorList = selectAdvisorsForInput();
-$selectedAdvisor = 0;
+$selectedAdvisor = $student['Advisor_ID'];
 include "advisor-input-list.php";
-?>            
+?>
           </div>
             <input type="hidden" name="sid" value="<?php echo $student['Student_ID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
