@@ -21,8 +21,20 @@
             <input type="text" class="form-control" id="sid" name="sid">
           </div>
           <div class="mb-3">
+            <label for="sid" class="form-label">Student</label>
+<?php
+$studentList = selectStudentsForInput();
+$selectedStudent = 0;
+include "student-input-list.php";
+?>
+          </div>
+          <div class="mb-3">
             <label for="mid" class="form-label">Major</label>
-            <input type="text" class="form-control" id="mid" name="mid">
+<?php
+$majorList = selectMajorsForInput();
+$selectedMajor = 0;
+include "major-input-list.php";
+?>
           </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
