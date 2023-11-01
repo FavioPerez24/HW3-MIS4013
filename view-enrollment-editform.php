@@ -7,7 +7,7 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="editEnrollmentModal<?php echo $major['program_code']; ?>" tabindex="-1" aria-labelledby="editEnrollmentModalLabel<?php echo $major['program_code']; ?>" aria-hidden="true">
+<div class="modal fade" id="editEnrollmentModal<?php echo $major['program_code']; ?>" tabindex="-1" aria-labelledby="editEnrollmentModalLabel<?php echo $major['Enrollment_ID']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -25,18 +25,22 @@ include "student-input-list.php";
 ?>
           </div>
           <div class="mb-3">
-            <label for="mName<?php echo $major['program_code']; ?>" class="form-label">Major Name</label>
-            <input type="text" class="form-control" id="mName<?php echo $major['program_code']; ?>" name="mName" value="<?php echo $major['major_name']; ?>">
+            <label for="mid<?php echo $major['Enrollment_ID']; ?>" class="form-label">Major Name</label>
+            <?php
+$majorList = selectMajorsForInput();
+$selectedMajor = $major[program_code];
+include "student-input-list.php";
+?>
           </div>
           <div class="mb-3">
-            <label for="mDiv<?php echo $major['program_code']; ?>" class="form-label">Division</label>
-            <input type="text" class="form-control" id="mDiv<?php echo $major['program_code']; ?>" name="mDiv" value="<?php echo $major['division']; ?>">
+            <label for="mDiv<?php echo $major['Enrollment_ID']; ?>" class="form-label">Division</label>
+            <input type="text" class="form-control" id="mDiv<?php echo $major['Enrollment_ID']; ?>" name="mDiv" value="<?php echo $major['division']; ?>">
           </div>
           <div class="mb-3">
-            <label for="mCred<?php echo $major['program_code']; ?>" class="form-label">Minimum Credit Hours</label>
-            <input type="text" class="form-control" id="mCred<?php echo $major['program_code']; ?>" name="mCred" value="<?php echo $major['minimum_credit_hours']; ?>">
+            <label for="mCred<?php echo $major['Enrollment_ID']; ?>" class="form-label">Minimum Credit Hours</label>
+            <input type="text" class="form-control" id="mCred<?php echo $major['Enrollment_ID']; ?>" name="mCred" value="<?php echo $major['minimum_credit_hours']; ?>">
           </div>
-            <input type="hidden" name="mid" value="<?php echo $major['program_code']; ?>">
+            <input type="hidden" name="mid" value="<?php echo $major['Enrollment_ID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
