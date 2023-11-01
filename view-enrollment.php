@@ -50,7 +50,7 @@ include "view-enrollment-editform.php";
 ?>
       </ul>
       </p>
-      <p class="card-text"><small class="text-body-secondary">Advisor: <?php echo $advisor['Advisor_Name']; ?></small></p>
+      <p class="card-text"><small class="text-body-secondary">Graduation Year: <?php echo $student['Graduation_Year']; ?></small></p>
     </div>
   </div>
 <?php
