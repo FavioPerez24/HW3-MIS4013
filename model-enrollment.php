@@ -44,7 +44,7 @@ function selectStudentsForInput() {
 function selectMajorsForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT major_name, division, M.program_code, minimum_credit_hourse FROM `Business_Major` order by major_name");
+        $stmt = $conn->prepare("SELECT major_name, M.program_code FROM `Business_Major` order by major_name");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
