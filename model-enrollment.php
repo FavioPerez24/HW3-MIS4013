@@ -27,6 +27,34 @@ function selectStudentbyMajor($sid) {
     }
 }
 
+function selectStudentsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Student_LastName FROM `Student` order by Student_LastName");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectMajorsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT program_code, major_name, minimum_credit_hourse FROM `Business_Major` order by major_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 function insertEnrollment($mid, $sid) {
     try {
         $conn = get_db_connection();
