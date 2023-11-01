@@ -27,3 +27,4 @@ include "view-enrollment-editform.php";
 <?php
   }
 ?>
+}
