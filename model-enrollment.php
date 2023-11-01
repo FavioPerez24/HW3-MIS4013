@@ -41,20 +41,6 @@ function selectStudentsForInput() {
     }
 }
 
-function selectMajorsForInput() {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT major_name, M.program_code FROM `Business_Major` order by major_name");
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-
 function insertEnrollment($mid, $sid) {
     try {
         $conn = get_db_connection();
