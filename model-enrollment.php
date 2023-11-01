@@ -27,6 +27,20 @@ function selectStudentbyMajor($sid) {
     }
 }
 
+function selectMajorsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT program_code, major_name FROM `Business_Major` order by major_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 function selectStudentsForInput() {
     try {
         $conn = get_db_connection();
