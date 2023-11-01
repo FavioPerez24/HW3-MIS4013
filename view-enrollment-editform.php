@@ -16,6 +16,10 @@
       </div>
       <div class="modal-body">
         <form method="post" action="">
+           <div class="mb-3">
+            <label for="sid<?php echo $major['Enrollment_ID']; ?>" class="form-label">Student Name</label>
+            <input type="text" class="form-control" id="mName<?php echo $major['program_code']; ?>" name="mName" value="<?php echo $major['major_name']; ?>">
+          </div> 
           <div class="mb-3">
             <label for="mName<?php echo $major['program_code']; ?>" class="form-label">Major Name</label>
             <input type="text" class="form-control" id="mName<?php echo $major['program_code']; ?>" name="mName" value="<?php echo $major['major_name']; ?>">
