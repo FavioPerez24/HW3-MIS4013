@@ -30,7 +30,7 @@ function selectStudentbyMajor($sid) {
 function selectStudentsForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Student_LastName FROM `Student` order by Student_LastName");
+        $stmt = $conn->prepare("SELECT S.Student_ID, Student_FirstName, Student_LastName FROM `Student` order by Student_LastName");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -44,7 +44,7 @@ function selectStudentsForInput() {
 function selectMajorsForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT major_name, division, program_code, minimum_credit_hourse FROM `Business_Major` order by major_name");
+        $stmt = $conn->prepare("SELECT major_name, division, M.program_code, minimum_credit_hourse FROM `Business_Major` order by major_name");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
