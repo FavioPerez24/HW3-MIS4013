@@ -18,10 +18,6 @@
         <form method="post" action="">
           <div class="mb-3">
             <label for="sid" class="form-label">Student</label>
-            <input type="text" class="form-control" id="sid" name="sid">
-          </div>
-          <div class="mb-3">
-            <label for="sid" class="form-label">Student</label>
 <?php
 $studentList = selectStudentsForInput();
 $selectedStudent = 0;
