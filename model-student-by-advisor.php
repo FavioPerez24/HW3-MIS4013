@@ -28,7 +28,7 @@ function insertAdvisor($aName, $aMT) {
     }
 }
 
-function updateChoice($aName, $aMT, $aid) {
+function updateAdvisor($aName, $aMT, $aid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Advisor` set `Advisor_Name` = ?, `Meeting_Times` = ? where Advisor_ID = ?");
@@ -42,7 +42,7 @@ function updateChoice($aName, $aMT, $aid) {
     }
 }
 
-function deleteChoice($aid) {
+function deleteAdvisor($aid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from Advisor where Advisor_ID= ?");
