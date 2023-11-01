@@ -17,7 +17,7 @@
       <div class="modal-body">
         <form method="post" action="">
             <div class="mb-3">
-            <label for="aid<?php echo $advisor['Advisor_ID']; ?>" class="form-label">Advisor Name</label>
+            <label for="aName<?php echo $advisor['Advisor_ID']; ?>" class="form-label">Advisor Name</label>
 <?php
 $advisorList = selectAdvisorsForInput();
 $selectedAdvisor = 0;
