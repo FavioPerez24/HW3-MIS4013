@@ -18,7 +18,7 @@ while ($student = $students->fetch_assoc()) {
       <p class="card-text">
       <ul class="list-group">
 <?php
-  $majors = selectStudentByMajor($major['program_code']);
+  $majors = selectStudentByMajor($student['Student_ID']);
   while ($major = $majors->fetch_assoc()) {
 ?>
     <li class="list-group-item">
