@@ -16,9 +16,13 @@
       </div>
       <div class="modal-body">
         <form method="post" action="">
-          <div class="mb-3">
-            <label for="aName" class="form-label">Advisor Name</label>
-            <input type="text" class="form-control" id="aName" name="aName">
+      <div class="mb-3">
+            <label for="aid" class="form-label">Advisor</label>
+<?php
+$advisorList = selectAdvisorsForInput();
+$selectedAdvisor = 0;
+include "advisor-input-list.php";
+?>
           </div>
           <div class="mb-3">
             <label for="aMT" class="form-label">Meeting Times</label>
