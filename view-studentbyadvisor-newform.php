@@ -18,7 +18,7 @@
         <form method="post" action="">
           <div class="mb-3">
             <label for="aName" class="form-label">Advisor Name</label>
-            <input type="text" class="form-control" id="mName" name="mName">
+            <input type="text" class="form-control" id="aName" name="aName">
           </div>
           <div class="mb-3">
             <label for="aMT" class="form-label">Meeting Times</label>
