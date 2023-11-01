@@ -16,6 +16,14 @@
       </div>
       <div class="modal-body">
         <form method="post" action="">
+            <div class="mb-3">
+            <label for="aid" class="form-label">Advisor Name</label>
+<?php
+$advisorList = selectAdvisorsForInput();
+$selectedAdvisor = 0;
+include "advisor-input-list.php";
+?>
+          </div>
           <div class="mb-3">
             <label for="aName<?php echo $advisor['Advisor_ID']; ?>" class="form-label">Advisor Name</label>
             <input type="text" class="form-control" id="aName<?php echo $advisor['Advisor_ID']; ?>" name="aName" value="<?php echo $advisor['Advisor_Name']; ?>">
