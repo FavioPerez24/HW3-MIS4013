@@ -13,7 +13,7 @@ include "view-student-newform.php";
     <thead>
       <tr>
       <th>ID</th>
-      <th>First Name</th>
+      <th>Name</th>
       <th>Graduation Year</th>
       <th></th>
       <th></th>
