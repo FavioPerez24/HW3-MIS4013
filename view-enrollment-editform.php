@@ -20,7 +20,7 @@
             <label for="sid<?php echo $major['program_code']; ?>" class="form-label">Student Name</label>
 <?php
 $studentList = selectStudentsForInput();
-$selectedStudent = $major[Student_ID];
+$selectedStudent = $student[Student_ID];
 include "student-input-list.php";
 ?>
           </div>
@@ -29,7 +29,7 @@ include "student-input-list.php";
             <?php
 $majorList = selectMajorsForInput();
 $selectedMajor = $major[program_code];
-include "student-input-list.php";
+include "major-input-list.php";
 ?>
           </div>
           <div class="mb-3">
