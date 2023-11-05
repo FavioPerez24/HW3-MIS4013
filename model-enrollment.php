@@ -55,11 +55,11 @@ function selectStudentsForInput() {
     }
 }
 
-function insertEnrollment($mid, $sid, $GPA) {
+function insertEnrollment($mid, $sid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Enrollment` (`program_code`, `Student_ID`, `Minimum_GPA`) VALUES (?, ?, ?)");
-        $stmt->bind_param("iid", $mid, $sid, $GPA);
+        $stmt = $conn->prepare("INSERT INTO `Enrollment` (`program_code`, `Student_ID`) VALUES (?, ?)");
+        $stmt->bind_param("ii", $mid, $sid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -69,11 +69,11 @@ function insertEnrollment($mid, $sid, $GPA) {
     }
 }
 
-function updateEnrollment($mid, $sid, $GPA, $eid) {
+function updateEnrollment($mid, $sid, $eid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `Enrollment` set `program_code` = ?, `Student_ID` = ? , `Minimum_GPA` = ? where Enrollment_ID = ?");
-        $stmt->bind_param("iidi", $mid, $sid, $GPA, $eid);
+        $stmt = $conn->prepare("update `Enrollment` set `program_code` = ?, `Student_ID` = ? where Enrollment_ID = ?");
+        $stmt->bind_param("iii", $mid, $sid, $eid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
