@@ -1,5 +1,5 @@
 <?php
-function selectStudentbyMajor($Zid) {
+function selectStudentbyMajor($sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT M.program_code, major_name, division, minimum_credit_hours FROM `Business_Major`M JOIN Enrollment E ON E.program_code=M.program_code WHERE E.Student_ID=?");
