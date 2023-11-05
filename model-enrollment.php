@@ -41,25 +41,11 @@ function selectMajorsForInput() {
     }
 }
 
-function selectStudentsForInput() {
+function insertEnrollment($mid, $sid, $GPA) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Student_LastName FROM `Student`");
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-
-function insertEnrollment($mid, $sid) {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Enrollment` (`program_code`, `Student_ID`) VALUES (?, ?)");
-        $stmt->bind_param("ii", $mid, $sid);
+        $stmt = $conn->prepare("INSERT INTO `Enrollment` (`program_code`, `Student_ID`, `Minimum_GPA`) VALUES (?, ?, ?)");
+        $stmt->bind_param("iid", $mid, $sid, $GPA);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -69,11 +55,11 @@ function insertEnrollment($mid, $sid) {
     }
 }
 
-function updateEnrollment($mid, $sid, $eid) {
+function updateEnrollment($mid, $sid, $GPA, $eid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `Enrollment` set `program_code` = ?, `Student_ID` = ? where Enrollment_ID = ?");
-        $stmt->bind_param("iii", $mid, $sid, $eid);
+        $stmt = $conn->prepare("update `Enrollment` set `program_code` = ?, `Student_ID` = ? , `Minimum_GPA` = ? where Enrollment_ID = ?");
+        $stmt->bind_param("iidi", $mid, $sid, $GPA, $eid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
