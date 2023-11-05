@@ -2,7 +2,7 @@
 function selectStudents() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Student_LastName, Graduation_Year FROM `Student`");
+        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Graduation_Year FROM `Student`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -44,7 +44,7 @@ function selectMajorsForInput() {
 function selectStudentsForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Student_LastName FROM `Student` order by Student_LastName");
+        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName FROM `Student` order by Student_FirstName");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
