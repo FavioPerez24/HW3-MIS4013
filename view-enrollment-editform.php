@@ -17,13 +17,6 @@
       <div class="modal-body">
         <form method="post" action="">
            <div class="mb-3">
-            <label for="sid<?php echo $major['program_code']; ?>" class="form-label">Student Name</label>
-<?php
-$studentList = selectStudentsForInput();
-$selectedStudent = $student[Student_ID];
-include "student-input-list.php";
-?>
-          </div>
           <div class="mb-3">
             <label for="mid<?php echo $major['program_code']; ?>" class="form-label">Major Name</label>
             <?php
