@@ -21,10 +21,6 @@
             <input type="text" class="form-control" id="sFName" name="sFName">
           </div>
           <div class="mb-3">
-            <label for="sLName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="sLName" name="sLName">
-          </div>
-          <div class="mb-3">
             <label for="sGrad" class="form-label">Graduation Year</label>
             <input type="number" class="form-control" id="sGrad" name="sGrad">
           </div>
