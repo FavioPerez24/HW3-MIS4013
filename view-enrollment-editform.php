@@ -17,7 +17,6 @@
       <div class="modal-body">
         <form method="post" action="">
            <div class="mb-3">
-          <div class="mb-3">
             <label for="mid<?php echo $major['program_code']; ?>" class="form-label">Major Name</label>
             <?php
 $majorList = selectMajorsForInput();
