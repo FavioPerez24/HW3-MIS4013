@@ -24,7 +24,7 @@ while ($student = $students->fetch_assoc()) {
     <li class="list-group-item">
     <div class="row">
       <div class="col">
-        <?php echo $major['major_name']; ?> - <?php echo $major['division']; ?> - <?php echo $major['minimum_credit_hours']; ?> - <?php echo $enrollment['Minimum_GPA']; ?>
+        <?php echo $major['major_name']; ?> - <?php echo $major['division']; ?> - <?php echo $major['minimum_credit_hours']; ?>
       </div>
       <div class="col-auto">
 <?php
