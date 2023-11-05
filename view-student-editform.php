@@ -21,10 +21,6 @@
             <input type="text" class="form-control" id="sFName<?php echo $student['Student_ID']; ?>" name="sFName" value="<?php echo $student['Student_FirstName']; ?>">
           </div>
           <div class="mb-3">
-            <label for="sLName<?php echo $student['Student_ID']; ?>" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="sLName<?php echo $student['Student_ID']; ?>" name="sLName" value="<?php echo $student['Student_LastName']; ?>">
-          </div>
-          <div class="mb-3">
             <label for="sGrad<?php echo $student['Student_ID']; ?>" class="form-label">Graduation Year</label>
             <input type="number" class="form-control" id="sGrad<?php echo $student['Student_ID']; ?>" name="sGrad" value="<?php echo $student['Graduation_Year']; ?>">
           </div>
