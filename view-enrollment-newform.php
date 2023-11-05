@@ -33,8 +33,8 @@ include "major-input-list.php";
 ?>
           </div>
              <div class="mb-3">
-            <label for="eid" class="form-label">Minimum GPA</label>
-
+            <label for="GPA" class="form-label">Minimum GPA</label>
+                <input type="decimal" class="form-control" id="GPA" name="GPA">    
           </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
