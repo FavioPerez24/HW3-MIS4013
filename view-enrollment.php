@@ -14,7 +14,7 @@ while ($student = $students->fetch_assoc()) {
 ?>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title"><?php echo $student['Student_FirstName']; ?> <?php echo $student['Student_LastName']; ?></h5>
+      <h5 class="card-title"><?php echo $student['Student_FirstName']; ?></h5>
       <p class="card-text">
       <ul class="list-group">
 <?php
