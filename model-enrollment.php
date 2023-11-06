@@ -55,7 +55,7 @@ function selectStudentsForInput() {
     }
 }
 
-function insertEnrollment($sid2, $mid2) {
+function insertEnrollment($sid, $mid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `Enrollment` (`Student_ID`, `program_code`) VALUES (?, ?)");
@@ -69,7 +69,7 @@ function insertEnrollment($sid2, $mid2) {
     }
 }
 
-function updateEnrollment($sid2, $mid2, $eid) {
+function updateEnrollment($sid, $mid, $eid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Enrollment` set `Student_ID` = ?, `program_code` = ? where Enrollment_ID = ?");
