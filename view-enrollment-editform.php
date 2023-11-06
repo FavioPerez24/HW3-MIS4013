@@ -16,6 +16,9 @@
       </div>
       <div class="modal-body">
         <form method="post" action="">
+            <div class="mb-3">
+            <label for="sid" class="form-label">Student</label>
+          </div>
            <div class="mb-3">
             <label for="mid" class="form-label">Major</label>
 <?php
@@ -32,7 +35,7 @@ include "major-input-list.php";
             <label for="mCred<?php echo $major['program_code']; ?>" class="form-label">Minimum Credit Hours</label>
             <input type="text" class="form-control" id="mCred<?php echo $major['program_code']; ?>" name="mCred" value="<?php echo $major['minimum_credit_hours']; ?>">
           </div>
-            <input type="hidden" name="mid" value="<?php echo $major['program_code']; ?>">
+            <input type="hidden" name="eid" value="<?php echo $major['program_code']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
