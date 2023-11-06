@@ -17,13 +17,8 @@
       <div class="modal-body">
         <form method="post" action="">
            <div class="mb-3">
-            <label for="mid<?php echo $major['program_code']; ?>" class="form-label">Major Name</label>
-            <?php
-$majorList = selectMajorsForInput();
-$selectedMajor = $major[program_code];
-include "major-input-list.php";
-?>
-          </div>
+            <label for="mName<?php echo $major['program_code']; ?>" class="form-label">Major Name</label>
+            <input type="text" class="form-control" id="mName<?php echo $major['program_code']; ?>" name="mName" value="<?php echo $major['major_name']; ?>">
           <div class="mb-3">
             <label for="mDiv<?php echo $major['program_code']; ?>" class="form-label">Division</label>
             <input type="text" class="form-control" id="mDiv<?php echo $major['program_code']; ?>" name="mDiv" value="<?php echo $major['division']; ?>">
