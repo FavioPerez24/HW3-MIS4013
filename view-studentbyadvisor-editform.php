@@ -20,7 +20,7 @@
             <label for="aName<?php echo $advisor['Advisor_ID']; ?>" class="form-label">Advisor Name</label>
 <?php
 $advisorList = selectAdvisorsForInput();
-$selectedAdvisor = $student['Advisor_ID'];
+$selectedAdvisor = $advisor['Student_ID'];
 include "advisor-input-list.php";
 ?>
           </div>
