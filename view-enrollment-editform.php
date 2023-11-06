@@ -20,7 +20,7 @@
             <label for="mid" class="form-label">Major</label>
 <?php
 $majorList = selectMajorsForInput();
-$selectedMajor = 0;
+$selectedMajor = $major['program_code'];
 include "major-input-list.php";
 ?>
           </div>
