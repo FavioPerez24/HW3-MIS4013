@@ -13,3 +13,47 @@ function selectStudentbyMajor($sid) {
         throw $e;
     }
 }
+
+
+function insertChoice($mName, $mDiv, $mCred) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `Enrollment` (`major_name`, `division`, `minimum_credit_hours`) VALUES (?, ?, ?)");
+        $stmt->bind_param("ssi", $mName, $mDiv, $mCred);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function updateChoice($mName, $mDiv, $mCred, $mid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("update `Enrollment` set `major_name` = ?, `division` = ?,  `minimum_credit_hours` = ? where program_code = ?");
+        $stmt->bind_param("ssii", $mName, $mDiv, $mCred, $mid);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function deleteChoice($mid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("delete from Enrollment where program_code= ?");
+        $stmt->bind_param("i", $mid);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+?>
