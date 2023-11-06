@@ -6,13 +6,11 @@
         <?php include "view-enrollment-newform.php"; ?>
     </div>
 </div>
-
 <div class="card-group">
     <?php
     $count = 0;
     while ($student = $students->fetch_assoc()) {
         if ($count % 2 == 0) {
-            // Start a new row for every two cards
             echo '<div class="row">';
         }
     ?>
@@ -57,7 +55,6 @@
         </div>
     <?php
         if ($count % 2 !== 0 || $students->num_rows % 2 !== 0) {
-            // Close the row for odd count or odd total number of students
             echo '</div>';
         }
         $count++;
