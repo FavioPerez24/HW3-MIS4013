@@ -23,7 +23,8 @@ $studentList = selectStudentsForInput();
 $selectedStudent = $student['Student_ID'];
 include "student-input-list.php";
 ?>
-          </div>           <div class="mb-3">
+          </div>           
+            <div class="mb-3">
             <label for="mid" class="form-label">Major</label>
 <?php
 $majorList = selectMajorsForInput();
