@@ -17,7 +17,7 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="sid" class="form-label">Student</label>
+            <label for="sid2" class="form-label">Student</label>
 <?php
 $studentList = selectStudentsForInput();
 $selectedStudent = 0;
@@ -25,7 +25,7 @@ include "student-input-list.php";
 ?>
           </div>
           <div class="mb-3">
-            <label for="mid" class="form-label">Major</label>
+            <label for="mid2" class="form-label">Major</label>
 <?php
 $majorList = selectMajorsForInput();
 $selectedMajor = 0;
