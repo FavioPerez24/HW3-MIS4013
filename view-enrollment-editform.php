@@ -18,8 +18,12 @@
         <form method="post" action="">
             <div class="mb-3">
             <label for="sid" class="form-label">Student</label>
-          </div>
-           <div class="mb-3">
+<?php
+$studentList = selectStudentsForInput();
+$selectedStudent = $student['Student_ID'];
+include "student-input-list.php";
+?>
+          </div>           <div class="mb-3">
             <label for="mid" class="form-label">Major</label>
 <?php
 $majorList = selectMajorsForInput();
