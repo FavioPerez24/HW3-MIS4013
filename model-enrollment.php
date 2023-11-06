@@ -2,7 +2,7 @@
 function selectStudents() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Graduation_Year FROM `Student`");
+        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Graduation_Year, Advisor_ID FROM `Student`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
