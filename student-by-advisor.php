@@ -9,7 +9,7 @@ if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
       if (insertAdvisor($_POST['aName'], $_POST['aMT'])) {
-        echo '<div class="alert alert-success" role="alert"> New Advisor added.</div>';
+        echo '<div class="alert alert-success" role="alert">New Advisor added.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
