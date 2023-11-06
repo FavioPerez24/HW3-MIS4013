@@ -31,10 +31,10 @@
                                         <div class="col">
                                             <?php echo $major['major_name']; ?> - <?php echo $major['division']; ?> - <?php echo $major['minimum_credit_hours']; ?>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-auto">
                                             <?php include "view-enrollment-editform.php"; ?>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-auto">
                                             <form method="post" action="">
                                                 <input type="hidden" name="eid" value="<?php echo $major['Enrollment_ID']; ?>">
                                                 <input type="hidden" name="actionType" value="Delete">
