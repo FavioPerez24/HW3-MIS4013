@@ -27,7 +27,7 @@
             <label for="mCred<?php echo $major['program_code']; ?>" class="form-label">Minimum Credit Hours</label>
             <input type="text" class="form-control" id="mCred<?php echo $major['program_code']; ?>" name="mCred" value="<?php echo $major['minimum_credit_hours']; ?>">
           </div>
-            <input type="hidden" name="mid2" value="<?php echo $major['program_code']; ?>">
+            <input type="hidden" name="mid" value="<?php echo $major['program_code']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
