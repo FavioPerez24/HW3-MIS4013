@@ -32,7 +32,7 @@ function insertChoice($mName, $mDiv, $mCred) {
 function updateChoice($mName, $mDiv, $mCred, $mid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `Enrollment` set `major_name` = ?, `division` = ?,  `minimum_credit_hours` = ? where program_code = ?");
+        $stmt = $conn->prepare("update `Business_Major` set `major_name` = ?, `division` = ?,  `minimum_credit_hours` = ? where program_code = ?");
         $stmt->bind_param("ssii", $mName, $mDiv, $mCred, $mid);
         $success = $stmt->execute();
         $conn->close();
