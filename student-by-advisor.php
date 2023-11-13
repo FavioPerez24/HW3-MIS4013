@@ -1,6 +1,6 @@
 <?php
 require_once("model/connection.php");
-require_once("model/students/byadvisor/page.php");
+require_once("model/students-by-advisor-db.php");
 
 $pageTitle= "Student's Advisor";
 Include "view/header.php";
