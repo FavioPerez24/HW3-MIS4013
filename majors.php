@@ -1,6 +1,6 @@
 <?php
 require_once("model/connection.php");
-require_once("model/majors.php");
+require_once("model/majors-db.php");
 
 $pageTitle= "Majors";
 Include "view/header.php";
@@ -32,6 +32,6 @@ if (isset($_POST['actionType'])) {
 }
 
 $majors = selectMajors();
-Include "view/majors.php";
+Include "view/majors/page.php";
 Include "view/footer.php";
 ?>
