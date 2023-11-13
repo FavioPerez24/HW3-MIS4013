@@ -3,7 +3,7 @@ require_once("util-db.php");
 require_once("model-students.php");
 
 $pageTitle= "Students";
-Include "view-header.php";
+Include "view/header.php";
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
@@ -33,5 +33,5 @@ if (isset($_POST['actionType'])) {
 
 $students = selectStudents();
 Include "view-students.php";
-Include "view-footer.php";
+Include "view/footer.php";
 ?>
