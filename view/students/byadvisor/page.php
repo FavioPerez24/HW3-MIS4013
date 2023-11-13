@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
 <?php
-include "view-studentbyadvisor-newform.php";
+include "new-form.php";
 ?>
   </div>
 </div>
@@ -27,7 +27,7 @@ include "view-studentbyadvisor-newform.php";
         <td><?php echo $advisor['Advisor_ID']; ?></td>
         <td><?php echo $advisor['Advisor_Name']; ?></td>
         <td><?php echo $advisor['Meeting_Times']; ?></td>
-        <td><?php include "view-studentbyadvisor-editform.php"; ?></td>
+        <td><?php include "edit-form.php"; ?></td>
         <td>
       <form method="post" action="">
         <input type="hidden" name="aid" value="<?php echo $advisor['Advisor_ID']; ?>">
