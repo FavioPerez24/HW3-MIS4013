@@ -7,7 +7,7 @@
                             <?php
                             $majors = selectStudentByMajor($student['Student_ID']);
                             while ($major = $majors->fetch_assoc()) {
-                              include "major.php"
+                              include "major.php";
                            } 
                           ?>
                         </ul>
