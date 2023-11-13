@@ -1,6 +1,6 @@
 <?php
-require_once("util-db.php");
-require_once("model-students.php");
+require_once("connection.php");
+require_once("model/students/page.php");
 
 $pageTitle= "Students";
 Include "view/header.php";
@@ -32,6 +32,6 @@ if (isset($_POST['actionType'])) {
 }
 
 $students = selectStudents();
-Include "view-students.php";
+Include "view/students/page.php";
 Include "view/footer.php";
 ?>
