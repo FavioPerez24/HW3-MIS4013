@@ -1,5 +1,5 @@
 <?php
-require_once("util-db.php");
+require_once("model/connection.php");
 require_once("model/students.php");
 
 $pageTitle= "Students Chart";
