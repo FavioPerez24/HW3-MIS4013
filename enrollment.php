@@ -32,6 +32,6 @@ if (isset($_POST['actionType'])) {
 }
 
 $students = selectStudents();
-Include "view-enrollment.php";
-Include "view-footer.php";
+Include "view/enrollment.php";
+Include "view/footer.php";
 ?>
