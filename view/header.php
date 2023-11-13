@@ -32,7 +32,7 @@
         </li>
           </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="students-chart.php" href="/">Students Chart</a>
+          <a class="nav-link" href="students-chart.php">Students Chart</a>
         </li>
           </ul>
     </div>
