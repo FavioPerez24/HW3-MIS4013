@@ -1,5 +1,5 @@
 <?php
-require_once("connection.php");
+require_once("model/connection.php");
 require_once("model/students/page.php");
 
 $pageTitle= "Students";
