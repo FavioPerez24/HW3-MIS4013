@@ -30,6 +30,10 @@
         <li class="nav-item">
           <a class="nav-link" href="enrollment.php">Enrollment</a>
         </li>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="students-chart.php" href="/">Students Chart</a>
+        </li>
           </ul>
     </div>
   </div>
