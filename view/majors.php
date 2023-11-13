@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
 <?php
-include "view-major-newform.php";
+include "new-form.php";
 ?>
   </div>
 </div>
@@ -29,7 +29,7 @@ include "view-major-newform.php";
         <td><?php echo $major['major_name']; ?></td>
         <td><?php echo $major['division']; ?></td>
         <td><?php echo $major['minimum_credit_hours']; ?></td>
-        <td><?php include "view-major-editform.php"; ?></td>
+        <td><?php include "edit-form.php"; ?></td>
         <td>
       <form method="post" action="">
         <input type="hidden" name="mid" value="<?php echo $major['program_code']; ?>">
