@@ -1,6 +1,6 @@
 <?php
 require_once("model/connection.php");
-require_once("model/enrollment.php");
+require_once("model/enrollment-db.php");
 
 $pageTitle= "Enrollment";
 Include "view/header.php";
