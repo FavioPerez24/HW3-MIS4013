@@ -3,7 +3,7 @@
         <h1>Enrollment</h1>
     </div>
     <div class="col-auto">
-        <?php include "view-enrollment-newform.php"; ?>
+        <?php include "new-form.php"; ?>
     </div>
 </div>
 <div class="card-group">
@@ -30,7 +30,7 @@
                                             <?php echo $major['major_name']; ?> - <?php echo $major['division']; ?> - <?php echo $major['minimum_credit_hours']; ?>
                                         </div>
                                         <div class="col-auto">
-                                            <?php include "view-enrollment-editform.php"; ?>
+                                            <?php include "edit-form.php"; ?>
                                         </div>
                                         <div class="col-auto">
                                             <form method="post" action="">
