@@ -1,5 +1,5 @@
 <?php
-require_once("connection.php");
+require_once("model/connection.php");
 require_once("model/students-by-major.php");
 
 $pageTitle= "Student by Major";
