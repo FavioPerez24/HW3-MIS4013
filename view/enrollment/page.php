@@ -12,14 +12,12 @@
     while ($student = $students->fetch_assoc()) {
         if ($count % 2 == 0) {
             echo '<div class="row">';
-        }
-        
-        include "student.php"
-        
+        }        
         if ($count % 2 !== 0 || $students->num_rows % 2 !== 0) {
             echo '</div>';
         }
         $count++;
+        include "student.php"
     }
     ?>
 </div>
