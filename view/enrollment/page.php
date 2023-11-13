@@ -10,6 +10,7 @@
     <?php
     $count = 0;
     while ($student = $students->fetch_assoc()) {
+        include "student.php";
         if ($count % 2 == 0) {
             echo '<div class="row">';
         }        
@@ -17,7 +18,6 @@
             echo '</div>';
         }
         $count++;
-        include "student.php"
     }
     ?>
 </div>
