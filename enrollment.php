@@ -3,7 +3,7 @@ require_once("util-db.php");
 require_once("model/enrollment.php");
 
 $pageTitle= "Enrollment";
-Include "view-header.php";
+Include "view/header.php";
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
