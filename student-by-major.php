@@ -1,6 +1,6 @@
 <?php
 require_once("model/connection.php");
-require_once("model/students-by-major-db.php");
+require_once("model/student-by-major-db.php");
 
 $pageTitle= "Student by Major";
 Include "view/header.php";
