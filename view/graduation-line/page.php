@@ -11,7 +11,8 @@
     type: 'line',
     data: {
     datasets: [{
-        data: [
+      label: '# of Students graduating per Year',  
+      data: [
           <?php 
   while ($student = $students->fetch_assoc()) {
   echo $student[ 'num_grad'] . ", ";
