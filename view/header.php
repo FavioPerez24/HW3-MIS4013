@@ -34,6 +34,9 @@
         <li class="nav-item">
           <a class="nav-link" href="students-chart.php">Students Chart</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="majors-bar.php">Majors Chart</a>
+        </li>
           </ul>
     </div>
   </div>
