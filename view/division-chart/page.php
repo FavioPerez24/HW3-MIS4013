@@ -1,19 +1,28 @@
-<h1>Majors by Division Distribution</h1>
-<!-- Load c3.css -->
-<link href="/path/to/c3.css" rel="stylesheet">
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
 
-<!-- Load d3.js and c3.js -->
-<script src="/path/to/d3.v5.min.js" charset="utf-8"></script>
-<script src="/path/to/c3.min.js"></script>
+      function drawChart() {
 
-<div id="chart"></div>
+        var data = google.visualization.arrayToDataTable([
 
-var chart = c3.generate({
-    bindto: '#chart',
-    data: {
-      columns: [
-        ['data1', 30, 200, 100, 400, 150, 250],
-        ['data2', 50, 20, 10, 40, 15, 25]
-      ]
-    }
-});
+        ]);
+
+        var options = {
+          title: 'Majors by Division Distribution'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
+
