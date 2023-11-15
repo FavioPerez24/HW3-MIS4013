@@ -21,33 +21,73 @@ include "new-form.php";
         <th></th>
       </tr>
     </thead>
-    <tbody>
-      <?php 
-      while ($student = $students->fetch_assoc()) {
-      ?>
-      <tr>
-        <td><?php echo $student['Student_ID']; ?></td>
-        <td><?php echo $student['Student_FirstName']; ?></td>
-        <td><?php echo $student['Graduation_Year']; ?></td>
-        <td><?php include "edit-form.php"; ?></td>
-        <td>
-      <form method="post" action="">
-        <input type="hidden" name="sid" value="<?php echo $student['Student_ID']; ?>">
-        <input type="hidden" name="actionType" value="Delete">
-        <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
-            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
-          </svg>
-        </button>
-      </form>
+   <!-- Your existing PHP and HTML code -->
+
+<tbody>
+  <?php 
+  while ($student = $students->fetch_assoc()) {
+  ?>
+  <tr>
+    <td><?php echo $student['Student_ID']; ?></td>
+    <td><?php echo $student['Student_FirstName']; ?></td>
+    <td><?php echo $student['Graduation_Year']; ?></td>
+    <td><?php include "edit-form.php"; ?></td>
+    <td>
+      <!-- Replace the delete button with the SweetAlert2 JavaScript code -->
+      <button type="button" class="btn btn-primary delete-btn" data-student-id="<?php echo $student['Student_ID']; ?>">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+        </svg>
+      </button>
     </td>
-        <td><a href="student-by-advisor.php?id=<?php echo $student['Student_ID']; ?>">Advisor</a></td>
-        <td><a href="student-by-major.php?id=<?php echo $student['Student_ID']; ?>">Major</a></td>
-      </tr>
-      <?php
-      }
-      ?>
-    </tbody>
+    <td><a href="student-by-advisor.php?id=<?php echo $student['Student_ID']; ?>">Advisor</a></td>
+    <td><a href="student-by-major.php?id=<?php echo $student['Student_ID']; ?>">Major</a></td>
+  </tr>
+  <?php
+  }
+  ?>
+</tbody>
+
+<!-- Your existing JavaScript code -->
+
+<script>
+  // Add a script to handle the SweetAlert2 confirmation for delete action
+  document.addEventListener("DOMContentLoaded", function () {
+    const deleteButtons = document.querySelectorAll(".delete-btn");
+
+    deleteButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const studentId = button.getAttribute("data-student-id");
+
+        swalWithBootstrapButtons.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonText: "Yes, delete it!",
+          cancelButtonText: "No, cancel!",
+          reverseButtons: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Perform the delete action here or redirect to a delete endpoint
+            swalWithBootstrapButtons.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success"
+            });
+          } else if (result.dismiss === Swal.DismissReason.cancel) {
+            swalWithBootstrapButtons.fire({
+              title: "Cancelled",
+              text: "Your imaginary file is safe :)",
+              icon: "error"
+            });
+          }
+        });
+      });
+    });
+  });
+</script>
+
   </table>
 </div>
