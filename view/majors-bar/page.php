@@ -24,7 +24,7 @@ $majors = selectMajors();
         data: [ 
           <?php 
   while ($major = $majors->fetch_assoc()) {
-  echo $major[ 'num_enrollments'] . ", ";
+  echo $major[ 'num_enrollees'] . ", ";
   }    
 ?>
 ],
