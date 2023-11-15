@@ -11,7 +11,14 @@
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: [ 
+        <?php 
+$majors = selectMajors();
+  while ($major = $majors->fetch_assoc()) {
+  echo "'" . $major[ 'major_name'] . "', ";
+  }    
+?>
+],
       datasets: [{
         label: 'Majors',
         data: [ 
