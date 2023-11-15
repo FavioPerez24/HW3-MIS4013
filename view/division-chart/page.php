@@ -8,7 +8,11 @@
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-
+ <?php 
+  while ($major = $majors->fetch_assoc()) {
+  echo $major[ 'num_majors'] . ", ";
+  }    
+?>
         ]);
 
         var options = {
