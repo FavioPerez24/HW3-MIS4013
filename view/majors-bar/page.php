@@ -20,8 +20,8 @@ $majors = selectMajors();
 ?>
 ],
    datasets: [{
-        data: [
-          <?php 
+        label: '# of Enrollments per Major',
+        data: [<?php 
   while ($major = $majors->fetch_assoc()) {
   echo $major[ 'num_enrollees'] . ", ";
   }    
