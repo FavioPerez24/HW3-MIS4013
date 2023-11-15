@@ -1,4 +1,4 @@
-<h1>Advisor Distribution</h1>
+<h1>Majors by Division Distribution</h1>
 <!-- Load c3.css -->
 <link href="/path/to/c3.css" rel="stylesheet">
 
