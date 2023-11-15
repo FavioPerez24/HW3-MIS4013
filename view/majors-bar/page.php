@@ -1,3 +1,5 @@
+<h1>Majors Chart</h1>
+<div>
 {
   // Declare the chart dimensions and margins.
   const width = 640;
@@ -41,3 +43,4 @@
   // Return the SVG element.
   return svg.node();
 }
+</div>
