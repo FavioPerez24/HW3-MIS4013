@@ -9,7 +9,13 @@
 
   // Declare the x (horizontal position) scale.
   const x = d3.scaleUtc()
-      .domain([new Date("2023-01-01"), new Date("2024-01-01")])
+      .domain([ 
+<?php 
+  while ($major = $majors->fetch_assoc()) {
+  echo $major[ 'num_enrollments'] . ", ";
+  }    
+?>
+])
       .range([marginLeft, width - marginRight]);
 
   // Declare the y (vertical position) scale.
