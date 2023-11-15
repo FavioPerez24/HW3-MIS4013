@@ -8,16 +8,12 @@
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
- <?php 
+<?php
+  $majors = selectMajors();
+  $data = array();
   while ($major = $majors->fetch_assoc()) {
-  echo $major[ 'num_majors'] . ", ";
-  }    
-?>
-<?php 
-$majors = selectMajors();
-  while ($major = $majors->fetch_assoc()) {
-  echo "'" . $major[ 'division'] . "', ";
-  }    
+    $data[] = array($major['division'], $major['num_majors']);
+  }
 ?>
         ]);
 
