@@ -10,19 +10,18 @@ const stackedBar = new Chart(ctx, {
     data: data,
     options: {
         scales: {
-            x: {
+            x: { <?php 
+  while ($major = $majors->fetch_assoc()) {
+  echo $major[ 'num_enrollments'] . ", ";
+  }    
+?>
                 stacked: true
             },
-            y: {
+            y: {1, 10
                 stacked: true
             }
         }
     }
 });
 
-<?php 
-  while ($major = $majors->fetch_assoc()) {
-  echo $major[ 'num_enrollments'] . ", ";
-  }    
-?>
 </script>
