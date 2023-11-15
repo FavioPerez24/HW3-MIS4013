@@ -40,6 +40,9 @@
         <li class="nav-item">
           <a class="nav-link" href="graduation-line.php">Graduation Statistics</a>
         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="division-chart.php">Major's Distribution</a>
+        </li>
           </ul>
     </div>
   </div>
