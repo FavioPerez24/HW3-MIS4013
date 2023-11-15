@@ -13,8 +13,14 @@
     data: {
       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'Majors',
+        data: [ 
+          <?php 
+  while ($major = $majors->fetch_assoc()) {
+  echo $major[ 'num_enrollments'] . ", ";
+  }    
+?>
+],
         borderWidth: 1
       }]
     },
