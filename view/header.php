@@ -37,6 +37,9 @@
         <li class="nav-item">
           <a class="nav-link" href="majors-bar.php">Majors Chart</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="graduation-line.php">Graduation Statistics</a>
+        </li>
           </ul>
     </div>
   </div>
