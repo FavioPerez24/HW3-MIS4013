@@ -13,6 +13,12 @@
   echo $major[ 'num_majors'] . ", ";
   }    
 ?>
+<?php 
+$majors = selectMajors();
+  while ($major = $majors->fetch_assoc()) {
+  echo "'" . $major[ 'division'] . "', ";
+  }    
+?>
         ]);
 
         var options = {
