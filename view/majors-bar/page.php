@@ -19,24 +19,18 @@ $majors = selectMajors();
   }    
 ?>
 ],
-      datasets: [{
-        label: 'Majors',
-        data: [ 
+   datasets: [{
+        data: [
           <?php 
-  while ($major = $majors->fetch_assoc()) {
-  echo $major['num_enrollees'] . ", ";
+  while ($student = $students->fetch_assoc()) {
+  echo $student[ 'num_enrollments'] . ", ";
   }    
 ?>
-],
-        borderWidth: 2
-      }]
+        ]
+    }],
     },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
   });
 </script>
+
+
+
