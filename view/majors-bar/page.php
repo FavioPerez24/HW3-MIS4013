@@ -22,8 +22,8 @@ $majors = selectMajors();
    datasets: [{
         data: [
           <?php 
-  while ($student = $students->fetch_assoc()) {
-  echo $student[ 'num_enrollments'] . ", ";
+  while ($major = $majors->fetch_assoc()) {
+  echo $major[ 'num_enrollees'] . ", ";
   }    
 ?>
         ]
