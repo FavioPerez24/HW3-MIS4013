@@ -8,29 +8,27 @@
 <script>
   const ctx = document.getElementById('myChart');
 
+  <?php
+  $majors = selectMajors();
+  $labels = [];
+  $data = [];
+
+  while ($major = $majors->fetch_assoc()) {
+    $labels[] = "'" . $major['major_name'] . "'";
+    $data[] = $major['num_enrollees'];
+  }
+  ?>
+
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: [ 
-        <?php 
-$majors = selectMajors();
-  while ($major = $majors->fetch_assoc()) {
-  echo "'" . $major[ 'major_name'] . "', ";
-  }    
-?>
-],
-   datasets: [{
+      labels: [<?php echo implode(', ', $labels); ?>],
+      datasets: [{
         label: '# of Enrollments per Major',
-        data: [<?php 
-  while ($major = $majors->fetch_assoc()) {
-  echo $major[ 'num_enrollees'] . ", ";
-  }    
-?>
-        ]
-    }],
+        data: [<?php echo implode(', ', $data); ?>],
+      }],
     },
   });
 </script>
-
 
 
