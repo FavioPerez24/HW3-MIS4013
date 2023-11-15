@@ -24,11 +24,11 @@ $majors = selectMajors();
         data: [ 
           <?php 
   while ($major = $majors->fetch_assoc()) {
-  echo $major[ 'num_enrollees'] . ", ";
+  echo $major['num_enrollees'] . ", ";
   }    
 ?>
 ],
-        borderWidth: 1
+        borderWidth: 2
       }]
     },
     options: {
