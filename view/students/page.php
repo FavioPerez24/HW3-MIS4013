@@ -48,46 +48,5 @@ include "new-form.php";
   }
   ?>
 </tbody>
-
-<!-- Your existing JavaScript code -->
-
-<script>
-  // Add a script to handle the SweetAlert2 confirmation for delete action
-  document.addEventListener("DOMContentLoaded", function () {
-    const deleteButtons = document.querySelectorAll(".delete-btn");
-
-    deleteButtons.forEach((button) => {
-      button.addEventListener("click", function () {
-        const studentId = button.getAttribute("data-student-id");
-
-        swalWithBootstrapButtons.fire({
-          title: "Are you sure?",
-          text: "You won't be able to revert this!",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonText: "Yes, delete it!",
-          cancelButtonText: "No, cancel!",
-          reverseButtons: true
-        }).then((result) => {
-          if (result.isConfirmed) {
-            // Perform the delete action here or redirect to a delete endpoint
-            swalWithBootstrapButtons.fire({
-              title: "Deleted!",
-              text: "Your file has been deleted.",
-              icon: "success"
-            });
-          } else if (result.dismiss === Swal.DismissReason.cancel) {
-            swalWithBootstrapButtons.fire({
-              title: "Cancelled",
-              text: "Your imaginary file is safe :)",
-              icon: "error"
-            });
-          }
-        });
-      });
-    });
-  });
-</script>
-
   </table>
 </div>
