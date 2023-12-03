@@ -1,8 +1,8 @@
 <?php
-function selectMajors() {
+function selectMatchGames() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT major_name, division, program_code, minimum_credit_hours FROM `Business_Major`");
+        $stmt = $conn->prepare("SELECT Home-TID, Away-TID, MDetails, MConditions, MDate FROM `MatchGame`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -13,11 +13,11 @@ function selectMajors() {
     }
 }
 
-function insertMajor($mName, $mDiv, $mCred) {
+function insertMatchGame($HTid, $ATid, $MDet, $MCond, $MDate) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Business_Major` (`major_name`, `division`, `minimum_credit_hours`) VALUES (?, ?, ?)");
-        $stmt->bind_param("ssi", $mName, $mDiv, $mCred);
+        $stmt = $conn->prepare("INSERT INTO `MatchGame` (`Home-TID`, `Away-TID`, `MDetails`, `MConditions`, `MDate`) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("iisss", $HTid, $ATid, $MDet, $MCond, $MDate);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -27,11 +27,11 @@ function insertMajor($mName, $mDiv, $mCred) {
     }
 }
 
-function updateMajor($mName, $mDiv, $mCred, $mid) {
+function updateMatchGame($HTid, $ATid, $MDet, $MCond, $MDate, $Mid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `Business_Major` set `major_name` = ?, `division` = ?,  `minimum_credit_hours` = ? where program_code = ?");
-        $stmt->bind_param("ssii", $mName, $mDiv, $mCred, $mid);
+        $stmt = $conn->prepare("update `MatchGame` set `Home-TID`= ?, `Away-TID`= ?, `MDetails`= ?, `MConditions`= ?, `MDate`= ? where MID = ?");
+        $stmt->bind_param("iisssi", $HTid, $ATid, $MDet, $MCond, $MDate, $Mid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -41,11 +41,11 @@ function updateMajor($mName, $mDiv, $mCred, $mid) {
     }
 }
 
-function deleteMajor($mid) {
+function deleteMatchGane($Mid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from Business_Major where program_code= ?");
-        $stmt->bind_param("i", $mid);
+        $stmt = $conn->prepare("delete from MatchGame where MID= ?");
+        $stmt->bind_param("i", $Mid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
