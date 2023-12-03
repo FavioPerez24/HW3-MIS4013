@@ -1,8 +1,8 @@
 <?php
-function selectStudents() {
+function selectPlayers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Graduation_Year, Advisor_ID FROM `Student`");
+        $stmt = $conn->prepare("SELECT PID, PName, PDOB, PNationality, PPosition, TID FROM `Player`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -13,10 +13,10 @@ function selectStudents() {
     }
 }
 
-function selectAdvisorsForInput() {
+function selectTeamsForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Advisor_ID, Advisor_Name FROM `Advisor` order by Advisor_Name");
+        $stmt = $conn->prepare("SELECT TID, TName FROM `Team` order by TName");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -27,11 +27,11 @@ function selectAdvisorsForInput() {
     }
 }
 
-function insertStudent($sFName, $sGrad, $aid) {
+function insertPlayer($PName, $PNat, $Tid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Student` (`Student_FirstName`, `Graduation_Year`, `Advisor_ID`) VALUES (?, ?, ?)");
-        $stmt->bind_param("sii", $sFName, $sGrad, $aid);
+        $stmt = $conn->prepare("INSERT INTO `Player` (`PName`, `PNationality`, `TID`) VALUES (?, ?, ?)");
+        $stmt->bind_param("ssi", $PName, $PNat, $Tid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -41,11 +41,11 @@ function insertStudent($sFName, $sGrad, $aid) {
     }
 }
 
-function updateStudent($sFName, $sGrad, $aid, $sid) {
+function updatePlayer($PName, $PNat, $Tid, $Pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `Student` set `Student_FirstName` = ?,  `Graduation_Year` = ?, `Advisor_ID` = ? where Student_ID = ?");
-        $stmt->bind_param("siii", $sFName, $sGrad, $aid, $sid);
+        $stmt = $conn->prepare("update `Player` set `PName` = ?,  `PNationality` = ?, `TID` = ? where PID = ?");
+        $stmt->bind_param("ssii", $PName, $PNat, $Tid, $Pid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -55,11 +55,11 @@ function updateStudent($sFName, $sGrad, $aid, $sid) {
     }
 }
 
-function deleteStudent($sid) {
+function deletePlayer($Pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from Student where Student_ID= ?");
-        $stmt->bind_param("i", $sid);
+        $stmt = $conn->prepare("delete from Player where PID= ?");
+        $stmt->bind_param("i", $Pid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
