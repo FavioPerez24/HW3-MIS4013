@@ -1,8 +1,8 @@
 <?php
-function selectStudents() {
+function selectPlayers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName, Graduation_Year, Advisor_ID FROM `Student`");
+        $stmt = $conn->prepare("SELECT PID, PName, PDOB, PNationality, PPostion, TID FROM `Player`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -12,25 +12,11 @@ function selectStudents() {
         throw $e;
     }
 }
-function selectStudentbyMajor($sid) {
+function selectPlayerbyTeam($Pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT M.program_code, major_name, division, minimum_credit_hours, Enrollment_ID FROM `Business_Major` M JOIN Enrollment E ON E.program_code = M.program_code WHERE E.Student_ID=?");
-        $stmt->bind_param("i", $sid);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-
-function selectMajorsForInput() {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT program_code, major_name FROM `Business_Major` order by major_name");
+        $stmt = $conn->prepare("SELECT T.TID, TName, TCountry FROM `Team` M JOIN Player P ON T.TID = P.TID WHERE P.PID=?");
+        $stmt->bind_param("i", $Pid);
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -41,10 +27,10 @@ function selectMajorsForInput() {
     }
 }
 
-function selectStudentsForInput() {
+function selectMatchGamesForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Student_ID, Student_FirstName FROM `Student` order by Student_FirstName");
+        $stmt = $conn->prepare("SELECT MID, Home-TID, Away-TID, MDetails FROM `MatchGame` order by MDate");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -55,11 +41,25 @@ function selectStudentsForInput() {
     }
 }
 
-function insertEnrollment($sid, $mid) {
+function selectPlayersForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Enrollment` (`Student_ID`, `program_code`) VALUES (?, ?)");
-        $stmt->bind_param("ii", $sid, $mid);
+        $stmt = $conn->prepare("SELECT PID, PName FROM `Player` order by PName");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function insertMatchStat($Mid, $Pid, $Goal, $Shoots, $Passes, $Chances, $Miles) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `MatchStats` (`MID`, `PID`, `Goals_Scored`, `Shoots`, `Passes_Completed`, `Chances_Created`, `Miles_Run`) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("iiiiiii", $Mid, $Pid, $Goal, $Shoots, $Passes, $Chances, $Miles);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -69,11 +69,11 @@ function insertEnrollment($sid, $mid) {
     }
 }
 
-function updateEnrollment($sid, $mid, $eid) {
+function updateMatchStat($Mid, $Pid, $Goal, $Shoots, $Passes, $Chances, $Miles, $Msid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `Enrollment` set `Student_ID` = ?, `program_code` = ? where Enrollment_ID = ?");
-        $stmt->bind_param("iii", $sid, $mid, $eid);
+        $stmt = $conn->prepare("update `MatchStats` set `MID`= ?, `PID`= ?, `Goals_Scored`= ?, `Shoots`= ?, `Passes_Completed`= ?, `Chances_Created`= ?, `Miles_Run`= ? where MSID = ?");
+        $stmt->bind_param("iiiiiiii", $Mid, $Pid, $Goal, $Shoots, $Passes, $Chances, $Miles, $Msid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -83,11 +83,11 @@ function updateEnrollment($sid, $mid, $eid) {
     }
 }
 
-function deleteEnrollment($eid) {
+function deleteMatchStat($Msid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from Enrollment where Enrollment_ID= ?");
-        $stmt->bind_param("i", $eid);
+        $stmt = $conn->prepare("delete from MatchStats where MSID= ?");
+        $stmt->bind_param("i", $Msid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
