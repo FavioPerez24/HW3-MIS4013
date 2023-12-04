@@ -1,5 +1,5 @@
 <?php
-function selectMatchs() {
+function selectMatches() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT MID, Home-TID, Away-TID, MDetails, MConditions, MDate FROM `MatchGame`");
