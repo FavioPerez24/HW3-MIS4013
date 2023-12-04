@@ -28,11 +28,11 @@ include "new-form.php";
   while ($player = $players->fetch_assoc()) {
   ?>
   <tr>
-    <td><?php echo $player['PID']; ?></td>
-    <td><?php echo $player['PName']; ?></td>
-    <td><?php echo $player['PDob']; ?></td>
-    <td><?php echo $player['PNationality']; ?></td>
-    <td><?php echo $player['PPosition']; ?></td>
+    <td><?php echo $player['Pid']; ?></td>
+    <td><?php echo $player['Pname']; ?></td>
+    <td><?php echo $player['Pdob']; ?></td>
+    <td><?php echo $player['PNat']; ?></td>
+    <td><?php echo $player['Ppos']; ?></td>
     <td><?php include "edit-form.php"; ?></td>
      <td>
       <form method="post" action="">
