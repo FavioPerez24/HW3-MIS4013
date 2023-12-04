@@ -17,12 +17,20 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="PName<?php echo $player['PID']; ?>" class="form-label">Name</label>
-            <input type="text" class="form-control" id="PName<?php echo $player['PID']; ?>" name="PName" value="<?php echo $player['PName']; ?>">
+            <label for="Pname<?php echo $player['PID']; ?>" class="form-label">Name</label>
+            <input type="text" class="form-control" id="Pname<?php echo $player['PID']; ?>" name="Pname" value="<?php echo $player['PName']; ?>">
+          </div>
+            <div class="mb-3">
+            <label for="Pdob<?php echo $player['PID']; ?>" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" id="Pdob<?php echo $player['PID']; ?>" name="Pdob" value="<?php echo $player['PDOB']; ?>">
           </div>
           <div class="mb-3">
-            <label for="PNat<?php echo $player['PID']; ?>" class="form-label">Nationality</label>
-            <input type="number" class="form-control" id="PNat<?php echo $player['PID']; ?>" name="PNat" value="<?php echo $player['PNationality']; ?>">
+            <label for="Pnat<?php echo $player['PID']; ?>" class="form-label">Nationality</label>
+            <input type="text" class="form-control" id="Pnat<?php echo $player['PID']; ?>" name="Pnat" value="<?php echo $player['PNationality']; ?>">
+          </div>
+            <div class="mb-3">
+            <label for="Ppos<?php echo $player['PID']; ?>" class="form-label">Position</label>
+            <input type="text" class="form-control" id="Ppos<?php echo $player['PID']; ?>" name="Ppos" value="<?php echo $player['PPosition']; ?>">
           </div>
             <div class="mb-3">
             <label for="Tid<?php echo $player['TID']; ?>" class="form-label">Team</label>
