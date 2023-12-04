@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col">
-        <h1>Enrollment</h1>
+        <h1>Statistics</h1>
     </div>
     <div class="col-auto">
         <?php include "new-form.php"; ?>
@@ -9,11 +9,11 @@
 <div class="card-group">
     <?php
     $count = 0;
-    while ($student = $students->fetch_assoc()) {
+    while ($player = $players->fetch_assoc()) {
         if ($count % 2 == 0) {
             echo '<div class="row">';
         }        
-                include "student.php";
+                include "player.php";
         if ($count % 2 !== 0 || $students->num_rows % 2 !== 0) {
             echo '</div>';
         }
