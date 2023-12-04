@@ -8,8 +8,8 @@ Include "view/header.php";
 <script src="https://unpkg.com/scrollreveal@4"></script>
 <style>
 	h1.headline {text-align: center;}
-	p.tagline {text-align: center; animation: repeatText 5s linear infinite;}
-	.punchline {display: inline-block; animation: repeatText 5s linear infinite;}
+	p.tagline {text-align: center; animation: repeatText 10s linear infinite;}
+	.punchline {display: inline-block; animation: repeatText 10s linear infinite;}
 	body {font-family: "Verdana", sans-serif}
 	@keyframes repeatText {
 			0% { opacity: 2; }
@@ -28,8 +28,8 @@ Include "view/header.php";
 	</p>
 	<script>
 		ScrollReveal().reveal('.headline')
-		ScrollReveal().reveal('.tagline', { delay: 500 })
-		ScrollReveal().reveal('.punchline', { delay: 7500 })
+		ScrollReveal().reveal('.tagline', { delay: 750 })
+		ScrollReveal().reveal('.punchline', { delay: 750 })
 	</script>
 </head>
 </html>
