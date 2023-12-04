@@ -10,9 +10,9 @@ Include "view/header.php";
 	h1.headline {text-align: center;}
 	p.tagline {text-align: center; animation: repeatText 5s linear infinite;}
 	.punchline {display: inline-block; animation: repeatText 5s linear infinite;}
-	body {font-family: "Foobar Pro", sans-serif}
+	body {font-family: "Verdana", sans-serif}
 	@keyframes repeatText {
-			0% { opacity: 1; }
+			0% { opacity: 2; }
 			50% { opacity: 0; }
 			100% { opacity: 1; }
 		}
