@@ -14,7 +14,7 @@
             echo '<div class="row">';
         }        
                 include "player.php";
-        if ($count % 2 !== 0 || $students->num_rows % 2 !== 0) {
+        if ($count % 2 !== 0 || $players->num_rows % 2 !== 0) {
             echo '</div>';
         }
         $count++;
