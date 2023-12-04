@@ -14,10 +14,10 @@ include "new-form.php";
       <tr>
       <th>Match ID</th>
       <th>Home Team</th>
-      <th>Aways Team</th>
+      <th>Away Team</th>
       <th>Details</th>
-      <th>Conditions</th>
       <th>Date</th>
+      <th>Conditions</th>
       <th></th>
       <th></th>
       </tr>
