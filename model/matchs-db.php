@@ -13,11 +13,11 @@ function selectMatchs() {
     }
 }
 
-function insertMatch($HTid, $ATid, $MDet, $MCond, $MDate) {
+function insertMatch($HTid, $ATid, $Mdet, $Mcond, $Mdate) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `MatchGame` (`Home-TID`, `Away-TID`, `MDetails`, `MConditions`, `MDate`) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("iisss", $HTid, $ATid, $MDet, $MCond, $MDate);
+        $stmt->bind_param("iisss", $HTid, $ATid, $Mdet, $Mcond, $Mdate);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -27,11 +27,11 @@ function insertMatch($HTid, $ATid, $MDet, $MCond, $MDate) {
     }
 }
 
-function updateMatch($HTid, $ATid, $MDet, $MCond, $MDate, $Mid) {
+function updateMatch($HTid, $ATid, $Mdet, $Mcond, $Mdate, $Mid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `MatchGame` set `Home-TID`= ?, `Away-TID`= ?, `MDetails`= ?, `MConditions`= ?, `MDate`= ? where MID = ?");
-        $stmt->bind_param("iisssi", $HTid, $ATid, $MDet, $MCond, $MDate, $Mid);
+        $stmt->bind_param("iisssi", $HTid, $ATid, $Mdet, $Mcond, $Mdate, $Mid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
