@@ -20,9 +20,17 @@
             <label for="PName" class="form-label">Player Name</label>
             <input type="text" class="form-control" id="PName" name="PName">
           </div>
+            <div class="mb-3">
+            <label for="Pdob" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" id="Pdob" name="Pdob">
+          </div>
           <div class="mb-3">
             <label for="PNat" class="form-label">Nationality</label>
-            <input type="number" class="form-control" id="PNat" name="PNat">
+            <input type="text" class="form-control" id="PNat" name="PNat">
+          </div>
+            <div class="mb-3">
+            <label for="Ppos" class="form-label">Position</label>
+            <input type="text" class="form-control" id="Ppos" name="Ppos">
           </div>
           <div class="mb-3">
             <label for="Tid" class="form-label">Team</label>
