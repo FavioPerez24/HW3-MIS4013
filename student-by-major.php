@@ -1,10 +1,10 @@
 <?php
 require_once("model/connection.php");
-require_once("model/student-by-major-db.php");
+require_once("model/player-by-match-db.php");
 
-$pageTitle= "Student by Major";
-Include "view/header.php";
-$majors = selectStudentbyMajor($_GET['id']);
-Include "view/students-by-major.php";
+$pageTitle= "Player by Match";
+Include "view/header.html";
+$matchs = selectPlayerbyMatch($_GET['id']);
+Include "view/players-by-match.php";
 Include "view/footer.php";
 ?>
