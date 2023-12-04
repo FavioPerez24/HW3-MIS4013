@@ -18,24 +18,17 @@
         <form method="post" action="">
           <div class="mb-3">
           <div class="mb-3">
-            <label for="HTid" class="form-label">Home Team</label>
-            <input type="number" class="form-control" id="HTid" name="HTid">
-          </div>
-          <div class="mb-3">
-            <label for="ATid" class="form-label">Away Team</label>
-            <input type="number" class="form-control" id="ATid" name="ATid">
-          </div>
          <div class="mb-3">
             <label for="Mdet" class="form-label">Details</label>
             <input type="text" class="form-control" id="Mdet" name="Mdet">
           </div>
+               </div>
+            <label for="Mdate" class="form-label">Date</label>
+            <input type="date" class="form-control" id="Mdate" name="Mdate">
+          </div>
           <div class="mb-3">
             <label for="Mcond" class="form-label">Conditions</label>
             <input type="text" class="form-control" id="Mcond" name="Mcond">
-          </div>
-            <label for="Mdate" class="form-label">Date</label>
-            <input type="number" class="form-control" id="Mdate" name="Mdate">
-          </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
