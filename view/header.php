@@ -16,9 +16,9 @@
 
 <!-- Slide Show -->
 <section>
- <img class="mySlides" src="https://m.media-amazon.com/images/M/MV5BNTViYjI5M2MtNDYzZS00MDZkLTkzOWItMzkyM2FmMDhhZjc4XkEyXkFqcGdeQXVyNDg4MjkzNDk@._V1_.jpg"
- style="width:100%">
  <img class="mySlides" src="https://wwwimage-us.pplusstatic.com/base/files/seo/ucl_social_1200x627.jpg"
+ style="width:100%">
+ <img class="mySlides" src="https://cdn.mos.cms.futurecdn.net/FCgDYSPyp4GTsvmhVMaUP6.jpg""
  style="width:100%">
  <img class="mySlides" src="https://www.aroged.com/wp-content/uploads/2023/04/Champions-League-202223-find-out-where-to-watch-the-games.jpeg"
  style="width:100%">
