@@ -1,9 +1,9 @@
 <?php
-function selectStudentbyMajor($sid) {
+function selectPlayerbyMatch($Pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT M.program_code, major_name, division, minimum_credit_hours FROM `Business_Major`M JOIN Enrollment E ON E.program_code=M.program_code WHERE E.Student_ID=?");
-        $stmt->bind_param("i", $sid);
+        $stmt = $conn->prepare("SELECT M.MID, Home-TID, Away-TID, MConditions, MDate FROM `MatchGame`M JOIN MatchStats MS ON M.MID=MS.MID WHERE MS.PID=?");
+        $stmt->bind_param("i", $Pid);
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
