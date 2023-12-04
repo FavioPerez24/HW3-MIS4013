@@ -1,6 +1,6 @@
 <?php
 require_once("model/connection.php");
-require_once("model/matchgames-db.php");
+require_once("model/matchs-db.php");
 
 $pageTitle= "Tournament Match";
 Include "view/header.php";
