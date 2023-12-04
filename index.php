@@ -7,21 +7,33 @@ Include "view/header.php";
 <head>
 <script src="https://unpkg.com/scrollreveal@4"></script>
 <style>
-		@font-face {
-		font-family: 'Foobar Pro';
-		src: url('FoobarPro-Regular.ttf') format('truetype');
-		}
-		body {
-			font-family: 'Foobar Pro', sans-serif;
-		}
-	h1.headline {text-align: center;}
-	p.tagline {text-align: center; animation: repeatText 10s linear infinite;}
-	.punchline {display: inline-block; animation: repeatText 10s linear infinite;}
-	@keyframes repeatText {
-			0% { opacity: 2; }
-			50% { opacity: 0; }
-			100% { opacity: 1; }
-		}
+    h1.headline {
+        text-align: center;
+        font-size: 3rem;
+        animation: pulsate 1s ease-in-out infinite;
+	font-family: "Verdana", sans-serif;
+    }
+    p.tagline {
+        text-align: center;
+        animation: repeatText 10s linear infinite;
+    }
+    .punchline {
+        display: inline-block;
+        animation: repeatText 10s linear infinite;
+    }
+    body {
+        font-family: "Verdana", sans-serif;
+    }
+    @keyframes pulsate {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+    @keyframes repeatText {
+        0% { opacity: 2; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+    }
 </style>
 </script>  
 
