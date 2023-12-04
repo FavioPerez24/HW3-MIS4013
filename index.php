@@ -10,7 +10,7 @@ Include "view/header.php";
     h1.headline {
         text-align: center;
         font-size: 3rem;
-        animation: pulsate 1s ease-in-out infinite;
+        animation: pulsate 5s ease-in-out infinite;
 	font-family: "Verdana", sans-serif;
     }
     p.tagline {
@@ -21,16 +21,13 @@ Include "view/header.php";
         display: inline-block;
         animation: repeatText 10s linear infinite;
     }
-    body {
-        font-family: "Verdana", sans-serif;
-    }
     @keyframes pulsate {
         0% { transform: scale(1); }
         50% { transform: scale(1.1); }
         100% { transform: scale(1); }
     }
     @keyframes repeatText {
-        0% { opacity: 2; }
+        0% { opacity: 1; }
         50% { opacity: 0; }
         100% { opacity: 1; }
     }
