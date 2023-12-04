@@ -33,22 +33,22 @@
 
 <!-- Features -->
 <section class="w3-row-padding w3-center w3-light-grey">
-  <article class="w3-third">
-    <p>Our Players</p>
-    <img src="img_bandmember.jpg" alt="Random Name" style="width:100%">
-    <p>Get your Data scouted.</p>
-  </article>
-  <article class="w3-third">
-    <p>Our Teams</p>
-    <img src="img_bandmember.jpg" alt="Random Name" style="width:100%">
-    <p>Improve your team performance through individual analysis.</p>
-  </article>
-  <article class="w3-third">
-    <p>Join Us</p>
-    <img src="img_bandmember.jpg" alt="Random Name" style="width:100%">
-    <p>Be part of this community.</p>
-  </article>
-</section>
+        <article class="w3-third">
+            <p>Our Players</p>
+            <a href="link to data scouted"><img src="img_bandmember.jpg" alt="Random Name" style="width:100%"></a>
+            <p>Get your Data scouted.</p>
+        </article>
+        <article class="w3-third">
+            <p>Our Teams</p>
+            <a href="link to improve team performance"><img src="img_bandmember.jpg" alt="Random Name" style="width:100%"></a>
+            <p>Improve your team performance through individual analysis.</p>
+        </article>
+        <article class="w3-third">
+            <p>Join Us</p>
+            <a href="link to join community"><img src="img_bandmember.jpg" alt="Random Name" style="width:100%"></a>
+            <p>Be part of this community.</p>
+        </article>
+    </section>
 
 <script>
 // Automatic Slideshow - change image every 3 seconds
