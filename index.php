@@ -17,8 +17,22 @@ Include "view/header.php";
 			100% { opacity: 1; }
 		}
 </style>
+</script>  
 
-
+	<h1 class="headline">
+		The UEFA Collection.
+	</h1>
+	<p class="tagline">
+		Where data meets talents
+		<span class="punchline"> ... Get in touch ...</span>
+	</p>
+	<script>
+		ScrollReveal().reveal('.headline')
+		ScrollReveal().reveal('.tagline', { delay: 400 })
+		ScrollReveal().reveal('.punchline', { delay: 750 })
+	</script>
+</head>
+</html>
 <?php
 Include "home.html";
 ?>
