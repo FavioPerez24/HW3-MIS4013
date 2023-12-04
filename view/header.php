@@ -31,24 +31,23 @@
   <p class="w3-justify">"The UEFA Collection" stands as a pioneering recruiting agency dedicated to unveiling the untapped potential of young soccer talents. We meticulously collect, curate, and present comprehensive data on emerging players, providing in-depth reports that serve as invaluable resources for prospective teams. Our dynamic platform not only showcases the prowess of these budding athletes but also offers an engaging and visually compelling experience. With a commitment to revolutionizing the scouting landscape, "The UEFA Collection" is the go-to destination for teams seeking the next generation of soccer stars, blending data-driven insights with a touch of flair.</p>
 </section>
 
-<!-- Features -->
 <section class="w3-row-padding w3-center w3-light-grey">
-        <article class="w3-third">
-            <p>Our Players</p>
-            <a href="link to data scouted"><img src="img_bandmember.jpg" alt="Random Name" style="width:100%"></a>
-            <p>Get your Data scouted.</p>
-        </article>
-        <article class="w3-third">
-            <p>Our Teams</p>
-            <a href="link to improve team performance"><img src="img_bandmember.jpg" alt="Random Name" style="width:100%"></a>
-            <p>Improve your team performance through individual analysis.</p>
-        </article>
-        <article class="w3-third">
-            <p>Join Us</p>
-            <a href="link to join community"><img src="img_bandmember.jpg" alt="Random Name" style="width:100%"></a>
-            <p>Be part of this community.</p>
-        </article>
-    </section>
+    <article class="w3-third">
+        <p>Our Players</p>
+        <img src="https://pbs.twimg.com/media/F6fqek3XoAAMlKC?format=jpg&name=4096x4096" alt="The Gems" style="width:100%">
+        <p>Get your Data scouted.</p>
+    </article>
+    <article class="w3-third">
+        <p>Our Teams</p>
+        <img src="https://editorial.uefa.com/resources/025f-1004f11c742c-1af8521465a3-1000/paris_saint_germain_v_real_madrid_-_uefa_champions_league.jpeg" alt="Supporters" style="width:100%">
+        <p>Improve your team performance through individual analysis.</p>
+    </article>
+    <article class="w3-third">
+        <p>Join Us</p>
+        <img src="https://cdn4.iconfinder.com/data/icons/user-interface-line-1/32/UI3-15-512.png" alt="Join Now" style="width:100%">
+        <p>Be part of this community.</p>
+    </article>
+</section>
 
 <script>
 // Automatic Slideshow - change image every 3 seconds
