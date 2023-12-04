@@ -1,14 +1,14 @@
                                 <li class="list-group-item">
                                     <div class="row">
                                         <div class="col">
-                                            <?php echo $major['major_name']; ?> - <?php echo $major['division']; ?> - <?php echo $major['minimum_credit_hours']; ?>
+                                            <?php echo $match['MDetails']; ?> - <?php echo $match['MDate']; ?> - <?php echo $match['MConditions']; ?>
                                         </div>
                                         <div class="col-auto">
                                             <?php include "edit-form.php"; ?>
                                         </div>
                                         <div class="col-auto">
                                             <form method="post" action="">
-                                                <input type="hidden" name="eid" value="<?php echo $major['Enrollment_ID']; ?>">
+                                                <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
                                                 <input type="hidden" name="actionType" value="Delete">
                                                 <button type="submit" class="btn" onclick="return confirm('Are you sure?');">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
