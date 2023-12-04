@@ -13,9 +13,6 @@
 <h1>Our Players</h1>
   </div>
   <div class="col-auto">
-<?php
-include "new-form.php";
-?>
   </div>
 </div>
 <div class="table-responsive">
