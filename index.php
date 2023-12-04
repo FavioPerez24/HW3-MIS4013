@@ -28,8 +28,8 @@ Include "view/header.php";
 	</p>
 	<script>
 		ScrollReveal().reveal('.headline')
-		ScrollReveal().reveal('.tagline', { delay: 400 })
-		ScrollReveal().reveal('.punchline', { delay: 750 })
+		ScrollReveal().reveal('.tagline', { delay: 500 })
+		ScrollReveal().reveal('.punchline', { delay: 7500 })
 	</script>
 </head>
 </html>
