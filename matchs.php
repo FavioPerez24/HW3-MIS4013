@@ -3,7 +3,7 @@ require_once("model/connection.php");
 require_once("model/matchs-db.php");
 
 $pageTitle= "Tournament Match";
-Include "view/header.php";
+Include "view/header.html";
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
@@ -31,7 +31,7 @@ if (isset($_POST['actionType'])) {
   }
 }
 
-$matchgames = selectMatchGames();
-Include "view/matchgames/page.php";
+$matchs = selectMatchs();
+Include "view/matchs/page.php";
 Include "view/footer.php";
 ?>
