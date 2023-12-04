@@ -33,8 +33,8 @@ include "match-input-list.php";
 ?>
           </div>
           <div class="mb-3">
-            <label for="mDiv<?php echo $major['program_code']; ?>" class="form-label">Division</label>
-            <input type="text" class="form-control" id="mDiv<?php echo $major['program_code']; ?>" name="mDiv" value="<?php echo $major['division']; ?>">
+            <label for="Goal<?php echo $match['MID']; ?>" class="form-label">Goals Scored</label>
+            <input type="text" class="form-control" id="Goal<?php echo $match['MID']; ?>" name="Goal" value="<?php echo $match['Goals_scored']; ?>">
           </div>
             <input type="hidden" name="Msid" value="<?php echo $match['MID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
