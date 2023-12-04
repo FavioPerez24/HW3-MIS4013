@@ -1,5 +1,5 @@
 <?php
-function selectMatchGames() {
+function selectMatchs() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT Home-TID, Away-TID, MDetails, MConditions, MDate FROM `MatchGame`");
@@ -13,7 +13,7 @@ function selectMatchGames() {
     }
 }
 
-function insertMatchGame($HTid, $ATid, $MDet, $MCond, $MDate) {
+function insertMatch($HTid, $ATid, $MDet, $MCond, $MDate) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `MatchGame` (`Home-TID`, `Away-TID`, `MDetails`, `MConditions`, `MDate`) VALUES (?, ?, ?, ?, ?)");
@@ -27,7 +27,7 @@ function insertMatchGame($HTid, $ATid, $MDet, $MCond, $MDate) {
     }
 }
 
-function updateMatchGame($HTid, $ATid, $MDet, $MCond, $MDate, $Mid) {
+function updateMatch($HTid, $ATid, $MDet, $MCond, $MDate, $Mid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `MatchGame` set `Home-TID`= ?, `Away-TID`= ?, `MDetails`= ?, `MConditions`= ?, `MDate`= ? where MID = ?");
@@ -41,7 +41,7 @@ function updateMatchGame($HTid, $ATid, $MDet, $MCond, $MDate, $Mid) {
     }
 }
 
-function deleteMatchGane($Mid) {
+function deleteMatch($Mid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from MatchGame where MID= ?");
