@@ -42,6 +42,6 @@ body {font-family: "Lato", sans-serif}
 </div>
 
 <!-- Page content -->
-<div class="w3-content" style="max-width:3000px;margin-top:60px">
+<div class="w3-content" style="max-width:2000px;margin-top:80px">
 </body>
 </html>
