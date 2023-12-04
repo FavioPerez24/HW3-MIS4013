@@ -9,8 +9,8 @@ Include "view/header.php";
 <style>
     h1.headline {
         text-align: center;
-        font-size: 3rem;
-        animation: pulsate 5s ease-in-out infinite;
+        font-size: 4rem;
+        animation: pulsate 10s ease-in-out infinite;
 	font-family: "Verdana", sans-serif;
     }
     p.tagline {
@@ -41,11 +41,6 @@ Include "view/header.php";
 		Where data meets talents
 		<span class="punchline"> ... Get in touch ...</span>
 	</p>
-	<script>
-		ScrollReveal().reveal('.headline')
-		ScrollReveal().reveal('.tagline', { delay: 750 })
-		ScrollReveal().reveal('.punchline', { delay: 750 })
-	</script>
 </head>
 </html>
 <?php
