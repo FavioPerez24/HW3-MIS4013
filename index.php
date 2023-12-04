@@ -28,7 +28,7 @@ Include "view/header.html";
 	<script>
 		ScrollReveal().reveal('.headline')
 		ScrollReveal().reveal('.tagline', { delay: 500 })
-		ScrollReveal().reveal('.punchline', { delay: 2000 })
+		ScrollReveal().reveal('.punchline', { delay: 1000 })
 	</script>
 </body>
 </html><?php
