@@ -3,7 +3,7 @@ require_once("model/connection.php");
 require_once("model/matchstats-db.php");
 
 $pageTitle= "Match Statistics";
-Include "view/header.html";
+Include "view/header.php";
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
