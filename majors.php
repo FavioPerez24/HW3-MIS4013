@@ -1,28 +1,28 @@
 <?php
 require_once("model/connection.php");
-require_once("model/majors-db.php");
+require_once("model/matchgames-db.php");
 
-$pageTitle= "Majors";
+$pageTitle= "Tournament Match";
 Include "view/header.php";
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      if (insertMajor($_POST['mName'], $_POST['mDiv'], $_POST['mCred'])) {
+      if (insertMatch($_POST['Home-TID'], $_POST['Away-TID'], $_POST['MDate'], $_POST['MDetails'], $_POST['MConditions'])) {
         echo '<div class="alert alert-success" role="alert">Major added.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
       break;
     case "Edit":
-      if (updateMajor($_POST['mName'], $_POST['mDiv'], $_POST['mCred'], $_POST['mid'])) {
+      if (updateMatch($_POST['Home-TID'], $_POST['Away-TID'], $_POST['MDate'], $_POST['MDetails'], $_POST['MConditions'], $_POST['Mid'])) {
         echo '<div class="alert alert-success" role="alert">Major edited.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
       break;
     case "Delete":
-      if (deleteMajor($_POST['mid'])) {
+      if (deleteMatch($_POST['Mid'])) {
         echo '<div class="alert alert-success" role="alert">Major deleted.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
@@ -31,7 +31,7 @@ if (isset($_POST['actionType'])) {
   }
 }
 
-$majors = selectMajors();
-Include "view/majors/page.php";
+$matchgames = selectMatchGames();
+Include "view/matchgames/page.php";
 Include "view/footer.php";
 ?>
