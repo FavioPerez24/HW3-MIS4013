@@ -34,5 +34,14 @@ body {font-family: "Lato", sans-serif}
   </div>
 </div>
   
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="players.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">OUR GEMS</a>
+  <a href="matches.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MATCHES</a>
+  <a href="matchstats.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">STATS</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MORE</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
 </body>
 </html>
