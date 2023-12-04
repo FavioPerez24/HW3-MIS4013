@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#newAdvisorModal">
+<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#newTeamModal">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
       <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -7,26 +7,26 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="newAdvisorModal" tabindex="-1" aria-labelledby="newAdvisorModalLabel" aria-hidden="true">
+<div class="modal fade" id="newTeamModal" tabindex="-1" aria-labelledby="newTeamModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="newAdvisorModalLabel">Add second advisor</h1>
+        <h1 class="modal-title fs-5" id="newTeamModalLabel">Add previous team</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
       <div class="mb-3">
-            <label for="aName" class="form-label">Advisor Name</label>
+            <label for="Tname" class="form-label">Team Name</label>
 <?php
-$advisorList = selectAdvisorsForInput();
-$selectedAdvisor = 0;
-include "advisor-input-list.php";
+$teamList = selectTeamsForInput();
+$selectedTeam = 0;
+include "team-input-list.php";
 ?>
           </div>
           <div class="mb-3">
-            <label for="aMT" class="form-label">Meeting Times</label>
-            <input type="text" class="form-control" id="aMT" name="aMT">
+            <label for="Tcountry" class="form-label">Country</label>
+            <input type="text" class="form-control" id="Tcountry" name="Tcountry">
           </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
