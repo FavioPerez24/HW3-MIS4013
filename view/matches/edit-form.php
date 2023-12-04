@@ -17,15 +17,7 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="HTid<?php echo $match['MID']; ?>" class="form-label">Home Team</label>
-            <input type="number" class="form-control" id="HTid<?php echo $match['MID']; ?>" name="HTid" value="<?php echo $match['Home-TID']; ?>">
-          </div>
-          <div class="mb-3">
-            <label for="ATid<?php echo $match['MID']; ?>" class="form-label">Away Team</label>
-            <input type="number" class="form-control" id="ATid<?php echo $match['MID']; ?>" name="ATid" value="<?php echo $match['Away-TID']; ?>">
-          </div>
-          <div class="mb-3">
-            <label for="Mdet<?php echo $match['MID']; ?>" class="form-label">Minimum Credit Hours</label>
+            <label for="Mdet<?php echo $match['MID']; ?>" class="form-label">Details</label>
             <input type="text" class="form-control" id="Mdet<?php echo $match['MID']; ?>" name="Mdet" value="<?php echo $match['MDetails']; ?>">
           </div>
          <div class="mb-3">
