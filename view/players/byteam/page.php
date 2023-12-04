@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-<h1>Student's Advisor</h1>
+<h1>Player's Team</h1>
   </div>
   <div class="col-auto">
 <?php
@@ -12,25 +12,27 @@ include "new-form.php";
   <table class="table">
     <thead>
       <tr>
-      <th>Advisor ID</th>
-      <th>Advisor Name</th>
-      <th>Meeting Times</th>
+      <th>ID</th>
+      <th>Team</th>
+      <th>Country</th>
+      <th>Coach</th>
       <th></th>
       <th></th>  
       </tr>
     </thead>
     <tbody>
       <?php 
-      while ($advisor = $advisors->fetch_assoc()) {
+      while ($team = $teams->fetch_assoc()) {
       ?>
       <tr>
-        <td><?php echo $advisor['Advisor_ID']; ?></td>
-        <td><?php echo $advisor['Advisor_Name']; ?></td>
-        <td><?php echo $advisor['Meeting_Times']; ?></td>
+        <td><?php echo $team['TID']; ?></td>
+        <td><?php echo $team['TName']; ?></td>
+        <td><?php echo $team['TCountry']; ?></td>
+        <td><?php echo $team['TCoach']; ?></td>
         <td><?php include "edit-form.php"; ?></td>
         <td>
-<form method="post" action="">
-        <input type="hidden" name="aid" value="<?php echo $advisor['Advisor_ID']; ?>">
+        <form method="post" action="">
+        <input type="hidden" name="Tid" value="<?php echo $team['TID']; ?>">
         <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
