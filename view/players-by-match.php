@@ -20,9 +20,10 @@
       ?>
       <tr>
         <td><?php echo $match['MID']; ?></td>
-        <td><?php echo $match['major_name']; ?></td>
-        <td><?php echo $match['division']; ?></td>
-        <td><?php echo $match['minimum_credit_hours']; ?></td>
+        <td><?php echo $match['Home-TID']; ?></td>
+        <td><?php echo $match['Away-TID']; ?></td>
+        <td><?php echo $match['MDetails']; ?></td>
+        <td><?php echo $match['MDate']; ?></td>
       </tr>
       <?php
       }
