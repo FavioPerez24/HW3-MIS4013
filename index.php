@@ -7,10 +7,16 @@ Include "view/header.php";
 <head>
 <script src="https://unpkg.com/scrollreveal@4"></script>
 <style>
+		@font-face {
+		font-family: 'Foobar Pro';
+		src: url('FoobarPro-Regular.ttf') format('truetype');
+		}
+		body {
+			font-family: 'Foobar Pro', sans-serif;
+		}
 	h1.headline {text-align: center;}
 	p.tagline {text-align: center; animation: repeatText 10s linear infinite;}
 	.punchline {display: inline-block; animation: repeatText 10s linear infinite;}
-	body {font-family: "Verdana", sans-serif}
 	@keyframes repeatText {
 			0% { opacity: 2; }
 			50% { opacity: 0; }
