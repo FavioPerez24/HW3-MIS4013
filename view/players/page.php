@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-<h1>Players</h1>
+<h1>Our Players</h1>
   </div>
   <div class="col-auto">
 <?php
@@ -14,7 +14,9 @@ include "new-form.php";
       <tr>
       <th>PID</th>
       <th>Player Name</th>
+      <th>Date of Birth</th>
       <th>Nationality</th>
+      <th>Position</th>
       <th></th>
       <th></th>
         <th></th>
@@ -28,6 +30,7 @@ include "new-form.php";
   <tr>
     <td><?php echo $player['PID']; ?></td>
     <td><?php echo $player['PName']; ?></td>
+    <td><?php echo $player['PDob']; ?></td>
     <td><?php echo $player['PNationality']; ?></td>
     <td><?php include "edit-form.php"; ?></td>
      <td>
