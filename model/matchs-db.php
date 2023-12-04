@@ -2,7 +2,7 @@
 function selectMatchs() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Home-TID, Away-TID, MDetails, MConditions, MDate FROM `MatchGame`");
+        $stmt = $conn->prepare("SELECT MID, Home-TID, Away-TID, MDetails, MConditions, MDate FROM `MatchGame`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
