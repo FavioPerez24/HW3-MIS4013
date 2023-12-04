@@ -3,7 +3,7 @@ require_once("model/connection.php");
 require_once("model/players-db.php");
 
 $pageTitle= "Our Players";
-Include "view/header.html";
+Include "view/header.php";
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
