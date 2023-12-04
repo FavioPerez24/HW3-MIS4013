@@ -13,6 +13,8 @@ Include "view/header.html";
 	h1.headline {text-align: center;}
 	p.tagline {text-align: center;}
 	.punchline {display: inline-block;}
+	body {font-family: "Lato", sans-serif}
+</style>
 </style>
 </head>
 <body>
