@@ -21,18 +21,18 @@
             <input type="text" class="form-control" id="PName<?php echo $player['PID']; ?>" name="PName" value="<?php echo $player['PName']; ?>">
           </div>
           <div class="mb-3">
-            <label for="Pnat<?php echo $student['Student_ID']; ?>" class="form-label">Graduation Year</label>
-            <input type="number" class="form-control" id="sGrad<?php echo $student['Student_ID']; ?>" name="sGrad" value="<?php echo $student['Graduation_Year']; ?>">
+            <label for="PNat<?php echo $player['PID']; ?>" class="form-label">Nationality</label>
+            <input type="number" class="form-control" id="PNat<?php echo $player['PID']; ?>" name="PNat" value="<?php echo $player['PNationality']; ?>">
           </div>
             <div class="mb-3">
-            <label for="aid<?php echo $student['Advisor_ID']; ?>" class="form-label">Advisor</label>
+            <label for="Tid<?php echo $player['TID']; ?>" class="form-label">Team</label>
 <?php
-$advisorList = selectAdvisorsForInput();
-$selectedAdvisor = $student['Advisor_ID'];
-include "advisor-input-list.php";
+$teamsList = selectTeamsForInput();
+$selectedTeam = $player['TID'];
+include "team-input-list.php";
 ?>
           </div>
-            <input type="hidden" name="sid" value="<?php echo $student['Student_ID']; ?>">
+            <input type="hidden" name="Pid" value="<?php echo $player['PID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
