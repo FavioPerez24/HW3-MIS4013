@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-<h1>Students</h1>
+<h1>Players</h1>
   </div>
   <div class="col-auto">
 <?php
@@ -12,9 +12,9 @@ include "new-form.php";
   <table class="table">
     <thead>
       <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Graduation Year</th>
+      <th>PID</th>
+      <th>Player Name</th>
+      <th>Nationality</th>
       <th></th>
       <th></th>
         <th></th>
@@ -23,16 +23,16 @@ include "new-form.php";
     </thead>
 <tbody>
   <?php 
-  while ($student = $students->fetch_assoc()) {
+  while ($player = $players->fetch_assoc()) {
   ?>
   <tr>
-    <td><?php echo $student['Student_ID']; ?></td>
-    <td><?php echo $student['Student_FirstName']; ?></td>
-    <td><?php echo $student['Graduation_Year']; ?></td>
+    <td><?php echo $player['PID']; ?></td>
+    <td><?php echo $player['PName']; ?></td>
+    <td><?php echo $player['PNationality']; ?></td>
     <td><?php include "edit-form.php"; ?></td>
      <td>
       <form method="post" action="">
-        <input type="hidden" name="sid" value="<?php echo $student['Student_ID']; ?>">
+        <input type="hidden" name="Pid" value="<?php echo $player['PID']; ?>">
         <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
