@@ -15,7 +15,7 @@ function selectPlayers() {
 function selectPlayerbyTeam($Pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT T.TID, TName, TCountry FROM `Team` M JOIN Player P ON T.TID = P.TID WHERE P.PID=?");
+        $stmt = $conn->prepare("SELECT T.TID, TName, TCountry FROM `Team` T JOIN Player P ON T.TID = P.TID WHERE P.PID=?");
         $stmt->bind_param("i", $Pid);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -27,10 +27,10 @@ function selectPlayerbyTeam($Pid) {
     }
 }
 
-function selectMatchGamesForInput() {
+function selectMatchesForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT MID, Home-TID, Away-TID, MDetails FROM `MatchGame` order by MDate");
+        $stmt = $conn->prepare("SELECT MID, MDetails, MDate, MConditions FROM `MatchGame` order by MDate");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -44,7 +44,7 @@ function selectMatchGamesForInput() {
 function selectPlayersForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT PID, PName FROM `Player` order by PName");
+        $stmt = $conn->prepare("SELECT PID, PName, PNationality, PPosition, TID FROM `Player` order by PName");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
