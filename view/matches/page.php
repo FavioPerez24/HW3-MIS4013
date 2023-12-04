@@ -24,7 +24,7 @@ include "new-form.php";
     </thead>
     <tbody>
       <?php 
-      while ($match = $matchs->fetch_assoc()) {
+      while ($match = $matches->fetch_assoc()) {
       ?>
       <tr>
         <td><?php echo $match['MID']; ?></td>
