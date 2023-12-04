@@ -27,7 +27,7 @@ Include "view/header.php";
         100% { transform: scale(1); }
     }
     @keyframes repeatText {
-        0% { opacity: 1; }
+        0% { opacity: 0; }
         50% { opacity: 0; }
         100% { opacity: 1; }
     }
