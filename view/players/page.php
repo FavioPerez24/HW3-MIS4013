@@ -32,6 +32,7 @@ include "new-form.php";
     <td><?php echo $player['PName']; ?></td>
     <td><?php echo $player['PDob']; ?></td>
     <td><?php echo $player['PNationality']; ?></td>
+    <td><?php echo $player['PPosition']; ?></td>
     <td><?php include "edit-form.php"; ?></td>
      <td>
       <form method="post" action="">
