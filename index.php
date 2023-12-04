@@ -15,11 +15,11 @@ Include "view/header.php";
     }
     p.tagline {
         text-align: center;
-        animation: repeatText 10s linear infinite;
+        animation: repeatText 15s linear infinite;
     }
     .punchline {
         display: inline-block;
-        animation: repeatText 10s linear infinite;
+        animation: repeatText 15s linear infinite;
     }
     @keyframes pulsate {
         0% { transform: scale(1); }
@@ -27,7 +27,7 @@ Include "view/header.php";
         100% { transform: scale(1); }
     }
     @keyframes repeatText {
-        0% { opacity: 0; }
+        0% { opacity: 1; }
         50% { opacity: 0; }
         100% { opacity: 1; }
     }
