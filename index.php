@@ -11,8 +11,8 @@ Include "view/header.html";
 </script>
 <style>
 	h1.headline {text-align: center;}
-	p.tagline {text-align: center; animation: repeatText 4s linear infinite;}
-	.punchline {display: inline-block; animation: repeatText 2s linear infinite;}
+	p.tagline {text-align: center; animation: repeatText 5s linear infinite;}
+	.punchline {display: inline-block; animation: repeatText 5s linear infinite;}
 	body {font-family: "Lato", sans-serif}
 	@keyframes repeatText {
 			0% { opacity: 1; }
