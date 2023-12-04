@@ -20,22 +20,22 @@
           <a class="nav-link active" href="home.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="students.php">Students</a>
+          <a class="nav-link" href="players.php">Students</a>
         </li>
          </li>
         <li class="nav-item">
-          <a class="nav-link" href="majors.php">Majors</a>
+          <a class="nav-link" href="matches.php">Matches</a>
         </li>
          </li>
         <li class="nav-item">
-          <a class="nav-link" href="enrollment.php">Enrollment</a>
+          <a class="nav-link" href="matchstats.php">Match Stats</a>
         </li>
           </li>
         <li class="nav-item">
-          <a class="nav-link" href="students-chart.php">Students Chart</a>
+          <a class="nav-link" href="students-chart.php">Player's Chart</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="majors-bar.php">Majors Chart</a>
+          <a class="nav-link" href="majors-bar.php">Matches Chart</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="graduation-line.php">Graduation Statistics</a>
