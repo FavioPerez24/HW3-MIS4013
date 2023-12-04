@@ -13,8 +13,6 @@ include "new-form.php";
     <thead>
       <tr>
       <th>Match ID</th>
-      <th>Home Team</th>
-      <th>Away Team</th>
       <th>Details</th>
       <th>Date</th>
       <th>Conditions</th>
@@ -28,8 +26,6 @@ include "new-form.php";
       ?>
       <tr>
         <td><?php echo $match['MID']; ?></td>
-        <td><?php echo $match['Home-TID']; ?></td>
-        <td><?php echo $match['Away-TID']; ?></td>
         <td><?php echo $match['MDetails']; ?></td>
         <td><?php echo $match['MConditions']; ?></td>
         <td><?php echo $match['MDate']; ?></td>
