@@ -10,9 +10,9 @@ Include "view/header.html";
 	ScrollReveal({ duration: 1000 })
 </script>
 <style>
-	h1.headline {text-align: center; animation: repeatText 10s linear infinite;}
-	p.tagline {text-align: center; animation: repeatText 10s linear infinite;}
-	.punchline {display: inline-block; animation: repeatText 10s linear infinite;}
+	h1.headline {text-align: center; animation: repeatText 3s linear infinite;}
+	p.tagline {text-align: center; animation: repeatText 3s linear infinite;}
+	.punchline {display: inline-block; animation: repeatText 3s linear infinite;}
 	body {font-family: "Lato", sans-serif}
 	@keyframes repeatText {
 			0% { opacity: 1; }
@@ -32,8 +32,8 @@ Include "view/header.html";
 	</p>
 	<script>
 		ScrollReveal().reveal('.headline')
-		ScrollReveal().reveal('.tagline', { delay: 500 })
-		ScrollReveal().reveal('.punchline', { delay: 1000 })
+		ScrollReveal().reveal('.tagline', { delay: 250 })
+		ScrollReveal().reveal('.punchline', { delay: 500 })
 	</script>
 </body>
 </html><?php
