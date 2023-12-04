@@ -3,7 +3,7 @@ require_once("model/connection.php");
 require_once("model/matches-db.php");
 
 $pageTitle= "Tournament Match";
-Include "view/header.html";
+Include "view/header.php";
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
