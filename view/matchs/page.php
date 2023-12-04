@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-<h1>Majors</h1>
+<h1>Tournament Matches</h1>
   </div>
   <div class="col-auto">
 <?php
@@ -12,27 +12,31 @@ include "new-form.php";
   <table class="table">
     <thead>
       <tr>
-      <th>Program Code</th>
-      <th>Major</th>
-      <th>Division</th>
-      <th>Minimum Credit Hours</th>
+      <th>Match ID</th>
+      <th>Home Team</th>
+      <th>Aways Team</th>
+      <th>Details</th>
+      <th>Conditions</th>
+      <th>Date</th>
       <th></th>
       <th></th>
       </tr>
     </thead>
     <tbody>
       <?php 
-      while ($major = $majors->fetch_assoc()) {
+      while ($match = $matchs->fetch_assoc()) {
       ?>
       <tr>
-        <td><?php echo $major['program_code']; ?></td>
-        <td><?php echo $major['major_name']; ?></td>
-        <td><?php echo $major['division']; ?></td>
-        <td><?php echo $major['minimum_credit_hours']; ?></td>
+        <td><?php echo $match['MID']; ?></td>
+        <td><?php echo $match['Home-TID']; ?></td>
+        <td><?php echo $match['Away-TID']; ?></td>
+        <td><?php echo $match['MDetails']; ?></td>
+        <td><?php echo $match['MConditions']; ?></td>
+        <td><?php echo $match['MDate']; ?></td>
         <td><?php include "edit-form.php"; ?></td>
         <td>
       <form method="post" action="">
-        <input type="hidden" name="mid" value="<?php echo $major['program_code']; ?>">
+        <input type="hidden" name="Mid" value="<?php echo $match['MID']; ?>">
         <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
