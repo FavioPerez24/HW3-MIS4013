@@ -15,14 +15,14 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Edit":
-      if (updateMatch($_POST['MDetails'], $_POST['MDate'], $_POST['MConditions'], $_POST['Mid'])) {
+      if (updateMatch($_POST['MDetails'], $_POST['MDate'], $_POST['MConditions'], $_POST['MID'])) {
         echo '<div class="alert alert-success" role="alert">Match edited.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
       break;
     case "Delete":
-      if (deleteMatch($_POST['Mid'])) {
+      if (deleteMatch($_POST['MID'])) {
         echo '<div class="alert alert-success" role="alert">Match deleted.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
