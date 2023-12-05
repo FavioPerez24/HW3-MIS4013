@@ -1,7 +1,7 @@
                         <li class="list-group-item">
                                     <div class="row">
                                         <div class="col">
-                                            <?php echo $match['M.MDate']; ?>
+                                            <?php echo $match['MDate']; ?>
                                         </div>
                                         <div class="col-auto">
                                             <?php include "edit-form.php"; ?>
