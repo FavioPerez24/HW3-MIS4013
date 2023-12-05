@@ -13,7 +13,7 @@
   $data = [];
 
   while ($stat = $stats->fetch_assoc()) {
-    $labels[] = "'" . $stat['P.PName'] . "'";
+    $labels[] = "'" . $stat['Player_Name'] . "'";
     $data[] = $stat['Total_goals'];
   }
   ?>
