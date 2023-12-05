@@ -42,6 +42,14 @@
             <label for="Ppos" class="form-label">Position</label>
             <input type="text" class="form-control" id="Ppos" name="Ppos">
           </div>
+           <div class="mb-3">
+            <label for="Tid<?php echo $player['TID']; ?>" class="form-label">Team</label>
+<?php
+$teamList = selectTeamsForInput();
+$selectedTeam = $player['TID'];
+include "team-input-list.php";
+?>
+          </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
