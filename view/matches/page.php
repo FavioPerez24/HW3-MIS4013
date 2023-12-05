@@ -16,11 +16,11 @@
 <h1>Tournament Matches</h1>
   </div>
   <div class="col-auto">
+  </div>
 <?php
 include "new-form.php";
 ?>
   </div>
-</div>
 <div class="table-responsive">
   <table class="table">
     <thead>
