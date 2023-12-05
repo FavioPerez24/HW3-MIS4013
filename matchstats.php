@@ -31,7 +31,7 @@ if (isset($_POST['actionType'])) {
   }
 }
 
-$matches = selectMatches();
+$matches = selectMatchbyPlayer();
 Include "view/matchstats/page1.php";
 Include "view/footer.php";
 ?>
