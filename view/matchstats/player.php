@@ -5,7 +5,7 @@
                     <p class="card-text">
                         <ul class="list-group">
                             <?php
-                            $matches = selectPlayerByMatch($player['PID']);
+                            $matches = selectMatchbyPlayer($player['PID']);
                             while ($match = $matches->fetch_assoc()) {
                               include "match.php";
                            } 
