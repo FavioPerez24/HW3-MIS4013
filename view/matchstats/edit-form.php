@@ -19,7 +19,7 @@
             <div class="mb-3">
             <label for="Pid" class="form-label">Players</label>
 <?php
-$playerList = selectPlayersForInput();
+$playerList = selectPlayerForInput();
 $selectedPlayer = $player['PID'];
 include "player-input-list.php";
 ?>
@@ -27,7 +27,7 @@ include "player-input-list.php";
             <div class="mb-3">
             <label for="Mid" class="form-label">Match</label>
 <?php
-$matchList = selectMatchesForInput();
+$matchList = selectMatchForInput();
 $selectedMatch = $match['MID'];
 include "match-input-list.php";
 ?>
