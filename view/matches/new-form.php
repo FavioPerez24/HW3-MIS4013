@@ -39,6 +39,7 @@
           <div class="mb-3">
             <label for="Mcond" class="form-label">Conditions</label>
             <input type="text" class="form-control" id="Mcond" name="Mcond">
+          </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
