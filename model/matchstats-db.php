@@ -27,7 +27,7 @@ function selectMatchbyPlayer($Pid) {
     }
 }
 
-function selectMatchesForInput() {
+function selectMatchForInput() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT MID, MDetails, MDate, MConditions FROM `MatchGame` order by MDate");
@@ -41,7 +41,7 @@ function selectMatchesForInput() {
     }
 }
 
-function selectPlayersForInput() {
+function selectPlayerForInput() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT PID, PName, PNationality, PPosition, TID FROM `Player` order by PName");
