@@ -14,7 +14,7 @@
   </div>
   <div class="col-auto">
 <?php
-include "new-form.php";
+include "view/matches/new-form.php";
 ?>
   </div>
 </div>
@@ -39,7 +39,7 @@ include "new-form.php";
         <td><?php echo $match['MDetails']; ?></td>
         <td><?php echo $match['MConditions']; ?></td>
         <td><?php echo $match['MDate']; ?></td>
-        <td><?php include "edit-form.php"; ?></td>
+        <td><?php include "view/matches/edit-form.php"; ?></td>
         <td>
       <form method="post" action="">
         <input type="hidden" name="Mid" value="<?php echo $match['MID']; ?>">
