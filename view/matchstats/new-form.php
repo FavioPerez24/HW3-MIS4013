@@ -19,7 +19,7 @@
           <div class="mb-3">
             <label for="Pid" class="form-label">Player</label>
 <?php
-$playerList = selectPlayersForInput();
+$playerList = selectPlayerForInput();
 $selectedPlayer = 0;
 include "player-input-list.php";
 ?>
