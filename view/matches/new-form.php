@@ -29,15 +29,15 @@
           <div class="mb-3">
           <div class="mb-3">
          <div class="mb-3">
-            <label for="Mdet" class="form-label">Details</label>
+            <label for="MDetails" class="form-label">Details</label>
             <input type="text" class="form-control" id="Mdet" name="MDetails">
           </div>
                </div>
-            <label for="Mdate" class="form-label">Date</label>
+            <label for="MDate" class="form-label">Date</label>
             <input type="date" class="form-control" id="Mdate" name="MDate">
           </div>
           <div class="mb-3">
-            <label for="Mcond" class="form-label">Conditions</label>
+            <label for="MConditions" class="form-label">Conditions</label>
             <input type="text" class="form-control" id="Mcond" name="MConditions">
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
