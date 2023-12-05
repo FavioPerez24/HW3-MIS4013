@@ -11,13 +11,15 @@
 <div class="row">
   <div class="col">
 <h1>Our Players</h1>
-  </div>
+ </div>
   <div class="col-auto">
+    <div>
   </div>
 <?php
 include "new-form.php";
 ?>
   </div>
+</div>
 <div class="table-responsive">
   <table class="table">
     <thead>
