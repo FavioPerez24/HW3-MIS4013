@@ -41,19 +41,21 @@ include "new-form1.php";
     </thead>
     <tbody>
       <?php 
-      while ($match = $matches->fetch_assoc()) {
+      while ($stat = $stats->fetch_assoc()) {
       ?>
       <tr>
-        <td><?php echo $match['MID']; ?></td>
-        <td><?php echo $match['Goals_Scored']; ?></td>
-        <td><?php echo $match['Shoots']; ?></td>
-        <td><?php echo $match['Passes_Completed']; ?></td>
-        <td><?php echo $match['Chances_Created']; ?></td>
-        <td><?php echo $match['Miles_Run']; ?></td>
+        <td><?php echo $stat['M.MID']; ?></td>
+        <td><?php echo $stat['P.PName']; ?></td>
+        <td><?php echo $stat['M.MDetails']; ?></td>
+        <td><?php echo $stat['Goals_Scored']; ?></td>
+        <td><?php echo $stat['Shoots']; ?></td>
+        <td><?php echo $stat['Passes_Completed']; ?></td>
+        <td><?php echo $stat['Chances_Created']; ?></td>
+        <td><?php echo $stat['Miles_Run']; ?></td>
         <td><?php include "edit-form1.php"; ?></td>
         <td>
       <form method="post" action="">
-        <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
+        <input type="hidden" name="Msid" value="<?php echo $stat['MSID']; ?>">
         <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
