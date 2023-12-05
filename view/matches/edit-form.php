@@ -31,12 +31,12 @@
             <input type="text" class="form-control" id="Mdet<?php echo $match['MID']; ?>" name="Mdet" value="<?php echo $match['MDetails']; ?>">
           </div>
          <div class="mb-3">
-            <label for="Mcond<?php echo $match['MID']; ?>" class="form-label">Conditions</label>
-            <input type="text" class="form-control" id="Mcond<?php echo $match['MID']; ?>" name="Mcond" value="<?php echo $match['MConditions']; ?>">
-          </div>
-         <div class="mb-3">
             <label for="Mdate<?php echo $match['MID']; ?>" class="form-label">Date</label>
             <input type="date" class="form-control" id="Mdate<?php echo $match['MID']; ?>" name="Mdate" value="<?php echo $match['MDate']; ?>">
+          </div>
+          <div class="mb-3">
+            <label for="Mcond<?php echo $match['MID']; ?>" class="form-label">Conditions</label>
+            <input type="text" class="form-control" id="Mcond<?php echo $match['MID']; ?>" name="Mcond" value="<?php echo $match['MConditions']; ?>">
           </div>
             <input type="hidden" name="Mid" value="<?php echo $match['MID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
