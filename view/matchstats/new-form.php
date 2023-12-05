@@ -27,7 +27,7 @@ include "player-input-list.php";
           <div class="mb-3">
             <label for="Mid" class="form-label">Match</label>
 <?php
-$matchList = selectMatchesForInput();
+$matchList = selectMatchForInput();
 $selectedMatch = 0;
 include "match-input-list.php";
 ?>
