@@ -25,7 +25,7 @@
    <?php 
 $stats = selectStats();
   while ($stat = $stats->fetch_assoc()) {
-  echo "'" . $stat[ 'Pname'] . "', ";
+  echo "'" . $player[ 'Pname'] . "', ";
   }    
 ?>
     ]
