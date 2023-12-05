@@ -1,4 +1,4 @@
-<h1>Major's Distribution by Division</h1>
+<h1>Goals' Stats by Player</h1>
 <div>
   <canvas id="myChart"></canvas>
 </div>
@@ -13,8 +13,8 @@
     datasets: [{
         data: [
           <?php 
-  while ($major = $majors->fetch_assoc()) {
-  echo $major[ 'num_majors'] . ", ";
+  while ($stat = $stats->fetch_assoc()) {
+  echo $stat[ 'Total_goals'] . ", ";
   }    
 ?>
         ]
@@ -23,9 +23,9 @@
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
    <?php 
-$majors = selectMajors();
-  while ($major = $majors->fetch_assoc()) {
-  echo "'" . $major[ 'division'] . "', ";
+$stats = selectStats();
+  while ($stat = $stats->fetch_assoc()) {
+  echo "'" . $major[ 'Pname'] . "', ";
   }    
 ?>
     ]
