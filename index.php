@@ -35,7 +35,7 @@ Include "view/header.php";
 </script>  
 
 	<h1 class="headline">
-		The UEFA Collection.
+		The UEFA Collection
 	</h1>
 	<p class="tagline">
 		Where data meets talents
