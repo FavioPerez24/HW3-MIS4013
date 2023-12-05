@@ -1,7 +1,7 @@
                                 <li class="list-group-item">
                                     <div class="row">
                                         <div class="col">
-                                            <?php echo $match['MDetails']; ?> - <?php echo $match['MDate']; ?> - <?php echo $match['MConditions']; ?>
+                                            <?php echo $match['Mdet']; ?> - <?php echo $match['Mdat']; ?> - <?php echo $match['Mcond']; ?>
                                         </div>
                                         <div class="col-auto">
                                             <?php include "edit-form.php"; ?>
