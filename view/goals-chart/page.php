@@ -7,29 +7,27 @@
 <script>
   const ctx = document.getElementById('myChart');
 
-  new Chart(ctx, {
-    type: 'pie',
-    data: {
-    datasets: [{
-        data: [
-          <?php 
-  while ($stat = $stats->fetch_assoc()) {
-  echo $stat[ 'Total_goals'] . ", ";
-  }    
-?>
-        ]
-    }],
+  <?php
+  $stats = selectStats();
+  $labels = [];
+  $data = [];
 
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-   <?php 
-$stats = selectStats();
   while ($stat = $stats->fetch_assoc()) {
-  echo "'" . $player[ 'Pname'] . "', ";
-  }    
-?>
-    ]
-},
+    $labels[] = "'" . $stat['Pname'] . "'";
+    $data[] = $stat['Total_goals'];
+  }
+  ?>
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [<?php echo implode(', ', $labels); ?>],
+      datasets: [{
+        label: 'Total Goals per Player',
+        data: [<?php echo implode(', ', $data); ?>],
+      }],
+    },
   });
 </script>
-     
+
+
