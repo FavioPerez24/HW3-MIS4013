@@ -44,10 +44,7 @@ include "new-form1.php";
       while ($match = $matches->fetch_assoc()) {
       ?>
       <tr>
-        <td><?php echo $match['MSID']; ?></td>
-        <td><?php echo $player['PName']; ?></td>
-        <td><?php echo $player['MDetails']; ?></td>
-        <td><?php echo $match['MSID']; ?></td>
+        <td><?php echo $match['MID']; ?></td>
         <td><?php echo $match['Goals_Scored']; ?></td>
         <td><?php echo $match['Shoots']; ?></td>
         <td><?php echo $match['Passes_Completed']; ?></td>
