@@ -42,7 +42,6 @@
             <label for="Ppos" class="form-label">Position</label>
             <input type="text" class="form-control" id="Ppos" name="Ppos">
           </div>
-          
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
