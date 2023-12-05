@@ -30,8 +30,8 @@ function insertMatch($Mdet, $Mdate, $Mcond) {
 function updateMatch($Mdet, $Mdate, $Mcond, $Mid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `MatchGame` set `MDetails` = ?, `MDate`= ?, `MConditions`= ? where MID = ?");
-        $stmt->bind_param("sssi", $Mdet, $Mcond, $Mdate, $Mid);
+        $stmt = $conn->prepare(UPDATE `MatchGame` SET `MDetails` = '', `MDate` = '', `MConditions` = '' WHERE `MatchGame`.`MID` = ?");
+        $stmt->bind_param("sssi", $Mdet, $Mdate, $Mcond, $Mid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
