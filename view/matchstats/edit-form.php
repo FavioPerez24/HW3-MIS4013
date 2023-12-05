@@ -34,7 +34,23 @@ include "match-input-list.php";
           </div>
           <div class="mb-3">
             <label for="Goal<?php echo $match['MID']; ?>" class="form-label">Goals Scored</label>
-            <input type="text" class="form-control" id="Goal<?php echo $match['MID']; ?>" name="Goal" value="<?php echo $match['Goals_scored']; ?>">
+            <input type="text" class="form-control" id="Goal<?php echo $match['MID']; ?>" name="Goal" value="<?php echo $match['Goals_Scored']; ?>">
+          </div>
+        <div class="mb-3">
+            <label for="Shoots<?php echo $match['MID']; ?>" class="form-label">Shoots on Target</label>
+            <input type="text" class="form-control" id="Shoots<?php echo $match['MID']; ?>" name="Shoots" value="<?php echo $match['Shoots']; ?>">
+          </div>
+        <div class="mb-3">
+            <label for="Passes<?php echo $match['MID']; ?>" class="form-label">Passes Completed</label>
+            <input type="text" class="form-control" id="Passes<?php echo $match['MID']; ?>" name="Passes" value="<?php echo $match['Passes_Completed']; ?>">
+          </div>
+        <div class="mb-3">
+            <label for="Chances<?php echo $match['MID']; ?>" class="form-label">Chances Created</label>
+            <input type="text" class="form-control" id="Chances<?php echo $match['MID']; ?>" name="Chances" value="<?php echo $match['Chances_Created']; ?>">
+          </div>
+                <div class="mb-3">
+            <label for="Miles<?php echo $match['MID']; ?>" class="form-label">Miles Run</label>
+            <input type="text" class="form-control" id="Miles<?php echo $match['MID']; ?>" name="Miles" value="<?php echo $match['Miles_Run']; ?>">
           </div>
             <input type="hidden" name="Msid" value="<?php echo $match['MID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
