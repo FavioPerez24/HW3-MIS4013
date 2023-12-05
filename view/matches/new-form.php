@@ -29,16 +29,16 @@
           <div class="mb-3">
           <div class="mb-3">
          <div class="mb-3">
-            <label for="MDetails" class="form-label">Details</label>
-            <input type="text" class="form-control" id="MDetails" name="MDetails">
+            <label for="Mdet" class="form-label">Details</label>
+            <input type="text" class="form-control" id="Mdet" name="Mdetails">
           </div>
                </div>
-            <label for="MDate" class="form-label">Date</label>
-            <input type="date" class="form-control" id="MDate" name="MDate">
+            <label for="Mdate" class="form-label">Date</label>
+            <input type="date" class="form-control" id="Mdate" name="Mdate">
           </div>
           <div class="mb-3">
-            <label for="MConditions" class="form-label">Conditions</label>
-            <input type="text" class="form-control" id="MConditions" name="MConditions">
+            <label for="Mcond" class="form-label">Conditions</label>
+            <input type="text" class="form-control" id="Mcond" name="Mcond">
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
