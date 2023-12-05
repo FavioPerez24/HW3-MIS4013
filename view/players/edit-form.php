@@ -45,7 +45,7 @@
             <div class="mb-3">
             <label for="Tid<?php echo $player['TID']; ?>" class="form-label">Team</label>
 <?php
-$teamsList = selectTeamsForInput();
+$teamList = selectTeamsForInput();
 $selectedTeam = $player['TID'];
 include "team-input-list.php";
 ?>
