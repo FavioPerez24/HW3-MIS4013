@@ -31,7 +31,7 @@ if (isset($_POST['actionType'])) {
   }
 }
 
-$teams = selectPlayerbyTeam($_GET['Tid']);
+$teams = selectPlayerbyTeam($_GET['id']);
 Include "view/players/byteams/page.php";
 Include "view/footer.php";
 ?>
