@@ -4,7 +4,6 @@
                                             <?php echo $match['MDate']; ?>
                                         </div>
                                         <div class="col-auto">
-                                            <?php include "edit-form.php"; ?>
                                         </div>
                                         <div class="col-auto">
                                             <form method="post" action="">
