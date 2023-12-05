@@ -27,34 +27,6 @@ function selectMatchbyPlayer($Pid) {
     }
 }
 
-function selectMatchForInput() {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT MID, MDetails, MDate, MConditions FROM `MatchGame` order by MDate");
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-
-function selectPlayerForInput() {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT PID, PName, PNationality, PPosition, TID FROM `Player` order by PName");
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-
 function insertMatchStat($Mid, $Pid, $Goal, $Shoots, $Passes, $Chances, $Miles) {
     try {
         $conn = get_db_connection();
