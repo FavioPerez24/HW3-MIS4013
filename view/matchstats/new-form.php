@@ -34,23 +34,23 @@ include "match-input-list.php";
           </div>
         <div class="mb-3">
             <label for="Goal" class="form-label">Goals Scored</label>
-            <input type="text" class="form-control" id="Goal" name="Goal">
+            <input type="number" class="form-control" id="Goal" name="Goal">
           </div>
         <div class="mb-3">
             <label for="Shoots" class="form-label">Shoots on Target</label>
-            <input type="text" class="form-control" id="Shoots" name="Shoots">
+            <input type="number" class="form-control" id="Shoots" name="Shoots">
           </div>
         <div class="mb-3">
             <label for="Passes" class="form-label">Passes Completed</label>
-            <input type="text" class="form-control" id="Passes" name="Passes">
+            <input type="number" class="form-control" id="Passes" name="Passes">
           </div>
         <div class="mb-3">
             <label for="Chances" class="form-label">Chances Created</label>
-            <input type="text" class="form-control" id="Chances" name="Chances">
+            <input type="number" class="form-control" id="Chances" name="Chances">
           </div>
                 <div class="mb-3">
             <label for="Miles" class="form-label">Miles Run</label>
-            <input type="text" class="form-control" id="Miles" name="Miles">
+            <input type="number" class="form-control" id="Miles" name="Miles">
           </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
