@@ -26,9 +26,9 @@
       var chart = new Chart(ctx, {
          type: 'polarArea',
          data: {
-            labels: [<?php echo implode(', ', $labels); ?>],
+            labels: [<?php echo implode("', '", $labels); ?>],
             datasets: [{
-               label: [<?php echo implode(', ', $label); ?>],
+               label: [<?php echo implode("', '", $label); ?>],
                data: [<?php echo implode(', ', $data); ?>],
                backgroundColor: ['rgba(255, 99, 132, 0.5)']
             }]
