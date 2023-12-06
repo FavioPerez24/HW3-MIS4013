@@ -2,7 +2,7 @@
 function selectPlayers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT PID, PName AS Player_Name, PPosition as Position FROM `Player`");
+        $stmt = $conn->prepare("SELECT PID, PName AS Player_Name FROM `Player`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
