@@ -63,12 +63,18 @@
             </div>
           </div>
           <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+          <button class="w3-button w3-black w3-section w3-right" type="submit" onclick="showAlert()">SEND</button>
         </form>
       </div>
     </div>
   </div>
 
+	<script>
+        function showAlert() {
+            alert("Successfully sent!");
+        }
+    </script>
+	
 <script>
 var myIndex = 0;
 carousel();
