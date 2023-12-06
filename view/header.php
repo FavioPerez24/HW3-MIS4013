@@ -27,7 +27,7 @@ body {font-family: "Lato", sans-serif}
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
         <a href="goals-chart.php" class="w3-bar-item w3-button">TOP SCORERS</a>
         <a href="#" class="w3-bar-item w3-button">MARKET VALUE</a>
-        <a href="#" class="w3-bar-item w3-button">ARTICLES</a>
+        <a href="news.html" class="w3-bar-item w3-button">NEWS</a>
       </div>
     </div>
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
