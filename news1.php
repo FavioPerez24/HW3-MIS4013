@@ -3,20 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <title>Top Stories</title>
   <link rel="stylesheet" href="news-styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<section>
- <title>Top Stories</title>
 </head>
 <body>
+  <section>
   <article class="all-browsers">
     <h1>News Articles</h1>
     <article class="browser">
+      <style>
+        .text-bg-dark { color: black; background-color: white; } 
+      </style> 
       <h2>UEFA HIGHLIGHT</h2>
-      <div class="container accordion-container">
-        <h1>Most Recent</h1>
-        <div class="accordion text-bg-dark p-3" id="title">
+      <style>
+        .text-bg-dark { color: black; background-color: white; } 
+      </style> 
+    <div class="container accordion-container"> 
+      <h1>Most Recent</h1> 
+      <div class="accordion text-bg-dark p-3" id="title">
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -71,7 +76,7 @@ Jude Bellingham
   </div>  
 </div>
   </div>
-        </article>
+  </article>
  </section>
   <section>
    <?php include "news-section.php"; ?>
