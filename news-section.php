@@ -50,10 +50,10 @@
 <body>
     <div class="container">
         <div class="news-card">
-            <img src="https://via.placeholder.com/800x400" alt="">
+            <img src="https://cdn1.geordiebootboys.com/uploads/16/2023/11/GettyImages-1807994661-1140x760.jpg" alt="">
             <div class="card-body">
-                <h3>Manchester United vs Chelsea: Latest news</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non tellus lacus. Donec fringilla velit a velit malesuada, vel fringilla elit dignissim.</p>
+                <h3>Newcastle United vs PSG: Latest news</h3>
+                <p>In an electrifying showdown between Paris Saint-Germain (PSG) and Newcastle United, the match unfolded with intense moments and a spectacular display of skill. Tino Livramento, the rising star from Newcastle, etched his name in the headlines by delivering a stunning performance. As the clock ticked down, Livramento seized an opportune moment and scored a breathtaking goal that left spectators in awe. His precise footwork and strategic play secured a memorable victory for Newcastle, and fans erupted in joy as they celebrated the young talent's prowess on the field. The PSG-Newcastle clash will be remembered as a thrilling encounter, showcasing Livramento's remarkable contribution to his team's triumph.</p>
             </div>
             <div class="card-footer">
                 <a href="#">Read More</a>
