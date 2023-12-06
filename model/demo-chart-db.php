@@ -1,5 +1,5 @@
 <?php
-function selectStudents() {
+function selectPlayers() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT PNationality, COUNT(*) AS PlayersbyNat FROM Player GROUP BY PNationality");
