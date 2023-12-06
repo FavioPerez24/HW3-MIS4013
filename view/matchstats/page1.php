@@ -29,7 +29,7 @@ include "new-form1.php";
       <tr>
       <th>Match ID</th>
       <th>Player Name</th>
-      <th>MDetails<th>
+      <th>Details</th>
       <th>Goals</th>
       <th>Shoots On Target</th>
       <th>Passes Completed</th>
