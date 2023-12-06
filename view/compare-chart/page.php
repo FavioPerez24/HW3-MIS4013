@@ -20,7 +20,7 @@
   while ($stat = $stats->fetch_assoc()) {
     $labels[] = ['Goals', 'Shoots', 'Passes', 'Chances', 'Miles'];
    $label[] =  "'" . $stat['Player_Name'] . "'";
-    $data[] = $stat['Total_goals'], $stat['Total_shoots'], $stat['Total_passes'], $stat['Total_chances'], $stat['Total_miles'];
+    $data[] = [$stat['Total_goals'], $stat['Total_shoots'], $stat['Total_passes'], $stat['Total_chances'], $stat['Total_miles']];
   }
   ?>
       var chart = new Chart(ctx, {
