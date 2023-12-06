@@ -4,7 +4,7 @@ require_once("model/demo-chart-db.php");
 
 $pageTitle= "Player's Demographics";
 Include "view/header.php";
-$students = selectStudents();
+$players = selectPlayers();
 Include "view/demo-chart/page.php";
 Include "view/footer.php";
 ?>
