@@ -2,9 +2,9 @@
 require_once("model/connection.php");
 require_once("model/students-chart-db.php");
 
-$pageTitle= "Students Chart";
+$pageTitle= "Performance Comparison Chart";
 Include "view/header.php";
-$students = selectStudents();
-Include "view/students-chart/page.php";
+$stats = selectStats();
+Include "view/compare-chart/page.php";
 Include "view/footer.php";
 ?>
