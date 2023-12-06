@@ -2,15 +2,15 @@
   <h1>OUR CHARTS</h1>
 </section>
     <div>
-      <div>
-  <canvas id="myChart"></canvas>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     </div>
 <section>
 <h1>Goals' Stats by Player</h1>
-<div></div>
+<div>
+  div>
+  <canvas id="myChart"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</div>
 <script>
   const ctx = document.getElementById('myChart');
 
@@ -39,7 +39,12 @@
 </section>
 <section>
   <h1>Player's Nationalities</h1>
-<div></div>
+<div>
+  div>
+  <canvas id="myChart"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</div>
 
 <script>
   const ctx = document.getElementById('myChart');
