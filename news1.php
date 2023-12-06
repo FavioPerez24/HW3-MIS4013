@@ -34,8 +34,8 @@
 <body>
   <section>
     <div>
-      <h1 class="browsers">
-    <h1>Weekly Highlights</h1>
+      <h1 class="browsers" name="Weekly Highlights">
+    <h1></h1>
     </div>
    <?php include "news-section.php"; ?>
   </section>
