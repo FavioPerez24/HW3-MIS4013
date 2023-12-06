@@ -13,7 +13,7 @@
   $data = [];
 
   while ($player = $players->fetch_assoc()) {
-    $labels[] = "'" . $player['PNationalities'] . "'";
+    $labels[] = "'" . $player['PNationality'] . "'";
     $data[] = $player['PlayersbyNat'];
   }
   ?>
