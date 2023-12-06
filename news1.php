@@ -19,12 +19,22 @@
         text-align: center; 
         line-height: 1.5;
         }
+  .browsers {
+            background-color: white;
+            padding: 20px; 
+        margin: 10px; 
+        color: #333;
+        font-family: 'Arial', sans-serif; 
+        font-size: 3em; 
+        text-align: center; 
+        line-height: 2.5;
+        }
     </style>
 </head>
 <body>
   <section>
+      <article class="browsers">
     <h1>Weekly Highlights</h1>
-      <div class="accordion text-bg-dark p-3" id="title">
    <?php include "news-section.php"; ?>
   </section>
   <section>
