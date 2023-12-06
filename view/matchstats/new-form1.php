@@ -30,12 +30,21 @@
           <div class="mb-3">
          <div class="mb-3">
             <label for="Pname" class="form-label">Player Name</label>
-            <input type="text" class="form-control" id="Pname" name="Pname">
+<?php
+$playerList = selectPlayerForInput();
+$selectedPlayer = 0;
+include "player-input-list.php";
+?>
           </div>
-               </div>
+          <div class="mb-3">
             <label for="Mdet" class="form-label">Match Details</label>
-            <input type="text" class="form-control" id="Mdet" name="Mdet">
+<?php
+$matchList = selectMatchForInput();
+$selectedMatch = 0;
+include "match-input-list.php";
+?>
           </div>
+  
           <div class="mb-3">
             <label for="Goal" class="form-label">Goals Scored</label>
             <input type="number" class="form-control" id="Goal" name="Goal">
