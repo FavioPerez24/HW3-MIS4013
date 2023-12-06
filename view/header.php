@@ -30,7 +30,10 @@ body {font-family: "Lato", sans-serif}
         <a href="news.html" class="w3-bar-item w3-button">NEWS</a>
       </div>
     </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    <form class="d-flex">
+                            <input class="form-control me-2" type="text" id="newsQuery" placeholder="Search news">
+                            <button class="btn btn-outline-warning" type="button" id="searchBtn">Search</button>
+                        </form>
   </div>
 </div>
   
