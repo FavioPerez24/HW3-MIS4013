@@ -45,7 +45,6 @@ include "new-form1.php";
       ?>
       <tr>
         <td><?php echo $player['PName']; ?></td>
-}        
 <?php
   $matches = selectMatchByPlayer($player['PID']);
   while ($match = $matches->fetch_assoc()) {
@@ -80,3 +79,4 @@ include "new-form1.php";
 </div>
   </body>
 </html>
+      }
