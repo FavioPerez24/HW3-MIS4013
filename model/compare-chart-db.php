@@ -2,7 +2,7 @@
 function selectStats() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT P.PName, count(E.Enrollment_ID) as num_enrollments FROM `Student` S join `Enrollment` E on E.Student_ID=S.Student_ID group by Student_FirstName");
+        $stmt = $conn->prepare("SELECT P.PID, P.PName AS Player_Name, SUM(Goals_Scored) AS Total_goals, SUM(Shoots) AS Total_shoots, SUM(Passes_Completed) AS Total_passes, SUM(Chances_Created) AS Total_chances, SUM(Miles_Run) AS Total_miles FROM Player P LEFT JOIN MatchStats MS ON P.PID = MS.PID LEFT JOIN MatchGame M ON MS.MID= M.MID GROUP BY P.PID, P.PName");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
