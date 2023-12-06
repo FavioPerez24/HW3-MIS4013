@@ -32,7 +32,6 @@ include "new-form.php";
       <th></th>
       <th></th>
         <th></th>
-        <th></th>
       </tr>
     </thead>
 <tbody>
@@ -59,7 +58,6 @@ include "new-form.php";
       </form>
     </td>
         <td><a href="player-by-team.php?id=<?php echo $player['PID']; ?>">Team</a></td>
-        <td><a href="match-by-player.php?id=<?php echo $player['PID']; ?>">Matches</a></td>
       </tr>
       <?php
       }
