@@ -27,7 +27,7 @@
   </section>
   <section>
   <article class="all-browsers">
-    <h1>News Articles</h1>
+    <h1>Performance Reports</h1>
       <div class="accordion text-bg-dark p-3" id="title">
   <div class="accordion-item">
     <h2 class="accordion-header">
