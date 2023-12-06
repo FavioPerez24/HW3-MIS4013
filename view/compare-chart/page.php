@@ -1,6 +1,4 @@
-
-   <title>Players Polar Area Chart</title>
-</head>
+<h1>Players Performance</h1>
    <div>
   <canvas id="myChart"></canvas>
 </div>
