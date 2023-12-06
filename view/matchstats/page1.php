@@ -57,10 +57,7 @@ include "new-form1.php";
         <td><?php echo $match['Chances_Created']; ?></td>
         <td><?php echo $match['Miles_Run']; ?></td>
         <td><?php include "edit-form1.php"; ?></td>
-        <td>
-<?php
-    } 
-    ?>    
+        <td>  
       <form method="post" action="">
         <input type="hidden" name="Msid" value="<?php echo $stat['MSID']; ?>">
         <input type="hidden" name="actionType" value="Delete">
@@ -72,6 +69,9 @@ include "new-form1.php";
         </button>
       </form>
     </td>
+        <?php
+    } 
+    ?>  
       </tr>
       <?php
       }
