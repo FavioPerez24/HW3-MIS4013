@@ -1,4 +1,4 @@
-<h1>Graduation Statistics</h1>
+<h1>Player's Nationalities</h1>
 <div>
   <canvas id="myChart"></canvas>
 </div>
@@ -11,7 +11,7 @@
     type: 'line',
     data: {
     datasets: [{
-      label: 'Player's Nationalities',  
+      label: 'Countries',  
       data: [
           <?php 
   while ($player = $players->fetch_assoc()) {
