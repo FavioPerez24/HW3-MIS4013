@@ -41,7 +41,7 @@ include "new-form1.php";
     </thead>
     <tbody>
       <?php 
-      while ($stat = $stats->fetch_assoc()) {
+      while ($player = $players->fetch_assoc()) {
       ?>
       <tr>
         <td><?php echo $stat['MID']; ?></td>
