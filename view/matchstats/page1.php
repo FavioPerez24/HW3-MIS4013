@@ -41,7 +41,7 @@ include "new-form1.php";
     </thead>
     <tbody>
       <?php 
-      while ($match = $mathes->fetch_assoc()) {
+      while ($match = $matches->fetch_assoc()) {
       ?>
       <tr>
         <td><?php echo $stat['MID']; ?></td>
