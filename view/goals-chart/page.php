@@ -4,6 +4,7 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+<section>
 <script>
   const ctx = document.getElementById('myChart');
 
@@ -29,5 +30,9 @@
     },
   });
 </script>
+</section>
+<section>
+  <h1>Home</h1>
+</section>
 
 
