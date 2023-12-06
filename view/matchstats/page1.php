@@ -41,17 +41,22 @@ include "new-form1.php";
     </thead>
     <tbody>
       <?php 
-      while ($match = $matches->fetch_assoc()) {
+      while ($player = $players->fetch_assoc()) {
       ?>
       <tr>
-        <td><?php echo $stat['MID']; ?></td>
-        <td><?php echo $stat['PName']; ?></td>
-        <td><?php echo $stat['MDetails']; ?></td>
-        <td><?php echo $stat['Goals_Scored']; ?></td>
-        <td><?php echo $stat['Shoots']; ?></td>
-        <td><?php echo $stat['Passes_Completed']; ?></td>
-        <td><?php echo $stat['Chances_Created']; ?></td>
-        <td><?php echo $stat['Miles_Run']; ?></td>
+        <td><?php echo $player['PName']; ?></td>
+        
+<?php
+  $matches = selectMatchesByPlayer($player['PID']);
+  while ($match = $matches->fetch_assoc()) {
+?>
+        <td><?php echo $match['MID']; ?></td>
+        <td><?php echo $match['MDetails']; ?></td>
+        <td><?php echo $match['Goals_Scored']; ?></td>
+        <td><?php echo $match['Shoots']; ?></td>
+        <td><?php echo $match['Passes_Completed']; ?></td>
+        <td><?php echo $match['Chances_Created']; ?></td>
+        <td><?php echo $match['Miles_Run']; ?></td>
         <td><?php include "edit-form1.php"; ?></td>
         <td>
       <form method="post" action="">
