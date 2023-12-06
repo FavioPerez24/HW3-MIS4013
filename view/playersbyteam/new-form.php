@@ -29,7 +29,7 @@
             <label for="Tid<?php echo $player['TID']; ?>" class="form-label">Team Name</label>
 <?php
 $teamList = selectTeamsForInput();
-$selectedTeam = $team['TID'];
+$selectedTeam = 0;
 include "team-input-list.php";
 ?>
           </div>
