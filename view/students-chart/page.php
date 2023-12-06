@@ -12,18 +12,25 @@
    </div>
    <script>
       var ctx = document.getElementById('polarChart').getContext('2d');
+      <?php
+  $stats = selectStats();
+  $labels = [];
+  $data = [];
+
+  while ($stat = $stats->fetch_assoc()) {
+    $labels[] = $stat['Goals'], $stat['Shoots'], $stat['Passes'], $stat['Chances'], $stat['Miles'];
+   $label[] =  "'" . $stat['Player_Name'] . "'";
+    $data[] = $stat['Total_goals'], $stat['Total_shoots'], $stat['Total_passes'], $stat['Total_chances'], $stat['Total_miles'];
+  }
+  ?>
       var chart = new Chart(ctx, {
          type: 'polarArea',
          data: {
-            labels: ['Goals', 'Passes', 'Chances', 'Miles', 'Shoots'],
+            labels: [<?php echo implode(', ', $labels); ?>],
             datasets: [{
-               label: 'Player A',
-               data: [20, 10, 5, 30, 25],
+               label: [<?php echo implode(', ', $label); ?>],
+               data: [<?php echo implode(', ', $data); ?>],
                backgroundColor: ['rgba(255, 99, 132, 0.5)']
-            }, {
-               label: 'Player B',
-               data: [15, 8, 4, 25, 20],
-               backgroundColor: ['rgba(75, 192, 192, 0.5)']
             }]
          },
          options: {
@@ -35,5 +42,3 @@
          }
       });
    </script>
-</body>
-</html>
