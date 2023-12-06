@@ -27,7 +27,7 @@
             $playerData = [];
             ?>
             <div>
-                <h2><?php echo $player['PName']; ?></h2>
+                <h2><?php echo $player['Player_Name']; ?></h2>
                 <canvas id="myChart<?php echo $player['PID']; ?>"></canvas>
             </div>
 
@@ -48,7 +48,7 @@
                     data: {
                         labels: chartData<?php echo $player['PID']; ?>.labels,
                         datasets: [{
-                            label: '<?php echo $player['PName']; ?>',
+                            label: '<?php echo $player['Player_Name']; ?>',
                             data: chartData<?php echo $player['PID']; ?>.data,
                             backgroundColor: chartData<?php echo $player['PID']; ?>.backgroundColor
                         }]
