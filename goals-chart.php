@@ -6,6 +6,6 @@ $pageTitle= "Goals per Player";
 Include "view/header.php";
 $stats = selectStats();
 Include "view/goals-chart/page.php";
-Include "view/demo-chart/page.php
+Include "demo-chart.php
 Include "view/footer.php";
 ?>
