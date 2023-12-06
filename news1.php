@@ -9,44 +9,78 @@
  <title>Top Stories</title>
 </head>
 <body>
- <div class="container">
-    <article>
-      <h2>Pedri: A Fall From Grace?</h2>
-      <button class="btn btn-primary" onclick="toggleReadMore('article1')">
-        Read More
+  <article class="all-browsers">
+    <h1>News Articles</h1>
+    <article class="browser">
+      <h2>UEFA HIGHLIGHT</h2>
+      <div class="container accordion-container">
+        <h1>Most Recent</h1>
+        <div class="accordion text-bg-dark p-3" id="title">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Rico Lewis
       </button>
-      <div id="article1" class="read-more">
-        Potential flop in the market. Pedri's impressive performance in the 2020-2021 season for Barcelona did not continue in the 2021-2022 season. Although he started the season with great promise, Pedri struggled to find the consistency he showed during the previous campaign. Despite scoring only 2 goals and assisting in 4 more, his impact on the team was diminished. As the season progresses, Barcelona fans and pundits alike are eagerly awaiting Pedri's return to form.
-        <br><br>
-        In summary, while Pedri displayed exceptional skills and promise during the 2020-2021 season, his 2021-2022 season has been a letdown thus far. With increased scrutiny and expectations, it will be crucial for Pedri to regain his form and contribute significantly to Barcelona's success in the coming season.
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Potential rise in its market value. </strong>In the 2020-2021 season, Rico Lewis displayed an impressive performance for Manchester City, scoring 11 goals and contributing to 7 assists in the Premier League. However, the 2021-2022 season has been less successful for Lewis, with only 1 goal and 2 assists to his name so far. This downturn in form has led to increased scrutiny from fans and pundits, with some suggesting that the team's attacking structure may be impacting his effectiveness.
       </div>
-    </article>
-    <article>
-      <h2>Victor Osimhen: Back On Track?</h2>
-      <button class="btn btn-primary" onclick="toggleReadMore('article2')">
-        Read More
-      </button>
-      <div id="article2" class="read-more">
-        Potential move in season 2024/2025. In his debut season with Napoli, Victor Osimhen made an immediate impact by scoring 24 goals and assisting in 6 more. Despite a promising start, Osimhen's performance took a downturn after suffering a foot injury. However, Osimhen has since recovered and made his return to the pitch, vowing to continue contributing to Napoli's success in the remaining games of the season.
-      </div>
-    </article>
-    <article>
-      <h2>Jude Bellingham: A Bitter Return</h2>
-      <button class="btn btn-primary" onclick="toggleReadMore('article3')">
-        Read More
-      </button>
-      <div id="article3" class="read-more">
-        Next Ballon D' Or short-list. Jude Bellingham, the highly-touted 17-year-old winger at Real Madrid and Dortmund, continued to impress during his first professional season. He showed off his incredible technique and creativity, often dictating the pace of play for both clubs. However, his progression was halted after sustaining a muscle injury that sidelined him for several weeks. Upon returning to the field, Bellingham demonstrated his unwavering determination to overcome adversity, once again impressing coaches and teammates with his abilities.
-      </div>
-    </article>
- </div>
+    </div>
+  </div>
 
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Pedri
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Potential flop in the market. </strong> Pedri's impressive performance in the 2020-2021 season for Barcelona did not continue in the 2021-2022 season. Although he started the season with great promise, Pedri struggled to find the consistency he showed during the previous campaign. Despite scoring only 2 goals and assisting in 4 more, his impact on the team was diminished. As the season progresses, Barcelona fans and pundits alike are eagerly awaiting Pedri's return to form.
+In summary, while Pedri displayed exceptional skills and promise during the 2020-2021 season, his 2021-2022 season has been a letdown thus far. With increased scrutiny and expectations, it will be crucial for Pedri to regain his form and contribute significantly to Barcelona's success in the coming season.
+      </div>
+    </div>
+  </div>
+       
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Victor Osimhen
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Potential move in season 2024/2025. </strong>In his debut season with Napoli, Victor Osimhen made an immediate impact by scoring 24 goals and assisting in 6 more. Despite a promising start, Osimhen's performance took a downturn after suffering a foot injury. However, Osimhen has since recovered and made his return to the pitch, vowing to continue contributing to Napoli's success in the remaining games of the season.
+      </div>
+    </div>
+  </div>
+       
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+Jude Bellingham
+      </button>
+          <button class="btn btn-primary" onclick="toggleReadMore('article3')">
+        Read More
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Next Ballon D' Or short-list. </strong>Jude Bellingham, the highly-touted 17-year-old winger at Real Madrid and Dortmund, continued to impress during his first professional season. He showed off his incredible technique and creativity, often dictating the pace of play for both clubs. However, his progression was halted after sustaining a muscle injury that sidelined him for several weeks. Upon returning to the field, Bellingham demonstrated his unwavering determination to overcome adversity, once again impressing coaches and teammates with his talent and tenacity.
+      </div>
+    </div>
+  </div>
+       
+</div>
+  </div>
  <script>
     function toggleReadMore(articleID) {
       const article = document.getElementById(articleID);
       article.classList.toggle('show');
     }
  </script>
+        </article>
  </section>
   <section>
    <?php include "news-section.php"; ?>
