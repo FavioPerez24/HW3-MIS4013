@@ -33,7 +33,7 @@
 </head>
 <body>
   <section>
-      <article class="browsers">
+      <h1 class="browsers">
     <h1>Weekly Highlights</h1>
    <?php include "news-section.php"; ?>
   </section>
