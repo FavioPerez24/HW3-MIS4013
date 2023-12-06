@@ -1,8 +1,8 @@
 <?php
-function selectStats() {
+function selectPlayers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT MSID, M.MID, M.MDetails, Goals_Scored, Shoots, Passes_Completed, Chances_Created, Miles_Run FROM MatchGame M JOIN MatchStats MS ON M.MID = MS.MID WHERE MS.PID = ?");
+        $stmt = $conn->prepare("SELECT PID, PName, PPosition FROM `Player`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
