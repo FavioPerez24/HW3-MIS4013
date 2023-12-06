@@ -44,9 +44,9 @@ include "new-form1.php";
       while ($stat = $stats->fetch_assoc()) {
       ?>
       <tr>
-        <td><?php echo $stat['M.MID']; ?></td>
-        <td><?php echo $stat['P.PName']; ?></td>
-        <td><?php echo $stat['M.MDetails']; ?></td>
+        <td><?php echo $stat['MID']; ?></td>
+        <td><?php echo $stat['PName']; ?></td>
+        <td><?php echo $stat['MDetails']; ?></td>
         <td><?php echo $stat['Goals_Scored']; ?></td>
         <td><?php echo $stat['Shoots']; ?></td>
         <td><?php echo $stat['Passes_Completed']; ?></td>
