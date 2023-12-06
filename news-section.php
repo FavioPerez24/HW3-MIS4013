@@ -60,20 +60,20 @@
             </div>
         </div>
         <div class="news-card">
-            <img src="https://via.placeholder.com/800x400" alt="">
+            <img src="https://prod-media.beinsports.com/image/1696111251535_f53fafe6-816f-4e88-aafb-d992b8867849.1080.jpg" alt="">
             <div class="card-body">
-                <h3>Arsenal vs Tottenham: Latest news</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non tellus lacus. Donec fringilla velit a velit malesuada, vel fringilla elit dignissim.</p>
+                <h3>Real Madrid vs Napoli: Latest news</h3>
+                <p>In a riveting encounter between football giants Real Madrid and Napoli, the pitch became a battleground for an exhilarating clash. Victor Osimhen, the prolific striker for Napoli, showcased his goal-scoring prowess with a clinical finish that sent shockwaves through the Madrid defense. Not to be outdone, Jude Bellingham, the dynamic midfielder, added to the spectacle with a remarkable goal, displaying his technical finesse and football intelligence. The match unfolded as a symphony of skill and strategy, with both teams delivering a breathtaking performance. In the end, the goals by Osimhen and Bellingham proved decisive, etching their names into the annals of the match's history and securing a triumphant victory for Napoli against the formidable Real Madrid. The electrifying showdown left fans on the edge of their seats, savoring the brilliance of these two standout players.</p>
             </div>
             <div class="card-footer">
                 <a href="#">Read More</a>
             </div>
         </div>
         <div class="news-card">
-            <img src="https://via.placeholder.com/800x400" alt="">
+            <img src="https://leseng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2023/08/27/node_533473/30410981/public/2023/08/27/4177986.jpeg?itok=o9kroIgg1693151579" alt="">
             <div class="card-body">
-                <h3>Liverpool vs Manchester City: Latest news</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non tellus lacus. Donec fringilla velit a velit malesuada, vel fringilla elit dignissim.</p>
+                <h3>RB Leipzig vs Manchester City: Latest news</h3>
+                <p>In a gripping encounter between RB Leipzig and Manchester City, the match unfolded with an exhilarating display of teamwork and individual brilliance. Rico Lewis, the maestro from RB Leipzig, took center stage as he orchestrated two impeccable assists that set the tone for his team's attacking prowess. With precision and vision, Lewis provided the perfect setups, leaving the Manchester City defense scrambling. Jeremy Doku, seizing the opportunities created by Lewis, showcased his clinical finishing with a remarkable goal that ignited the crowd. The match ended with RB Leipzig emerging victorious, their dynamic duo of Lewis and Doku leaving an indelible mark on the thrilling contest, and fans reveling in the team's stunning performance.</p>
             </div>
             <div class="card-footer">
                 <a href="#">Read More</a>
