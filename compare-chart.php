@@ -1,6 +1,6 @@
 <?php
 require_once("model/connection.php");
-require_once("model/students-chart-db.php");
+require_once("model/compare-chart-db.php");
 
 $pageTitle= "Performance Comparison Chart";
 Include "view/header.php";
