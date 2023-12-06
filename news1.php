@@ -61,25 +61,15 @@ In summary, while Pedri displayed exceptional skills and promise during the 2020
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
 Jude Bellingham
       </button>
-          <button class="btn btn-primary" onclick="toggleReadMore('article3')">
-        Read More
-      </button>
     </h2>
     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <strong>Next Ballon D' Or short-list. </strong>Jude Bellingham, the highly-touted 17-year-old winger at Real Madrid and Dortmund, continued to impress during his first professional season. He showed off his incredible technique and creativity, often dictating the pace of play for both clubs. However, his progression was halted after sustaining a muscle injury that sidelined him for several weeks. Upon returning to the field, Bellingham demonstrated his unwavering determination to overcome adversity, once again impressing coaches and teammates with his talent and tenacity.
       </div>
     </div>
-  </div>
-       
+  </div>  
 </div>
   </div>
- <script>
-    function toggleReadMore(articleID) {
-      const article = document.getElementById(articleID);
-      article.classList.toggle('show');
-    }
- </script>
         </article>
  </section>
   <section>
