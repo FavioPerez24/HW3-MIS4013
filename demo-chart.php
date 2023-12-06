@@ -1,10 +1,10 @@
 <?php
 require_once("model/connection.php");
-require_once("model/graduation-line-db.php");
+require_once("model/demo-chart-db.php");
 
-$pageTitle= "Graduation Statistics";
+$pageTitle= "Player's Demographics";
 Include "view/header.php";
 $students = selectStudents();
-Include "view/graduation-line/page.php";
+Include "view/demo-chart/page.php";
 Include "view/footer.php";
 ?>
