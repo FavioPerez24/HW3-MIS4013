@@ -47,7 +47,7 @@ include "new-form1.php";
         <td><?php echo $player['PName']; ?></td>
 }        
 <?php
-  $matches = selectMatchesByPlayer($player['PID']);
+  $matches = selectMatchByPlayer($player['PID']);
   while ($match = $matches->fetch_assoc()) {
 ?>
         <td><?php echo $match['MID']; ?></td>
