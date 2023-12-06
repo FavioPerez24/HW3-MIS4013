@@ -20,11 +20,11 @@
    function getChartData($stat) {
       $labels = ['Goals', 'Shoots', 'Passes', 'Chances', 'Miles'];
       $data = [
-         $stat['Total_goals'],
-         $stat['Total_shoots'],
-         $stat['Total_passes'],
-         $stat['Total_chances'],
-         $stat['Total_miles']
+         isset($player['Total_goals']) ? $player['Total_goals'] : 0,
+        isset($player['Total_shoots']) ? $player['Total_shoots'] : 0,
+        isset($player['Total_passes']) ? $player['Total_passes'] : 0,
+        isset($player['Total_chances']) ? $player['Total_chances'] : 0,
+        isset($player['Total_miles']) ? $player['Total_miles'] : 0,
       ];
 
       return [
