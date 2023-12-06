@@ -1,5 +1,5 @@
 <section>
-  <h1>OUR CHARTS/h1>
+  <h1>OUR CHARTS</h1>
 </section>
     <div>
     </div>
