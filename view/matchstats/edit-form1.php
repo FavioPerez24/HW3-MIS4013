@@ -27,8 +27,8 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="Pname<?php echo $match['MID']; ?>" class="form-label">Player Name</label>
-            <input type="text" class="form-control" id="Pname<?php echo $match['MID']; ?>" name="Pname" value="<?php echo $match['PName']; ?>">
+            <label for="Pname<?php echo $player['PID']; ?>" class="form-label">Player Name</label>
+            <input type="text" class="form-control" id="Pname<?php echo $player['PID']; ?>" name="Pname" value="<?php echo $player['PName']; ?>">
           </div>
          <div class="mb-3">
             <label for="Mdet<?php echo $match['MID']; ?>" class="form-label">Match Details</label>
