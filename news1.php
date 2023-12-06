@@ -23,6 +23,8 @@
 </head>
 <body>
   <section>
+    <h1>Weekly Highlights</h1>
+      <div class="accordion text-bg-dark p-3" id="title">
    <?php include "news-section.php"; ?>
   </section>
   <section>
