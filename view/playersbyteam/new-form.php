@@ -37,6 +37,10 @@ include "team-input-list.php";
             <label for="Tcountry" class="form-label">Country</label>
             <input type="text" class="form-control" id="Tcountry" name="Tcountry">
           </div>
+          <div class="mb-3">
+            <label for="Tcoach" class="form-label">Coach</label>
+            <input type="text" class="form-control" id="Tcoach" name="Tcoach">
+          </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
