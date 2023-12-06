@@ -1,10 +1,13 @@
+<section>
+  <h1>Home</h1>
+</section>
+<section>
 <h1>Goals' Stats by Player</h1>
 <div>
   <canvas id="myChart"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<section>
 <script>
   const ctx = document.getElementById('myChart');
 
@@ -32,7 +35,6 @@
 </script>
 </section>
 <section>
-  <h1>Home</h1>
+  
 </section>
-
 
