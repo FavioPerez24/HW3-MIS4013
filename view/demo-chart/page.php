@@ -11,11 +11,11 @@
     type: 'line',
     data: {
     datasets: [{
-      label: '# of Graduates per Year',  
+      label: 'Player's Nationalities',  
       data: [
           <?php 
   while ($student = $students->fetch_assoc()) {
-  echo $student[ 'num_grad'] . ", ";
+  echo $student[ 'PlayersbyNat'] . ", ";
   }    
 ?>
         ]
@@ -26,7 +26,7 @@
    <?php 
 $students = selectStudents();
   while ($student = $students->fetch_assoc()) {
-  echo "'" . $student[ 'Graduation_Year'] . "', ";
+  echo "'" . $student[ 'PNationality'] . "', ";
   }    
 ?>
     ]
