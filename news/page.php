@@ -1,6 +1,8 @@
+<div>
 <?php
 Include "view/header.php";
 ?>
+</div>
 <!doctype html>
 <html lang="en">
 <head>
