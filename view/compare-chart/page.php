@@ -17,7 +17,7 @@
 
 <script>
    <?php
-   function getChartData($stat) {
+   function getChartData($player) {
       $labels = ['Goals', 'Shoots', 'Passes', 'Chances', 'Miles'];
       $data = [
          isset($player['Total_goals']) ? $player['Total_goals'] : 0,
