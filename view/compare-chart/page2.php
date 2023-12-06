@@ -1,4 +1,10 @@
-    <div class="row">
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="row">
         <div class="col">
             <h1>Players Performance</h1>
         </div>
@@ -52,5 +58,3 @@
 
         <?php } ?>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
