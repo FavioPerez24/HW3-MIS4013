@@ -17,44 +17,44 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="editMatchStatsModal<?php echo $stat['MID']; ?>" tabindex="-1" aria-labelledby="editMatchStatsModalLabel<?php echo $stat['MID']; ?>" aria-hidden="true">
+<div class="modal fade" id="editMatchStatsModal<?php echo $match['MID']; ?>" tabindex="-1" aria-labelledby="editMatchStatsModalLabel<?php echo $match['MID']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editMatchStatsModalLabel<?php echo $stat['MID']; ?>">Edit match</h1>
+        <h1 class="modal-title fs-5" id="editMatchStatsModalLabel<?php echo $match['MID']; ?>">Edit match</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="Pname<?php echo $stat['MID']; ?>" class="form-label">Player Name</label>
-            <input type="text" class="form-control" id="Pname<?php echo $stat['MID']; ?>" name="Pname" value="<?php echo $stat['PName']; ?>">
+            <label for="Pname<?php echo $match['MID']; ?>" class="form-label">Player Name</label>
+            <input type="text" class="form-control" id="Pname<?php echo $match['MID']; ?>" name="Pname" value="<?php echo $match['PName']; ?>">
           </div>
          <div class="mb-3">
-            <label for="Mdet<?php echo $stat['MID']; ?>" class="form-label">Match Details</label>
-            <input type="text" class="form-control" id="Mdet<?php echo $stat['MID']; ?>" name="Mdet" value="<?php echo $stat['MDetails']; ?>">
+            <label for="Mdet<?php echo $match['MID']; ?>" class="form-label">Match Details</label>
+            <input type="text" class="form-control" id="Mdet<?php echo $match['MID']; ?>" name="Mdet" value="<?php echo $match['MDetails']; ?>">
           </div>
           <div class="mb-3">
-            <label for="Goal<?php echo $stat['MID']; ?>" class="form-label">Goals Scored</label>
-            <input type="number" class="form-control" id="Goal<?php echo $stat['MID']; ?>" name="Goal" value="<?php echo $stat['Goals_Scored']; ?>">
+            <label for="Goal<?php echo $match['MID']; ?>" class="form-label">Goals Scored</label>
+            <input type="number" class="form-control" id="Goal<?php echo $match['MID']; ?>" name="Goal" value="<?php echo $match['Goals_Scored']; ?>">
           </div>
           <div class="mb-3">
-            <label for="Shoots<?php echo $stat['MID']; ?>" class="form-label">Shoots On Target</label>
-            <input type="number" class="form-control" id="Shoots<?php echo $stat['MID']; ?>" name="Shoots" value="<?php echo $stat['Shoots']; ?>">
+            <label for="Shoots<?php echo $match['MID']; ?>" class="form-label">Shoots On Target</label>
+            <input type="number" class="form-control" id="Shoots<?php echo $match['MID']; ?>" name="Shoots" value="<?php echo $match['Shoots']; ?>">
           </div>
           <div class="mb-3">
-            <label for="Passes<?php echo $stat['MID']; ?>" class="form-label">Passes Completed</label>
-            <input type="number" class="form-control" id="Passes<?php echo $stat['MID']; ?>" name="Passes" value="<?php echo $stat['Passes_Completed']; ?>">
+            <label for="Passes<?php echo $match['MID']; ?>" class="form-label">Passes Completed</label>
+            <input type="number" class="form-control" id="Passes<?php echo $match['MID']; ?>" name="Passes" value="<?php echo $match['Passes_Completed']; ?>">
           </div>
           <div class="mb-3">
-            <label for="Chances<?php echo $stat['MID']; ?>" class="form-label">Chances Created</label>
-            <input type="number" class="form-control" id="Chances<?php echo $stat['MID']; ?>" name="Chances" value="<?php echo $stat['Chances_Created']; ?>">
+            <label for="Chances<?php echo $match['MID']; ?>" class="form-label">Chances Created</label>
+            <input type="number" class="form-control" id="Chances<?php echo $match['MID']; ?>" name="Chances" value="<?php echo $match['Chances_Created']; ?>">
           </div>
           <div class="mb-3">
-            <label for="Miles<?php echo $stat['MID']; ?>" class="form-label">Miles Run</label>
-            <input type="number" class="form-control" id="Miles<?php echo $stat['MID']; ?>" name="Miles" value="<?php echo $stat['Miles_Run']; ?>">
+            <label for="Miles<?php echo $match['MID']; ?>" class="form-label">Miles Run</label>
+            <input type="number" class="form-control" id="Miles<?php echo $match['MID']; ?>" name="Miles" value="<?php echo $match['Miles_Run']; ?>">
           </div>
-            <input type="hidden" name="Mid" value="<?php echo $stat['MID']; ?>">
+            <input type="hidden" name="Mid" value="<?php echo $match['MID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
