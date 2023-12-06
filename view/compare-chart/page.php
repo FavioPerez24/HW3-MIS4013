@@ -14,12 +14,12 @@
       var ctx = document.getElementById('polarChart').getContext('2d');
       <?php
   $stats = selectStats();
+$labels[] = "'" . $stat['Player_Name'] . "'";
   $labels = [];
   $data = [];
 
   while ($stat = $stats->fetch_assoc()) {
-    $labels[] = ['Goals', 'Shoots', 'Passes', 'Chances', 'Miles'];
-   $label[] =  "'" . $stat['Player_Name'] . "'";
+   $label[] = ['Goals', 'Shoots', 'Passes', 'Chances', 'Miles'];
     $data[] = [$stat['Total_goals'], $stat['Total_shoots'], $stat['Total_passes'], $stat['Total_chances'], $stat['Total_miles']];
   }
   ?>
