@@ -17,14 +17,14 @@
 
 <script>
    <?php
-   function getChartData($player) {
+   function getChartData($stat) {
       $labels = ['Goals', 'Shoots', 'Passes', 'Chances', 'Miles'];
       $data = [
-         $player['Total_goals'],
-         $player['Total_shoots'],
-         $player['Total_passes'],
-         $player['Total_chances'],
-         $player['Total_miles']
+         $stat['Total_goals'],
+         $stat['Total_shoots'],
+         $stat['Total_passes'],
+         $stat['Total_chances'],
+         $stat['Total_miles']
       ];
 
       return [
