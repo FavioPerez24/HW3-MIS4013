@@ -8,13 +8,13 @@
   const ctx = document.getElementById('myChart');
 
   <?php
-  $stats = selectStats();
+  $players = selectPlayers();
   $labels = [];
   $data = [];
 
-  while ($stat = $stats->fetch_assoc()) {
-    $labels[] = "'" . $stat['PNationalities'] . "'";
-    $data[] = $stat['PlayersbyNat'];
+  while ($player = $player->fetch_assoc()) {
+    $labels[] = "'" . $player['PNationalities'] . "'";
+    $data[] = $player['PlayersbyNat'];
   }
   ?>
 
