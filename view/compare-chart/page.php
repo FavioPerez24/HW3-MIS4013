@@ -7,24 +7,16 @@
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-<div style="width:75%">
-   <canvas id="polarChartPlayer1"></canvas>
-</div>
-
-<div style="width:75%">
-   <canvas id="polarChartPlayer2"></canvas>
-</div>
-
 <script>
    <?php
-   function getChartData($player) {
+   function getChartData($stat) {
       $labels = ['Goals', 'Shoots', 'Passes', 'Chances', 'Miles'];
       $data = [
-         isset($player['Total_goals']) ? $player['Total_goals'] : 0,
-        isset($player['Total_shoots']) ? $player['Total_shoots'] : 0,
-        isset($player['Total_passes']) ? $player['Total_passes'] : 0,
-        isset($player['Total_chances']) ? $player['Total_chances'] : 0,
-        isset($player['Total_miles']) ? $player['Total_miles'] : 0,
+         isset($stat['Total_goals']) ? $stat['Total_goals'] : 0,
+        isset($stat['Total_shoots']) ? $stat['Total_shoots'] : 0,
+        isset($stat['Total_passes']) ? $stat['Total_passes'] : 0,
+        isset($stat['Total_chances']) ? $stat['Total_chances'] : 0,
+        isset($stat['Total_miles']) ? $stat['Total_miles'] : 0,
       ];
 
       return [
