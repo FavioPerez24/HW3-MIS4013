@@ -8,19 +8,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <style>
         .all-browsers {
-            background-color: white;
-            /* Add any other styles you want for the section */
-            padding: 20px; /* Example padding */
-        }
-   .browsers {
-            background-color: blue;
-            /* Add any other styles you want for the section */
-            padding: 20px; /* Example padding */
-        }
-  .browsers-section {
-            background-color: red;
-            /* Add any other styles you want for the section */
-            padding: 20px; /* Example padding */
+            background-color: black;
+            /
+            padding: 20px;
         }
     </style>
 </head>
@@ -28,10 +18,6 @@
   <section>
   <article class="all-browsers">
     <h1>News Articles</h1>
-    <article class="browsers">
-      <h2>UEFA HIGHLIGHT</h2>
-    <div class="browsers-section"> 
-      <h1>Most Recent</h1> 
       <div class="accordion text-bg-dark p-3" id="title">
   <div class="accordion-item">
     <h2 class="accordion-header">
