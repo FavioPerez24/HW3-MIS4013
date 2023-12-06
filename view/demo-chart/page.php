@@ -14,8 +14,8 @@
       label: 'Player's Nationalities',  
       data: [
           <?php 
-  while ($student = $students->fetch_assoc()) {
-  echo $student[ 'PlayersbyNat'] . ", ";
+  while ($player = $players->fetch_assoc()) {
+  echo $player[ 'PlayersbyNat'] . ", ";
   }    
 ?>
         ]
@@ -24,9 +24,9 @@
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
    <?php 
-$students = selectStudents();
-  while ($student = $students->fetch_assoc()) {
-  echo "'" . $student[ 'PNationality'] . "', ";
+$players = selectPlayers();
+  while ($player = $players->fetch_assoc()) {
+  echo "'" . $player[ 'PNationality'] . "', ";
   }    
 ?>
     ]
