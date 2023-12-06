@@ -8,9 +8,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <style>
         .all-browsers {
-            background-color: black;
-            /
+            background-color: white;
             padding: 20px;
+          border-radius: 10px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        margin: 10px; 
+        color: #333;
+        font-family: 'Arial', sans-serif; 
+        font-size: 1.2em; 
+        text-align: center; 
+        line-height: 1.5;
         }
     </style>
 </head>
