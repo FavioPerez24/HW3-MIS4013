@@ -45,7 +45,7 @@ include "new-form1.php";
       ?>
       <tr>
         <td><?php echo $player['PName']; ?></td>
-        
+}        
 <?php
   $matches = selectMatchesByPlayer($player['PID']);
   while ($match = $matches->fetch_assoc()) {
@@ -59,6 +59,7 @@ include "new-form1.php";
         <td><?php echo $match['Miles_Run']; ?></td>
         <td><?php include "edit-form1.php"; ?></td>
         <td>
+    }
       <form method="post" action="">
         <input type="hidden" name="Msid" value="<?php echo $stat['MSID']; ?>">
         <input type="hidden" name="actionType" value="Delete">
