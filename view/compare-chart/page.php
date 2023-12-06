@@ -1,7 +1,8 @@
 <h1>Players Performance</h1>
-   <div>
-  <canvas id="myChart"></canvas>
+<div>
+   <canvas id="myChart"></canvas>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
    <?php
@@ -9,10 +10,10 @@
       $labels = ['Goals', 'Shoots', 'Passes', 'Chances', 'Miles'];
       $data = [
          isset($stat['Total_goals']) ? $stat['Total_goals'] : 0,
-        isset($stat['Total_shoots']) ? $stat['Total_shoots'] : 0,
-        isset($stat['Total_passes']) ? $stat['Total_passes'] : 0,
-        isset($stat['Total_chances']) ? $stat['Total_chances'] : 0,
-        isset($stat['Total_miles']) ? $stat['Total_miles'] : 0,
+         isset($stat['Total_shoots']) ? $stat['Total_shoots'] : 0,
+         isset($stat['Total_passes']) ? $stat['Total_passes'] : 0,
+         isset($stat['Total_chances']) ? $stat['Total_chances'] : 0,
+         isset($stat['Total_miles']) ? $stat['Total_miles'] : 0,
       ];
 
       return [
@@ -29,7 +30,7 @@
       $playerName = $stat['Player_Name'];
    ?>
    
-   var ctx<?php echo $playerIndex; ?> = document.getElementById('polarChartPlayer<?php echo $playerIndex; ?>').getContext('2d');
+   var ctx<?php echo $playerIndex; ?> = document.getElementById('myChart').getContext('2d');
    var chartData<?php echo $playerIndex; ?> = <?php echo json_encode(getChartData($stat)); ?>;
    
    var chart<?php echo $playerIndex; ?> = new Chart(ctx<?php echo $playerIndex; ?>, {
@@ -55,5 +56,6 @@
       $playerIndex++;
    } ?>
 </script>
+
 
 
