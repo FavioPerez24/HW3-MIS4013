@@ -12,4 +12,19 @@ function selectStats() {
         throw $e;
     }
 }
+
+function selectPlayers() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT PNationality, COUNT(*) AS PlayersbyNat FROM Player GROUP BY PNationality");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 ?>
