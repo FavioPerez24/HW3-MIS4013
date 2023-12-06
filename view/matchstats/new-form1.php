@@ -26,8 +26,6 @@
       </div>
       <div class="modal-body">
         <form method="post" action="">
-          <div class="mb-3">
-          <div class="mb-3">
          <div class="mb-3">
             <label for="Pname" class="form-label">Player Name</label>
 <?php
@@ -44,7 +42,6 @@ $selectedMatch = 0;
 include "match-input-list.php";
 ?>
           </div>
-  
           <div class="mb-3">
             <label for="Goal" class="form-label">Goals Scored</label>
             <input type="number" class="form-control" id="Goal" name="Goal">
