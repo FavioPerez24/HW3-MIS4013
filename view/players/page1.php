@@ -33,7 +33,7 @@
         <?php include "new-form.php"; ?>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
       <?php while ($player = $players->fetch_assoc()) { ?>
         <div class="col">
           <div class="card">
