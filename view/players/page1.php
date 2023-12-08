@@ -40,17 +40,18 @@
         <?php include "new-form.php"; ?>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
       <?php while ($player = $players->fetch_assoc()) { ?>
         <div class="col">
           <div class="card">
+            <img src="<?php echo $player['PImage']; ?>" class="card-img-top" alt="<?php echo $player['PName']; ?> Image">
             <div class="card-body">
-              <img src="<?php echo $player['PImage']; ?>" class="card-img-top" alt="<?php echo $player['PName']; ?> Image">
               <h5 class="card-title"><?php echo $player['PName']; ?></h5>
               <p class="card-text">Date of Birth: <?php echo $player['PDOB']; ?></p>
               <p class="card-text">Nationality: <?php echo $player['PNationality']; ?></p>
               <p class="card-text">Position: <?php echo $player['PPosition']; ?></p>
-              <div>
+
+              <!-- Buttons in the same row -->
               <div class="d-flex justify-content-between">
                 <?php include "edit-form.php"; ?>
                 <form method="post" action="">
@@ -65,6 +66,10 @@
                 </form>
                 <a href="player-by-team.php?id=<?php echo $player['PID']; ?>" class="btn btn-primary">Team</a>
               </div>
+            </div>
+          </div>
+        </div>
+      
           </div>
         </div>
       <?php } ?>
