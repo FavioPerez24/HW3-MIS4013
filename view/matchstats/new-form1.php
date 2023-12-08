@@ -47,7 +47,7 @@ include "match-input-list.php";
             <input type="number" class="form-control" id="Goal" name="Goal">
           </div>
           <div class="mb-3">
-            <label for="Shoots" class="form-label">Goals Scored</label>
+            <label for="Shoots" class="form-label">Shoots On Target</label>
             <input type="number" class="form-control" id="Shoots" name="Shoots">
           </div>
           <div class="mb-3">
