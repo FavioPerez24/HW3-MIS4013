@@ -28,6 +28,25 @@
       object-fit: cover; /* Crop the image to cover the specified dimensions */
       margin: 10px 0; /* Set the desired top and bottom margins */
     }
+    .btn-add {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    .btn-edit {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .btn-delete {
+      background-color: #dc3545;
+      color: #fff;
+    }
+
+    .btn-teams {
+      background-color: #6c757d;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
