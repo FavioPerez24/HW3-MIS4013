@@ -69,9 +69,6 @@
             </div>
           </div>
         </div>
-      
-          </div>
-        </div>
       <?php } ?>
     </div>
   </div>
