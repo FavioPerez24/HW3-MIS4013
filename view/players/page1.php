@@ -50,6 +50,7 @@
               <p class="card-text">Date of Birth: <?php echo $player['PDOB']; ?></p>
               <p class="card-text">Nationality: <?php echo $player['PNationality']; ?></p>
               <p class="card-text">Position: <?php echo $player['PPosition']; ?></p>
+              <div>
               <div class="d-flex justify-content-between">
                 <?php include "edit-form.php"; ?>
                 <form method="post" action="">
