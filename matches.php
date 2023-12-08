@@ -15,7 +15,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Edit":
-      if (updateMatch($_POST['MDetails'], $_POST['MDate'], $_POST['MConditions'], $_POST['MID'])) {
+      if (updateMatch($_POST['Mdet'], $_POST['Mdate'], $_POST['Mcond'], $_POST['Mid'])) {
         echo '<div class="alert alert-success" role="alert">Match edited.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
