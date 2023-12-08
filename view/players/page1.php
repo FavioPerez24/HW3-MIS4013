@@ -52,7 +52,7 @@ if ($result->num_rows > 0) {
                         <p>Position: " . $row["PPosition"]. "</p>
     }
 } else {
-    echo "0 results";
+    echo "No results";
 }
 ?>
 </div>
