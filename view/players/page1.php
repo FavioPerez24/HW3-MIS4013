@@ -50,7 +50,6 @@ if ($result->num_rows > 0) {
                         <p>Date of Birth: " . $row["PDOB"]. "</p>
                         <p>Nationality: " . $row["PNationality"]. "</p>
                         <p>Position: " . $row["PPosition"]. "</p>
-                        <div><?php include "edit-form.php"; ?></div>
       <p>
                            <form method="post" action="">
         <input type="hidden" name="PID" value="<?php echo $player['PID']; ?>">
