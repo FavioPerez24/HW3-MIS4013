@@ -28,6 +28,7 @@ include "new-form1.php";
     <thead>
       <tr>
       <th>Player</th>
+      <th>Data ID</th>
       <th>Match ID</th>
       <th>Details</th>
       <th>Goals</th>
