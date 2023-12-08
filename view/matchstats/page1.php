@@ -59,7 +59,7 @@ include "new-form1.php";
         <td><?php include "edit-form1.php"; ?></td>
         <td>  
       <form method="post" action="">
-        <input type="hidden" name="Msid" value="<?php echo $stat['MSID']; ?>">
+        <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
         <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-dark" onclick="return confirm('Are you sure?');">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
