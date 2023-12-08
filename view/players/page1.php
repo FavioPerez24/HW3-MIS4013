@@ -72,7 +72,7 @@
               
               <!-- Buttons in the same row -->
               <div class="d-flex justify-content-between">
-                <button onclick="showForm(<?php echo $player['PID']; ?>)">Edit</button>
+                <?php include "edit-form.php"; ?>
                 <form method="post" action="">
                   <input type="hidden" name="PID" value="<?php echo $player['PID']; ?>">
                   <input type="hidden" name="actionType" value="Delete">
@@ -91,23 +91,7 @@
       <?php } ?>
     </div>
   </div>
-<script>
-    // JavaScript function to toggle the visibility of the edit form
-    function toggleForm() {
-      var editForms = document.querySelectorAll('[id^="editForm_"]');
-      editForms.forEach(function(form) {
-        form.style.display = (form.style.display === 'none' || form.style.display === '') ? 'block' : 'none';
-      });
-    }
 
-    // JavaScript function to show the edit form for a specific player
-    function showForm(playerId) {
-      var editForm = document.getElementById('editForm_' + playerId);
-      if (editForm) {
-        editForm.style.display = 'block';
-      }
-    }
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
