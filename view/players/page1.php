@@ -63,9 +63,7 @@ if ($result->num_rows > 0) {
         </button>
       </form>
                          </p>
-                        <p>
-                          
-                        </p>
+                        <p><a href="player-by-team.php?id=<?php echo $player['PID']; ?>">Team</a></p>
     }
 } else {
     echo "0 results";
