@@ -11,9 +11,8 @@
  <style>
   .btn-add,
   .btn-edit,
-  .btn-delete,
-  .btn-teams {
-    background-color: #000;
+  .btn-delete {
+    background-color: #888;
     border-color: #000;
     color: #888; /* Grey text color */
   }
