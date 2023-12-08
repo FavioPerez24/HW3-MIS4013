@@ -24,7 +24,7 @@
     </style>
   <style>
     .card-img-top {
-      margin-bottom: 15px; /* Adjust as needed */
+      margin-bottom: 10px; /* Adjust as needed */
     }
   </style>
 </head>
