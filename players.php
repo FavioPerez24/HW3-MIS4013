@@ -32,6 +32,6 @@ if (isset($_POST['actionType'])) {
 }
 
 $players = selectPlayers();
-Include "view/players/page.php";
+Include "view/players/page1.php";
 Include "view/footer.php";
 ?>
