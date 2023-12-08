@@ -63,7 +63,7 @@ include "match-input-list.php";
             <input type="number" class="form-control" id="Miles" name="Miles">
           </div>
             <input type="hidden" name="actionType" value="Add">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn btn-dark">Save</button>
         </form>
       </div>
     </div>
