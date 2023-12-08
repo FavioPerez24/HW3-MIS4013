@@ -22,6 +22,11 @@
             padding: 2px 16px;
         }
     </style>
+  <style>
+    .card-img-top {
+      margin-bottom: 15px; /* Adjust as needed */
+    }
+  </style>
 </head>
 <body>
   <div class="container">
