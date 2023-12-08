@@ -8,7 +8,7 @@ Include "view/header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      if (insertPlayer($_POST['$PName'], $_POST['$PDOB'], $_POST['$PNationality'], $_POST['$PPosition'], $_POST['$TID'])) {
+      if (insertPlayer($_POST['$Pname'], $_POST['$Pdob'], $_POST['$Pnat'], $_POST['$Ppos'], $_POST['$Tid'])) {
         echo '<div class="alert alert-success" role="alert">Player added.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
