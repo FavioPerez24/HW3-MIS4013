@@ -38,6 +38,7 @@
         <div class="col">
           <div class="card">
             <div class="card-body">
+              <img src="<?php echo $player['PImage']; ?>" class="card-img-top" alt="<?php echo $player['PName']; ?> Image">
               <h5 class="card-title"><?php echo $player['PName']; ?></h5>
               <p class="card-text">Date of Birth: <?php echo $player['PDOB']; ?></p>
               <p class="card-text">Nationality: <?php echo $player['PNationality']; ?></p>
