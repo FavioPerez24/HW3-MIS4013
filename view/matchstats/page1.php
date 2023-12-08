@@ -9,23 +9,12 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
  <style>
-  .btn-add {
-    background-color: #000;
-    color: #888; /* Grey text color */
-  }
-
-  .btn-edit {
-    background-color: #000;
-    color: #888; /* Grey text color */
-  }
-
-  .btn-delete {
-    background-color: #000;
-    color: #888; /* Grey text color */
-  }
-
+  .btn-add,
+  .btn-edit,
+  .btn-delete,
   .btn-teams {
     background-color: #000;
+    border-color: #000;
     color: #888; /* Grey text color */
   }
 </style>
