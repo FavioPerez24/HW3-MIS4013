@@ -28,12 +28,19 @@
         <form method="post" action="">
           <div class="mb-3">
             <label for="Pname<?php echo $player['PID']; ?>" class="form-label">Player Name</label>
-            <input type="text" class="form-control" id="Pname<?php echo $player['PID']; ?>" name="Pname" value="<?php echo $player['PName']; ?>">
+<?php
+$playerList = selectPlayerForInput();
+$selectedPlayer = 0;
+include "player-input-list.php";
+?>
           </div>
-         <div class="mb-3">
             <label for="Mdet<?php echo $match['MID']; ?>" class="form-label">Match Details</label>
-            <input type="text" class="form-control" id="Mdet<?php echo $match['MID']; ?>" name="Mdet" value="<?php echo $match['MDetails']; ?>">
-          </div>
+         <?php
+$matchList = selectMatchForInput();
+$selectedMatch = 0;
+include "match-input-list.php";
+?>
+          </div>   
           <div class="mb-3">
             <label for="Goal<?php echo $match['MID']; ?>" class="form-label">Goals Scored</label>
             <input type="number" class="form-control" id="Goal<?php echo $match['MID']; ?>" name="Goal" value="<?php echo $match['Goals_Scored']; ?>">
