@@ -8,7 +8,7 @@ Include "view/header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      if (insertMatch($_POST['MDetails'],$_POST['MDate'], $_POST['MConditions'])) {
+      if (insertMatch($_POST['Mdet'],$_POST['Mdate'], $_POST['Mcond'])) {
         echo '<div class="alert alert-success" role="alert">Match added.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
@@ -22,7 +22,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Delete":
-      if (deleteMatch($_POST['MID'])) {
+      if (deleteMatch($_POST['Mid'])) {
         echo '<div class="alert alert-success" role="alert">Match deleted.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
