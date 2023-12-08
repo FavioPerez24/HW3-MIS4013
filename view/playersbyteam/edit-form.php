@@ -44,7 +44,7 @@ include "team-input-list.php";
           </div>
             <input type="hidden" name="Tid" value="<?php echo $team['TID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn btn-secondary">Save</button>
         </form>
       </div>
     </div>
