@@ -24,7 +24,9 @@
     </style>
   <style>
     .card-img-top {
-      margin-bottom: 10px; /* Adjust as needed */
+      height: 200px; /* Set the desired height */
+      object-fit: cover; /* Crop the image to cover the specified dimensions */
+      margin: 10px 0; /* Set the desired top and bottom margins */
     }
   </style>
 </head>
