@@ -42,7 +42,7 @@ include "team-input-list.php";
             <input type="text" class="form-control" id="Tcoach" name="Tcoach">
           </div>
             <input type="hidden" name="actionType" value="Add">
-          <button type="submit" class="btn btn-dark">Save</button>
+          <button type="submit" class="btn btn-secondary">Save</button>
         </form>
       </div>
     </div>
