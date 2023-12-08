@@ -50,7 +50,6 @@ if ($result->num_rows > 0) {
                         <p>Date of Birth: " . $row["PDOB"]. "</p>
                         <p>Nationality: " . $row["PNationality"]. "</p>
                         <p>Position: " . $row["PPosition"]. "</p>
-                        <p><a href="player-by-team.php?id=<?php echo $player['PID']; ?>">Team</a></p>
     }
 } else {
     echo "0 results";
