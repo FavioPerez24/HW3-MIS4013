@@ -9,7 +9,7 @@
         .card {
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.3s;
-            width: 100%;
+            width: 80%;
             border-radius: 5px;
             margin: 10px;
         }
@@ -40,7 +40,7 @@
         <?php include "new-form.php"; ?>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
       <?php while ($player = $players->fetch_assoc()) { ?>
         <div class="col">
           <div class="card">
