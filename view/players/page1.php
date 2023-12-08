@@ -69,15 +69,6 @@
               <p class="card-text">Date of Birth: <?php echo $player['PDOB']; ?></p>
               <p class="card-text">Nationality: <?php echo $player['PNationality']; ?></p>
               <p class="card-text">Position: <?php echo $player['PPosition']; ?></p>
-
-               <!-- Edit Form (Initially hidden) -->
-              <form id="editForm_<?php echo $player['PID']; ?>" method="post" action="" style="display: none;">
-                <!-- Edit form content -->
-                <input type="hidden" name="PID" value="<?php echo $player['PID']; ?>">
-                <input type="hidden" name="actionType" value="Edit">
-                <!-- Add your edit form fields here -->
-                <button type="submit" class="btn btn-primary">Save</button>
-              </form>
               
               <!-- Buttons in the same row -->
               <div class="d-flex justify-content-between">
