@@ -27,8 +27,8 @@ include "new-form1.php";
   <table class="table">
     <thead>
       <tr>
+      <th>Player</th>
       <th>Match ID</th>
-      <th>Player Name</th>
       <th>Details</th>
       <th>Goals</th>
       <th>Shoots On Target</th>
