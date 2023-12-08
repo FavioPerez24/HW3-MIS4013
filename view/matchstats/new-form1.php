@@ -34,17 +34,12 @@ $selectedPlayer = 0;
 include "player-input-list.php";
 ?>
           </div>
-           <div class="mb-3">
-            <label for="Mid" class="form-label">Match ID</label>
+            <label for="Mdet" class="form-label">Match Details</label>
          <?php
 $matchList = selectMatchForInput();
 $selectedMatch = 0;
 include "match-input-list.php";
 ?>
-           </div>
-          <div class="mb-3">
-            <label for="Mdet" class="form-label">Match Details</label>
-
           </div>
           <div class="mb-3">
             <label for="Goal" class="form-label">Goals Scored</label>
