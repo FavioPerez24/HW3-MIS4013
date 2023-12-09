@@ -54,9 +54,12 @@
                         <td>
                             <!-- Button to trigger the collapse -->
                             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMatch<?php echo $match['MSID']; ?>" aria-expanded="false" aria-controls="collapseMatch<?php echo $match['MSID']; ?>">
-                                View Match Stats
+                                View Performance
                             </button>
                         </td>
+                    <td>
+                        
+                    </td>
                         <td>
                             <form method="post" action="">
                                 <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
