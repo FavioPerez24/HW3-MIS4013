@@ -13,13 +13,16 @@
     
 <div class="row">
     <div class="col">
-        <h1>Match Statistics</h1>
-    </div>
-    <div class="col-auto">
-        <!-- Add button or other elements here if needed -->
-    </div>
+        <h1>Players Performance</h1>
+      </div>
+  <div class="col-auto">
+    <div>
+  </div>
+<?php
+include "new-form1.php";
+?>
+  </div>
 </div>
-
 <div class="table-responsive">
     <table class="table">
         <thead>
