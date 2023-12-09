@@ -25,14 +25,7 @@
         <thead>
             <tr>
                 <th>Player</th>
-                <th>Data ID</th>
-                <th>Match ID</th>
-                <th>Details</th>
-                <th>Goals</th>
-                <th>Shoots On Target</th>
-                <th>Passes Completed</th>
-                <th>Chances Created</th>
-                <th>Miles Run</th>
+                <th></th>
                 <th></th>
                 <th></th>
             </tr>
@@ -43,23 +36,13 @@
                     <td><?php echo $player['PName']; ?></td>
                     <?php $matches = selectMatchByPlayer($player['PID']);
                     while ($match = $matches->fetch_assoc()) { ?>
-                        <td><?php echo $match['MSID']; ?></td>
-                        <td><?php echo $match['MID']; ?></td>
-                        <td><?php echo $match['MDetails']; ?></td>
-                        <td><?php echo $match['Goals_Scored']; ?></td>
-                        <td><?php echo $match['Shoots']; ?></td>
-                        <td><?php echo $match['Passes_Completed']; ?></td>
-                        <td><?php echo $match['Chances_Created']; ?></td>
-                        <td><?php echo $match['Miles_Run']; ?></td>
                         <td>
                             <!-- Button to trigger the collapse -->
                             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMatch<?php echo $match['MSID']; ?>" aria-expanded="false" aria-controls="collapseMatch<?php echo $match['MSID']; ?>">
                                 View Performance
                             </button>
                         </td>
-                    <td>
-                        
-                    </td>
+                        <td><?php include "edit-form1.php"; ?></td>
                         <td>
                             <form method="post" action="">
                                 <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
