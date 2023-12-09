@@ -23,63 +23,45 @@ include "new-form1.php";
 ?>
   </div>
 </div>
-<div class="table-responsive">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Player</th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php while ($player = $players->fetch_assoc()) { ?>
-                <tr>
-                    <td><?php echo $player['PName']; ?></td>
+<div class="container">
+    <?php while ($player = $players->fetch_assoc()) { ?>
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5 class="card-title"><?php echo $player['PName']; ?></h5>
+            </div>
+            <div class="card-body">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlayer<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapsePlayer<?php echo $player['PID']; ?>">
+                    Show Match Stats
+                </button>
+                <a href="#" class="btn btn-warning">Edit</a>
+                <form method="post" action="">
+                    <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
+                    <input type="hidden" name="actionType" value="Delete">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">
+                        Delete
+                    </button>
+                </form>
+            </div>
+            <!-- Collapsible section for match stats -->
+            <div class="collapse" id="collapsePlayer<?php echo $player['PID']; ?>">
+                <div class="card card-body">
+                    <!-- Display match stats for the player -->
                     <?php $matches = selectMatchByPlayer($player['PID']);
                     while ($match = $matches->fetch_assoc()) { ?>
-                        <td>
-                            <!-- Button to trigger the collapse -->
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMatch<?php echo $match['MSID']; ?>" aria-expanded="false" aria-controls="collapseMatch<?php echo $match['MSID']; ?>">
-                                View Performance
-                            </button>
-                        </td>
-                        <td><?php include "edit-form1.php"; ?></td>
-                        <td>
-                            <form method="post" action="">
-                                <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
-                                <input type="hidden" name="actionType" value="Delete">
-                                <button type="submit" class="btn btn-dark" onclick="return confirm('Are you sure?');">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
-                                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
-                                    </svg>
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                    <!-- Collapsible row for match stats -->
-                    <tr>
-                        <td colspan="11">
-                            <div class="collapse" id="collapseMatch<?php echo $match['MSID']; ?>">
-                                <div class="card card-body">
-                                    <!-- Add your sections for each player's info here -->
-                                    <p>Goals: <?php echo $match['Goals_Scored']; ?></p>
-                                    <p>Shoots On Target: <?php echo $match['Shoots']; ?></p>
-                                    <p>Passes Completed: <?php echo $match['Passes_Completed']; ?></p>
-                                    <p>Chances Created: <?php echo $match['Chances_Created']; ?></p>
-                                    <p>Miles Run: <?php echo $match['Miles_Run']; ?></p>
-                                    <!-- Add more sections if needed -->
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                <?php } ?>
-            <?php } ?>
-        </tbody>
-    </table>
+                        <p>Match ID: <?php echo $match['MID']; ?></p>
+                        <p>Details: <?php echo $match['MDetails']; ?></p>
+                        <p>Goals: <?php echo $match['Goals_Scored']; ?></p>
+                        <p>Shoots On Target: <?php echo $match['Shoots']; ?></p>
+                        <p>Passes Completed: <?php echo $match['Passes_Completed']; ?></p>
+                        <p>Chances Created: <?php echo $match['Chances_Created']; ?></p>
+                        <p>Miles Run: <?php echo $match['Miles_Run']; ?></p>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
 </div>
 
 </body>
 </html>
+
