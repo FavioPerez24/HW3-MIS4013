@@ -72,7 +72,7 @@
                         <button class="btn btn-stat" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlayer<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapsePlayer<?php echo $player['PID']; ?>">
                             View performance
                         </button>
-                        <a href="#" class="btn btn-edit">Edit</a>
+                        <a><?php include "edit-form1.php"; ?></a>
                         <form method="post" action="">
                             <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
                             <input type="hidden" name="actionType" value="Delete">
