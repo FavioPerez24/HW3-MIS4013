@@ -85,9 +85,7 @@
                                 <p>Passes Completed: <?php echo $match['Passes_Completed']; ?></p>
                                 <p>Chances Created: <?php echo $match['Chances_Created']; ?></p>
                                 <p>Miles Run: <?php echo $match['Miles_Run']; ?></p>
-                                <div class="d-flex"> <!-- Wrap buttons in a flex container -->    
-                                <p><?php include "edit-form1.php"; ?>  </p>
-                            <p>                            
+                                <p><?php include "edit-form1.php"; ?>  
                             <form method="post" action="">
                                 <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
                                 <input type="hidden" name="actionType" value="Delete">
