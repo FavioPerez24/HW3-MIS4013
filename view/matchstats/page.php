@@ -79,10 +79,10 @@
                             <?php $matches = selectMatchByPlayer($player['PID']);
                             while ($match = $matches->fetch_assoc()) { ?>
                                 <div class="mb-3">
-                                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMatch<?php echo $match['MID']; ?>" aria-expanded="false" aria-controls="collapseMatch<?php echo $match['MID']; ?>">
-                                        Match Info - ID: <?php echo $match['MID']; ?>
+                                    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMatch<?php echo $match['MSID']; ?>" aria-expanded="false" aria-controls="collapseMatch<?php echo $match['MSID']; ?>">
+                                        Match Info: <?php echo $match['MSID']; ?>
                                     </button>
-                                    <div class="collapse" id="collapseMatch<?php echo $match['MID']; ?>">
+                                    <div class="collapse" id="collapseMatch<?php echo $match['MSID']; ?>">
                                         <div class="card card-body">
                                             <p>Details: <?php echo $match['MDetails']; ?></p>
                                             <p>Goals: <?php echo $match['Goals_Scored']; ?></p>
@@ -112,8 +112,6 @@
         <?php } ?>
     </div>
 </div>
-
-<!-- Your Footer Here -->
 
 </body>
 </html>
