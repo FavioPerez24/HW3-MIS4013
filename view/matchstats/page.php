@@ -70,7 +70,7 @@
                     </div>
                     <div class="card-body">
                         <button class="btn btn-stat" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlayer<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapsePlayer<?php echo $player['PID']; ?>">
-                            View performance
+                            View
                         </button>
                         <a <?php include "edit-form1.php"; ?></a>
                         <form method="post" action="">
