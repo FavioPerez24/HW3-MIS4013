@@ -52,7 +52,7 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col">
-            <h1>Players Performance</h1>
+            <h1>Statistics by Player</h1>
         </div>
         <div class="col-auto">
             <?php include "new-form1.php"; ?>
