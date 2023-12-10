@@ -8,6 +8,44 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 80%;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+    </style>
+  <style>
+    .btn-add {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    .btn-edit {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .btn-delete {
+      background-color: #dc3545;
+      color: #fff;
+    }
+
+    .btn-stat {
+      background-color: #6c757d;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
     
@@ -34,11 +72,11 @@
                         <button class="btn btn-stat" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlayer<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapsePlayer<?php echo $player['PID']; ?>">
                             View performance
                         </button>
-                        <a href="#" class="btn btn-dark">Edit</a>
+                        <a href="#" class="btn btn-edit">Edit</a>
                         <form method="post" action="">
                             <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
                             <input type="hidden" name="actionType" value="Delete">
-                            <button type="submit" class="btn btn-dark" onclick="return confirm('Are you sure?');">
+                            <button type="submit" class="btn btn-delete" onclick="return confirm('Are you sure?');">
                                 Delete
                             </button>
                         </form>
