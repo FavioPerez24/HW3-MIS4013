@@ -81,8 +81,8 @@
                                     <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMatch<?php echo $match['MSID']; ?>" aria-expanded="false" aria-controls="collapseMatch<?php echo $match['MSID']; ?>">
                                         Match Info: <?php echo $match['MSID']; ?>
                                     </button>
-                                    <div class="collapse" id="collapseMatch<?php echo $match['MSID']; ?>">
                                         <div class="card card-body">
+                                            <div class="collapse" id="collapseMatch<?php echo $match['MSID']; ?>">
                                             <p>Details: <?php echo $match['MDetails']; ?></p>
                                             <p>Goals: <?php echo $match['Goals_Scored']; ?></p>
                                             <p>Shoots On Target: <?php echo $match['Shoots']; ?></p>
