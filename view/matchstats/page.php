@@ -32,14 +32,14 @@ include "new-form1.php";
                         <h5 class="card-title"><?php echo $player['PName']; ?></h5>
                     </div>
             <div class="card-body">
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlayer<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapsePlayer<?php echo $player['PID']; ?>">
+                <button class="btn btn-stat" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlayer<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapsePlayer<?php echo $player['PID']; ?>">
                     Show Match Stats
                 </button>
-                <a href="#" class="btn btn-warning">Edit</a>
+                <a href="#" class="btn btn-dark">Edit</a>
                 <form method="post" action="">
                     <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
                     <input type="hidden" name="actionType" value="Delete">
-                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">
+                    <button type="submit" class="btn btn-dark" onclick="return confirm('Are you sure?');">
                         Delete
                     </button>
                 </form>
@@ -47,7 +47,6 @@ include "new-form1.php";
             <!-- Collapsible section for match stats -->
             <div class="collapse" id="collapsePlayer<?php echo $player['PID']; ?>">
                 <div class="card card-body">
-                    <!-- Display match stats for the player -->
                     <?php $matches = selectMatchByPlayer($player['PID']);
                     while ($match = $matches->fetch_assoc()) { ?>
                         <p>Match ID: <?php echo $match['MID']; ?></p>
