@@ -30,7 +30,7 @@
             <label for="Pname" class="form-label">Player Name</label>
 <?php
 $playerList = selectPlayerForInput();
-$selectedPlayer = 0;
+$selectedPlayer = $player['PID'];
 include "player-input-list.php";
 ?>
           </div>
