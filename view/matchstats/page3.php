@@ -62,9 +62,7 @@
             <div class="col mb-4">
                 <div class="card">
                     <div class="card-header">
-                     <div class="col-auto">
                         <h5 class="card-title"><?php echo $player['PName']; ?><?php include "new-form1.php"; ?></h5>
-                    </div>    
                     </div>
                     <div class="card-body">
                         <button class="btn btn-stat" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStats<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapseStats<?php echo $player['PID']; ?>">
