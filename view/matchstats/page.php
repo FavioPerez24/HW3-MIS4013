@@ -24,6 +24,13 @@ include "new-form1.php";
   </div>
 </div>
 <div class="container">
+    <?php
+    $playerCount = 0;
+    while ($player = $players->fetch_assoc()) {
+        if ($playerCount % 3 == 0) {
+            echo '<div class="row">';
+        }
+    ?>
     <?php while ($player = $players->fetch_assoc()) { ?>
         <div class="card mb-3">
             <div class="card-header">
@@ -60,6 +67,14 @@ include "new-form1.php";
             </div>
         </div>
     <?php } ?>
+<?php
+        // Close the row after every two players
+        if ($playerCount % 3 == 1) {
+            echo '</div>';
+        }
+        $playerCount++;
+    }
+    ?>
 </div>
 
 </body>
