@@ -24,7 +24,7 @@ include "new-form1.php";
   </div>
 </div>
 <div class="container">
-    
+        <div class="row row-cols-1 row-cols-md-3 g-4">
     <?php while ($player = $players->fetch_assoc()) { ?>
         <div class="card mb-3">
             <div class="card-header">
@@ -58,6 +58,7 @@ include "new-form1.php";
                         <p>Miles Run: <?php echo $match['Miles_Run']; ?></p>
                     <?php } ?>
                 </div>
+            </div>
             </div>
         </div>
     <?php } ?>
