@@ -76,10 +76,10 @@
                     <!-- Collapsible section for match stats -->
                     <div class="collapse" id="collapsePlayer<?php echo $player['PID']; ?>">
                         <div class="card card-body">
-                            <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMatch<?php echo $match['MID']; ?>" aria-expanded="false" aria-controls="collapseMatch<?php echo $match['MID']; ?>">
-                            Match
+                            <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlayer<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapsePlayer<?php echo $player['PID']; ?>">
+                            Match Info
                         </button>
-                             <div class="collapse" id="collapseMatch<?php echo $match['MID']; ?>">
+                             <div class="collapse" id="collapse<?php echo $player['PID']; ?>">
                         <div class="card card-body">
                             <?php $matches = selectMatchByPlayer($player['PID']);
                             while ($match = $matches->fetch_assoc()) { ?>
