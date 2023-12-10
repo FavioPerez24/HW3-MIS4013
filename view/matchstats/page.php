@@ -24,12 +24,13 @@ include "new-form1.php";
   </div>
 </div>
 <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-    <?php while ($player = $players->fetch_assoc()) { ?>
-        <div class="card mb-3">
-            <div class="card-header">
-                <h5 class="card-title"><?php echo $player['PName']; ?></h5>
-            </div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+        <?php while ($player = $players->fetch_assoc()) { ?>
+            <div class="col mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title"><?php echo $player['PName']; ?></h5>
+                    </div>
             <div class="card-body">
                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlayer<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapsePlayer<?php echo $player['PID']; ?>">
                     Show Match Stats
