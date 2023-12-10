@@ -11,7 +11,7 @@
 </head>
 <body>
     
-<div class="container">
+<div class="container mt-4">
     <div class="row">
         <div class="col">
             <h1>Players Performance</h1>
@@ -20,7 +20,9 @@
             <?php include "new-form1.php"; ?>
         </div>
     </div>
+</div>
 
+<div class="container-fluid">
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <?php while ($player = $players->fetch_assoc()) { ?>
             <div class="col mb-4">
@@ -61,6 +63,8 @@
         <?php } ?>
     </div>
 </div>
+
+<!-- Your Footer Here -->
 
 </body>
 </html>
