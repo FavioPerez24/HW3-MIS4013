@@ -62,8 +62,17 @@
             <div class="col mb-4">
                 <div class="card">
                     <div class="card-header">
+                        <div class="row">
+                      <div class="col">
                         <h5 class="card-title"><?php echo $player['PName']; ?></h5>
-                        <?php include "new-form1.php"; ?>
+                      </div>
+                         <div class="col-auto">
+                        <div>
+                      </div>
+                        <?php
+                    include "new-form1.php";
+                        ?>
+                      </div>
                     </div>
                     <div class="card-body">
                         <!-- "View Stats" button and collapse section remain unchanged -->
