@@ -37,7 +37,7 @@ include "player-input-list.php";
             <label for="Mdet<?php echo $match['MSID']; ?>" class="form-label">Match Details</label>
          <?php
 $matchList = selectMatchForInput();
-$selectedMatch = 0;
+$selectedMatch = $match['MSID'];
 include "match-input-list.php";
 ?>
           </div>   
