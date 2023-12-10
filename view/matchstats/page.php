@@ -33,7 +33,7 @@ include "new-form1.php";
                     </div>
             <div class="card-body">
                 <button class="btn btn-stat" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlayer<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapsePlayer<?php echo $player['PID']; ?>">
-                    Show Match Stats
+                    View performance
                 </button>
                 <a href="#" class="btn btn-dark">Edit</a>
                 <form method="post" action="">
