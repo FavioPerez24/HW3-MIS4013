@@ -65,11 +65,7 @@
                         <h5 class="card-title"><?php echo $player['PName']; ?></h5>
                     </div>
                     <div class="card-body">
-                        <!-- Button to trigger the modal for new match data -->
-                        <button class="btn btn-add" type="button" data-bs-toggle="modal" data-bs-target="#newMatchStatsModal<?php echo $player['PID']; ?>">
-                            Add New Match Data
-                        </button>
-
+                        <?php include "new-form1.php"; ?>
                         <!-- "View Stats" button and collapse section remain unchanged -->
                         <button class="btn btn-stat" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStats<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapseStats<?php echo $player['PID']; ?>">
                             View Stats
