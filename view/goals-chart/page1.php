@@ -22,7 +22,7 @@
     <div class="col">
       <div class="collapse multi-collapse" id="collapse1">
         <div class="card card-body">
-            <script src="chart-goal.js"></script>
+            <script src="chart.php"></script>
         </div>
       </div>
     </div>
