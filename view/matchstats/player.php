@@ -10,12 +10,21 @@
                     <thead>
                         <tr>
                             <th>Data ID</th>
+                            <th>Match ID</th>
+                            <th>Goals</th>
+                            <th>Shoots On Target</th>
+                            <th>Passes Completed</th>
+                            <th>Chances Created</th>
+                            <th>Miles Run</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><?php echo $match['MSID']; ?></td>
                             <!-- Add other table cells -->
+                            
                             <td>
                                 <?php include "edit-form1.php"; ?>
                             </td>
