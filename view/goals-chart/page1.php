@@ -24,7 +24,7 @@
         <div class="card card-body">
           <h1>Goals' Stats by Player</h1>
           <div>
-            <canvas id="myChart"></canvas>
+            <canvas id="myChart1"></canvas>
           </div>
           <?php include "chart.php"; ?>
         </div>
