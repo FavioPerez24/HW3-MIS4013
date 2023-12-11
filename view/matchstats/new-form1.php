@@ -27,7 +27,7 @@
       <div class="modal-body">
         <form method="post" action="">
          <div class="mb-3">
-            <label for="Pid" class="form-label">Player Name</label>
+            <label for="Pname" class="form-label">Player Name</label>
 <?php
 $playerList = selectPlayerForInput();
 $selectedPlayer = 0;
