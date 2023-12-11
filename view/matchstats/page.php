@@ -61,7 +61,7 @@
 </div>
 
 <?php
-$players = selectAllPlayers();
+$players = selectPlayers();
 while ($player = $players->fetch_assoc()) {
     $matchstats = selectMatchStatsByPlayer($player['PID']);
 ?>
