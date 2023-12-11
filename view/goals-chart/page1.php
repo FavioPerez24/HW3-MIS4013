@@ -7,7 +7,9 @@
   <title>DATA PERFORMANCE</title>
 </head>
 <body>
-
+<div class="container mt-3">
+  <h1 class="text-center">Our Scouting Analysis</h1>
+</div>
 <div class="container mt-5">
   <p class="d-inline-flex gap-1">
     <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">Goals by Player</a>
