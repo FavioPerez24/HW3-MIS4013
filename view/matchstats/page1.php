@@ -8,9 +8,63 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-<?php
-include "page.css";
-?>
+<script>
+  body {
+ font-family: Arial, sans-serif;
+}
+
+.table-responsive {
+ margin: 15px 0;
+ overflow-x: auto;
+}
+
+table {
+ border-collapse: collapse;
+ width: 100%;
+}
+
+th, td {
+ border: 1px solid #ddd;
+ padding: 8px;
+ text-align: left;
+}
+
+th {
+ background-color: #4CAF50;
+ color: white;
+}
+
+tr:nth-child(even) {
+ background-color: #f2f2f2;
+}
+
+tr:hover {
+ background-color: #ddd;
+}
+
+button {
+ background-color: #4CAF50;
+ border: none;
+ color: white;
+ padding: 5px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 14px;
+ margin: 4px 2px;
+ cursor: pointer;
+}
+
+button:hover {
+ background-color: #45a049;
+}
+
+svg {
+ fill: currentColor;
+ height: 1em;
+ width: 1em;
+}
+</script>
   </head>
   <body>
     
