@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,6 +19,7 @@
           <h1>Goals' Stats by Player</h1>
           <div>
             <div>
+              <!-- Create a valid canvas element with an ID -->
               <canvas id="myChart"></canvas>
             </div>
           </div>
@@ -42,35 +43,38 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  const ctx = document.getElementById('myChart');
-
-  <?php
-  $stats = selectStats();
-  $labels = [];
-  $data = [];
-
-  while ($stat = $stats->fetch_assoc()) {
-    $labels[] = "'" . $stat['Player_Name'] . "'";
-    $data[] = $stat['Total_goals'];
-  }
-  ?>
-
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: [<?php echo implode(', ', $labels); ?>],
-      datasets: [{
-        label: 'Total Goals per Player',
-        data: [<?php echo implode(', ', $data); ?>],
-      }],
-    },
-  });
-</script>
-
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script>
+  // Ensure the DOM is fully loaded before executing Chart.js script
+  document.addEventListener('DOMContentLoaded', function () {
+    const ctx = document.getElementById('myChart').getContext('2d');
+
+    <?php
+    $stats = selectStats();
+    $labels = [];
+    $data = [];
+
+    while ($stat = $stats->fetch_assoc()) {
+      $labels[] = "'" . $stat['Player_Name'] . "'";
+      $data[] = $stat['Total_goals'];
+    }
+    ?>
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [<?php echo implode(', ', $labels); ?>],
+        datasets: [{
+          label: 'Total Goals per Player',
+          data: [<?php echo implode(', ', $data); ?>],
+        }],
+      },
+    });
+  });
+</script>
 
 </body>
 </html>
