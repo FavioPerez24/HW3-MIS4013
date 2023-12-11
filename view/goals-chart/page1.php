@@ -22,7 +22,6 @@
     <div class="col">
       <div class="collapse multi-collapse" id="collapse1">
         <div class="card card-body">
-            <script src="chart1.php"></script>
         </div>
       </div>
     </div>
