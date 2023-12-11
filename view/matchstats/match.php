@@ -32,7 +32,7 @@
 
                                         </div>
                                         <div class="col-auto">
-                                            <?php include "edit-form.php"; ?>
+                                            <?php include "edit-form1.php"; ?>
                                         </div>
                                         <div class="col-auto">
                                             <form method="post" action="">
