@@ -1,41 +1,45 @@
-<section>
-<h1>Goals' Stats by Player</h1>
-<div>
-  <div>
-  <canvas id="myChart1"></canvas>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</div>
-  <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <canvas id="myChart1"></canvas>
-                </div>
-            </div>
-        </div>
-<script>
-const ctx = document.getElementById('myChart1');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Goals' Stats by Player</title>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+ <section>
+    <h1>Goals' Stats by Player</h1>
+    <div>
+      <div>
+        <canvas id="myChart1"></canvas>
+      </div>
+    </div>
+ </section>
 
-  <?php
-  $stats = selectStats();
-  $labels = [];
-  $data = [];
+ <script>
+    const ctx = document.getElementById('myChart1');
 
-  while ($stat = $stats->fetch_assoc()) {
-    $labels[] = "'" . $stat['Player_Name'] . "'";
-    $data[] = $stat['Total_goals'];
-  }
-  ?>
+    <?php
+    $stats = selectStats();
+    $labels = [];
+    $data = [];
 
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: [<?php echo implode(', ', $labels); ?>],
-      datasets: [{
-        label: 'Total Goals per Player',
-        data: [<?php echo implode(', ', $data); ?>],
-      }],
-    },
-  });
-</script>
-  </section>
+    while ($stat = $stats->fetch_assoc()) {
+      $labels[] = "'" . $stat['Player_Name'] . "'";
+      $data[] = $stat['Total_goals'];
+    }
+    ?>
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [<?php echo implode(', ', $labels); ?>],
+        datasets: [{
+          label: 'Total Goals per Player',
+          data: [<?php echo implode(', ', $data); ?>],
+        }],
+      },
+    });
+ </script>
+</body>
+</html>
