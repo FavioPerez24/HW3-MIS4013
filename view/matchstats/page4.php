@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
 <?php
-include "new-form2.php";
+include "new-form1.php";
 ?>
   </div>
 </div>
