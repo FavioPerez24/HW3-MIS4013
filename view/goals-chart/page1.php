@@ -19,7 +19,7 @@
           <h1>Goals' Stats by Player</h1>
           <div>
             <div>
-          <?php include "new-form1.php"; ?>
+          <?php include "chart.php"; ?>
           </div>
           </div>
           <div class="container mt-5">
