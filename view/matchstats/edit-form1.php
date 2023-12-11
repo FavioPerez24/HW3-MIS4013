@@ -61,7 +61,7 @@ include "match-input-list.php";
             <label for="Miles<?php echo $match['MSID']; ?>" class="form-label">Miles Run</label>
             <input type="number" class="form-control" id="Miles<?php echo $match['MSID']; ?>" name="Miles" value="<?php echo $match['Miles_Run']; ?>">
           </div>
-            <input type="hidden" name="Mid" value="<?php echo $match['MSID']; ?>">
+            <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-secondary">Save</button>
         </form>
