@@ -5,7 +5,7 @@
       </div>
       <div class="col-auto">
 <?php
-include "edit-form2.php";
+include "edit-form1.php";
 ?>
       </div>
       <div class="col-auto">
