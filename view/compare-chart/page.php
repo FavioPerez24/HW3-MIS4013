@@ -57,7 +57,7 @@
       ?>
       <div class="card" onclick="flipCard(this)">
         <div class="front">
-          <h2><?php echo $player['Player_Name']; ?></h2>
+          <h2><?php echo $player['PName']; ?></h2>
         </div>
         <div class="back">
           <canvas id="myChart<?php echo $player['PID']; ?>"></canvas>
@@ -69,7 +69,7 @@
         var chartData<?php echo $player['PID']; ?> = {
           labels: ['Goals', 'Shoots', 'Passes', 'Chances', 'Miles'],
           datasets: [{
-            label: '<?php echo $player['Player_Name']; ?>',
+            label: '<?php echo $player['PName']; ?>',
             data: [<?php
               while ($stat = $stats->fetch_assoc()) {
                   echo $stat['Total_goals'] . ', ' . $stat['Total_shoots'] . ', ' . $stat['Total_passes'] . ', ' . $stat['Total_chances'] . ', ' . $stat['Total_miles'];
