@@ -19,11 +19,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-<?php
-  $matches = selectMatchByPlayer($player['PID']);
-  while ($match = $matches->fetch_assoc()) {
-?>
         <td><?php echo $match['MSID']; ?></td>
         <td><?php echo $match['MID']; ?></td>
         <td><?php echo $match['MDetails']; ?></td>
