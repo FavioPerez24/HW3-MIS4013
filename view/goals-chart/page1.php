@@ -22,15 +22,8 @@
     <div class="col">
       <div class="collapse multi-collapse" id="collapse1">
         <div class="card card-body">
-          <h1>Goals' Stats by Player</h1>
-          <div>
-            <canvas id="myChart1"></canvas>
-          </div>
-          <?php include "chart.php"; ?>
+          <canvas id="chart1"></canvas>
         </div>
-      </div>
-    </div>       
-  </div>
       </div>
     </div>
     <div class="col">
@@ -47,6 +40,9 @@
         </div>
       </div>
     </div>
+
+    
+    
   </div>
 </div>
 
