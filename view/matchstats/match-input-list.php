@@ -6,7 +6,7 @@ while ($matchItem = $matchList->fetch_assoc()) {
     $selText = " selected";
   }
 ?>
-  <option value="<?php echo $matchItem['MID']; ?>"<?=$selText?>><?php echo $matchItem['MDetails']; ?></option>
+  <option value="<?php echo $matchItem['MID']; ?>"<?=$selText?>><?php echo $matchItem['MID']; ?></option>
 <?php
 }
 ?>
