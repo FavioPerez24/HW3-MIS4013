@@ -115,16 +115,17 @@
           <div class="card">
             <img src="<?php echo $player['PImage']; ?>" class="card-img-top" alt="<?php echo $player['PName']; ?> Image">
             <div class="card-body">
-              <h5 class="card-title"><?php echo $player['PName']; ?></h5>
-              <p class="card-text">: <?php echo $player['PDOB']; ?></p>
-              <p class="card-text">Nationality: <?php echo $player['PNationality']; ?></p>
-              <p class="card-text">Position: <?php echo $player['PPosition']; ?></p>
-              
+                    <p>Goals: <?php echo $match['Goals_Scored']; ?></p>
+                    <p>Shoots On Target: <?php echo $match['Shoots']; ?></p>
+                    <p>Passes Completed: <?php echo $match['Passes_Completed']; ?></p>
+                    <p>Chances Created: <?php echo $match['Chances_Created']; ?></p>
+                    <p>Miles Run: <?php echo $match['Miles_Run']; ?></p>
+                    
               <!-- Buttons in the same row -->
               <div class="d-flex justify-content-between">
-                <?php include "edit-form.php"; ?>
+                <?php include "edit-form1.php"; ?>
                 <form method="post" action="">
-                  <input type="hidden" name="Pid" value="<?php echo $player['PID']; ?>">
+                  <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
                   <input type="hidden" name="actionType" value="Delete">
                   <button type="submit" class="btn btn-delete" onclick="return confirm('Are you sure?');">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
@@ -133,7 +134,6 @@
                     </svg>
                   </button>
                 </form>
-                <a href="player-by-team.php?id=<?php echo $player['PID']; ?>" class="btn btn-teams">Team</a>
               </div>
             </div>
           </div>
