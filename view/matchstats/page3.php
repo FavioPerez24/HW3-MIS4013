@@ -112,8 +112,10 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <?php while ($player = $players->fetch_assoc()) { ?>
         <div class="col">
-          <div class="card">
-            <img src="<?php echo $player['PImage']; ?>" class="card-img-top" alt="<?php echo $player['PName']; ?> Image">
+          div class="card">
+        <div class="card-header">
+            Player Name: <?php echo $player['Pname']; ?>
+        </div>
             <div class="card-body">
                     <p>Goals: <?php echo $match['Goals_Scored']; ?></p>
                     <p>Shoots On Target: <?php echo $match['Shoots']; ?></p>
