@@ -12,7 +12,6 @@
                           ?>
                         </ul>
                     </p>
-                    <p class="card-text"><small class="text-body-secondary">DOB: <?php echo $player['PDOB']; ?></small></p>
                 </div>
             </div>
         </div>
