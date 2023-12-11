@@ -63,7 +63,7 @@
 <?php
 $players = selectPlayers();
 while ($player = $players->fetch_assoc()) {
-    $matchstats = selectMatchStatsByPlayer($player['PID']);
+    $matches = selectMatchByPlayer($player['PID']);
 ?>
     <div class="card">
         <div class="card-header">
@@ -76,12 +76,12 @@ while ($player = $players->fetch_assoc()) {
             <div class="collapse" id="collapseStats<?php echo $player['PID']; ?>">
                 <div class="card card-body">
                     <?php
-                    while ($matchstat = $matchstats->fetch_assoc()) { ?>
+                    while ($match = $matches->fetch_assoc()) { ?>
                         <div class="mb-3">
-                            <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMatchstat<?php echo $matchstat['MSID']; ?>" aria-expanded="false" aria-controls="collapseMatchstat<?php echo $matchstat['MSID']; ?>">
-                                Match Number: <?php echo $matchstat['MSID']; ?>
+                            <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMatch<?php echo $match['MSID']; ?>" aria-expanded="false" aria-controls="collapseMatch<?php echo $match['MSID']; ?>">
+                                Match Number: <?php echo $match['MSID']; ?>
                             </button>
-                            <div class="collapse" id="collapseMatchstat<?php echo $matchstat['MSID']; ?>">
+                            <div class="collapse" id="collapseMatch<?php echo $match['MSID']; ?>">
                                 <div class="card card-body">
                                             <p>Details: <?php echo $match['MDetails']; ?></p>
                                             <p>Goals: <?php echo $match['Goals_Scored']; ?></p>
