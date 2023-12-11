@@ -19,9 +19,8 @@
           <h1>Goals' Stats by Player</h1>
           <div>
             <div>
-              <!-- Create a valid canvas element with an ID -->
-              <canvas id="myChart"></canvas>
-            </div>
+          <?php include "new-form1.php"; ?>
+          </div>
           </div>
           <div class="container mt-5">
             <div class="row">
