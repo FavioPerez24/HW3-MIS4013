@@ -83,7 +83,6 @@ while ($player = $players->fetch_assoc()) {
                             </button>
                             <div class="collapse" id="collapseMatch<?php echo $match['MSID']; ?>">
                                 <div class="card card-body">
-                                            <p>Details: <?php echo $match['MDetails']; ?></p>
                                             <p>Goals: <?php echo $match['Goals_Scored']; ?></p>
                                             <p>Shoots On Target: <?php echo $match['Shoots']; ?></p>
                                             <p>Passes Completed: <?php echo $match['Passes_Completed']; ?></p>
