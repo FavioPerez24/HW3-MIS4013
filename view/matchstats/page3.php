@@ -109,14 +109,32 @@
         <?php include "new-form.php"; ?>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <?php while ($player = $players->fetch_assoc()) { ?>
-        <div class="col">
-          div class="card">
+    
+<?php
+$players = selectPlayers();
+while ($player = $players->fetch_assoc()) {
+    $matches = selectMatchByPlayer($player['PID']);
+?>
+    <div class="card">
         <div class="card-header">
             Player Name: <?php echo $player['Pname']; ?>
         </div>
-            <div class="card-body">
+        <div class="card-body">
+            <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStats<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapseStats<?php echo $player['PID']; ?>">
+                View Stats
+            </button>
+            <div class="collapse" id="collapseStats<?php echo $player['PID']; ?>">
+                <div class="card card-body">
+                    <?php
+                    while ($match = $matches->fetch_assoc()) { ?>
+                        <div class="mb-3">
+                            <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMatch<?php echo $match['MSID']; ?>" aria-expanded="false" aria-controls="collapseMatch<?php echo $match['MSID']; ?>">
+                                Match Number: <?php echo $match['MID']; ?>
+                            </button>
+                            <div class="collapse" id="collapseMatch<?php echo $match['MSID']; ?>">
+                                <div class="card card-body">
+
+                
                     <p>Goals: <?php echo $match['Goals_Scored']; ?></p>
                     <p>Shoots On Target: <?php echo $match['Shoots']; ?></p>
                     <p>Passes Completed: <?php echo $match['Passes_Completed']; ?></p>
