@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container mt-3">
-  <h1 class="text-center">OUR SOCUTING ANALYSIS</h1>
+  <h1 class="text-center">OUR SCOUTING ANALYSIS</h1>
 </div>
 <div class="container mt-5">
   <p class="d-inline-flex gap-1">
@@ -22,7 +22,7 @@
     <div class="col">
       <div class="collapse multi-collapse" id="collapse1">
         <div class="card card-body">
-            <script src="chart.php"></script>
+            <script src="chart1.php"></script>
         </div>
       </div>
     </div>
