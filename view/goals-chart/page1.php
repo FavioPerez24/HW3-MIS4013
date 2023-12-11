@@ -43,30 +43,28 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-  const ctx = document.getElementById('myChart').getContext('2d');
-  // Replace PHP data with your actual data
-  const labels = ['Player1', 'Player2', 'Player3']; // Replace with your player names
-  const data = [10, 15, 8]; // Replace with your goal data
+  const ctx = document.getElementById('myChart');
+
+  <?php
+  $stats = selectStats();
+  $labels = [];
+  $data = [];
+
+  while ($stat = $stats->fetch_assoc()) {
+    $labels[] = "'" . $stat['Player_Name'] . "'";
+    $data[] = $stat['Total_goals'];
+  }
+  ?>
 
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: labels,
+      labels: [<?php echo implode(', ', $labels); ?>],
       datasets: [{
         label: 'Total Goals per Player',
-        data: data,
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1
-      }]
+        data: [<?php echo implode(', ', $data); ?>],
+      }],
     },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
   });
 </script>
 
