@@ -1,9 +1,4 @@
 <section>
-  <h1>OUR CHARTS</h1>
-</section>
-    <div>
-    </div>
-<section>
 <h1>Goals' Stats by Player</h1>
 <div>
   <div>
