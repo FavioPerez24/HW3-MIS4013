@@ -22,6 +22,7 @@
     <div class="col">
       <div class="collapse multi-collapse" id="collapse1">
         <div class="card card-body">
+          <?php include "chart1.php"; ?>
         </div>
       </div>
     </div>
