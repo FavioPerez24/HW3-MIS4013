@@ -1,7 +1,37 @@
                                 <li class="list-group-item">
                                     <div class="row">
                                         <div class="col">
-                                            <?php echo $match['Goals']; ?> - <?php echo $major['division']; ?> - <?php echo $major['minimum_credit_hours']; ?>
+
+                                          <div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Data ID</th>
+      <th>Match ID</th>
+      <th>Details</th>
+      <th>Goals</th>
+      <th>Shoots On Target</th>
+      <th>Passes Completed</th>
+      <th>Chances Created</th>
+      <th>Miles Run</th>
+      <th></th>
+      <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+<?php
+  $matches = selectMatchByPlayer($player['PID']);
+  while ($match = $matches->fetch_assoc()) {
+?>
+        <td><?php echo $match['MSID']; ?></td>
+        <td><?php echo $match['MID']; ?></td>
+        <td><?php echo $match['MDetails']; ?></td>
+        <td><?php echo $match['Goals_Scored']; ?></td>
+        <td><?php echo $match['Shoots']; ?></td>
+        <td><?php echo $match['Passes_Completed']; ?></td>
+        <td><?php echo $match['Chances_Created']; ?></td>
+        <td><?php echo $match['Miles_Run']; ?></td>                                        
                                         </div>
                                         <div class="col-auto">
                                             <?php include "edit-form.php"; ?>
