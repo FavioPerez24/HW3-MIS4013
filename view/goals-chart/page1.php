@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container mt-3">
-  <h1 class="text-center">Our Scouting Analysis</h1>
+  <h1 class="text-center">OUR SOCUTING ANALYSIS</h1>
 </div>
 <div class="container mt-5">
   <p class="d-inline-flex gap-1">
