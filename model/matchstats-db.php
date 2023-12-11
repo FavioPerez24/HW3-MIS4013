@@ -23,7 +23,7 @@ function selectMatchbyPlayer($id) {
         if ($stmt === false) {
             throw new Exception("Error: " . $conn->error);
         }
-        $stmt->bind_param("iii", $id, $id, $id);
+        $stmt->bind_param("i", $id);
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
