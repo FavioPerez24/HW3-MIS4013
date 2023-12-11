@@ -1,100 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>OUR SCOUTING ANALYSIS</title>
- <!-- Include Bootstrap for styling -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
- <!-- Include Chart.js library -->
- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
- <style>
-    .card {
-      width: 300px;
-      height: 400px;
-      perspective: 1000px;
-      position: relative;
-      cursor: pointer;
-      margin: 20px;
-    }
-
-    .card div {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      backface-visibility: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-size: 20px;
-      font-weight: bold;
-      color: white;
-    }
-
-    .front {
-      background-color: #3498db;
-      transform: rotateY(0deg);
-    }
-
-    .back {
-      background-color: #2ecc71;
-      transform: rotateY(180deg);
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    canvas {
-      max-width: 100%;
-      max-height: 80%;
-    }
- </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Scouting Analysis</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
 
-<div class="card" onclick="flipCard(this)">
- <div class="front">
-    <h1>OUR CHARTS</h1>
- </div>
- <div class="back">
-    <section>
-      <h1>Goals' Stats by Player</h1>
-      <div>
-        <div>
-          <canvas id="myChart"></canvas>
+<div class="container mt-3">
+  <h1 class="text-center">Our Scouting Analysis</h1>
+
+  <p class="d-inline-flex gap-1">
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+  </p>
+
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="card card-body">
+          Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
         </div>
       </div>
-    </section>
- </div>
+    </div>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <div class="card card-body">
+          Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+  </div>
+
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
- function flipCard(card) {
-    card.classList.toggle('flipped');
- }
+  const ctx = document.getElementById('myChart').getContext('2d');
+  // Replace PHP data with your actual data
+  const labels = ['Player1', 'Player2', 'Player3']; // Replace with your player names
+  const data = [10, 15, 8]; // Replace with your goal data
 
- // Chart.js configuration
- const ctx = document.getElementById('myChart');
-
- <?php
- // Replace the following with your actual data retrieval logic
- $stats = selectStats();
- $labels = [];
- $data = [];
-
- while ($stat = $stats->fetch_assoc()) {
-    $labels[] = "'" . $stat['Player_Name'] . "'";
-    $data[] = $stat['Total_goals'];
- }
- ?>
-
- new Chart(ctx, {
+  new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: [<?php echo implode(', ', $labels); ?>],
+      labels: labels,
       datasets: [{
         label: 'Total Goals per Player',
-        data: [<?php echo implode(', ', $data); ?>],
+        data: data,
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
         borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 1
@@ -107,11 +70,12 @@
         }
       }
     }
- });
+  });
 </script>
 
-<!-- Bootstrap JS for toggling the card -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </body>
 </html>
