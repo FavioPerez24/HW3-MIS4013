@@ -9,30 +9,7 @@
                     echo '<li class="list-group-item">';
                     echo '<div class="row">';
                     echo '<div class="col">';
-                        <table class="table">
-    <thead>
-        <tr>
-            <th>Data ID</th>
-            <th>MID</th>
-            <th>Goals</th>
-            <th>Shoots On Target</th>
-            <th>Passes Completed</th>
-            <th>Chances Created</th>
-            <th>Miles Run</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><?php echo $match['MSID']; ?></td>
-            <td><?php echo $match['MID']; ?></td>
-            <td><?php echo $match['Goals_Scored']; ?></td>
-            <td><?php echo $match['Shoots']; ?></td>
-            <td><?php echo $match['Passes_Completed']; ?></td>
-            <td><?php echo $match['Chances_Created']; ?></td>
-            <td><?php echo $match['Miles_Run']; ?></td>
-        </tr>
-    </tbody>
-</table>            
+                    include "match1.php";    
                     echo '</div>';
                     echo '<div class="col-auto">';
                     include "edit-form1.php";
