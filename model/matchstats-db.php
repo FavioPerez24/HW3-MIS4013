@@ -18,7 +18,7 @@ function selectMatchbyPlayer($id) {
         if ($conn->connect_error) {
             throw new Exception("Error: " . $conn->connect_error);
         }
-        $sql = "SELECT MS.MSID, M.MID, Goals_Scored, Shoots, Passes_Completed, Chances_Created, Miles_Run FROM MatchGame M JOIN MatchStats MS ON M.MID = MS.MID WHERE MS.PID = ?";
+        $sql = "SELECT MS.MSID, MS.MID, Goals_Scored, Shoots, Passes_Completed, Chances_Created, Miles_Run FROM MatchGame M JOIN MatchStats MS ON M.MID = MS.MID WHERE MS.PID = ?";
         $stmt = $conn->prepare($sql);
         if ($stmt === false) {
             throw new Exception("Error: " . $conn->error);
