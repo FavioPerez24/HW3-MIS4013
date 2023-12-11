@@ -34,7 +34,7 @@ $selectedPlayer =  $player['PID'];
 include "player-input-list.php";
 ?>
           </div>
-            <label for="Mdet<?php echo $match['MSID']; ?>" class="form-label">Match Details</label>
+            <label for="Mid<?php echo $match['MSID']; ?>" class="form-label">Match ID</label>
          <?php
 $matchList = selectMatchForInput();
 $selectedMatch = $match['MSID'];
