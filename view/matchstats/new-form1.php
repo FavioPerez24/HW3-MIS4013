@@ -34,7 +34,7 @@ $selectedPlayer = 0;
 include "player-input-list.php";
 ?>
           </div>
-            <label for="Mid" class="form-label">Match Details</label>
+            <label for="Mid" class="form-label">Match ID</label>
          <?php
 $matchList = selectMatchForInput();
 $selectedMatch = 0;
