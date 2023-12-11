@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OUR SCOUTING ANALYSIS</title>
-  <!-- Include Bootstrap for styling -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Include Chart.js library -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>OUR SCOUTING ANALYSIS</title>
+ <!-- Include Bootstrap for styling -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ <!-- Include Chart.js library -->
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <style>
     .card {
       width: 300px;
       height: 400px;
@@ -48,15 +48,15 @@
       max-width: 100%;
       max-height: 80%;
     }
-  </style>
+ </style>
 </head>
 <body>
 
 <div class="card" onclick="flipCard(this)">
-  <div class="front">
+ <div class="front">
     <h1>OUR CHARTS</h1>
-  </div>
-  <div class="back">
+ </div>
+ <div class="back">
     <section>
       <h1>Goals' Stats by Player</h1>
       <div>
@@ -65,30 +65,30 @@
         </div>
       </div>
     </section>
-  </div>
+ </div>
 </div>
 
 <script>
-  function flipCard(card) {
+ function flipCard(card) {
     card.classList.toggle('flipped');
-  }
+ }
 
-  // Chart.js configuration
-  const ctx = document.getElementById('myChart');
+ // Chart.js configuration
+ const ctx = document.getElementById('myChart');
 
-  <?php
-  // Replace the following with your actual data retrieval logic
-  $stats = selectStats();
-  $labels = [];
-  $data = [];
+ <?php
+ // Replace the following with your actual data retrieval logic
+ $stats = selectStats();
+ $labels = [];
+ $data = [];
 
-  while ($stat = $stats->fetch_assoc()) {
+ while ($stat = $stats->fetch_assoc()) {
     $labels[] = "'" . $stat['Player_Name'] . "'";
     $data[] = $stat['Total_goals'];
-  }
-  ?>
+ }
+ ?>
 
-  new Chart(ctx, {
+ new Chart(ctx, {
     type: 'bar',
     data: {
       labels: [<?php echo implode(', ', $labels); ?>],
@@ -107,11 +107,11 @@
         }
       }
     }
-  });
+ });
 </script>
 
 <!-- Bootstrap JS for toggling the card -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
