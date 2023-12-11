@@ -1,7 +1,6 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Data ID</th>
             <th>Match ID</th>
             <th>Goals</th>
             <th>Shoots On Target</th>
@@ -12,7 +11,6 @@
     </thead>
     <tbody>
         <tr>
-            <td><?php echo $match['MSID']; ?></td>
             <td><?php echo $match['MID']; ?></td>
             <td><?php echo $match['Goals_Scored']; ?></td>
             <td><?php echo $match['Shoots']; ?></td>
