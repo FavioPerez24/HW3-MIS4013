@@ -27,14 +27,14 @@
       <div class="modal-body">
         <form method="post" action="">
          <div class="mb-3">
-            <label for="Pname" class="form-label">Player Name</label>
+            <label for="Pid" class="form-label">Player Name</label>
 <?php
 $playerList = selectPlayerForInput();
 $selectedPlayer = 0;
 include "player-input-list.php";
 ?>
           </div>
-            <label for="Mdet" class="form-label">Match Details</label>
+            <label for="Mid" class="form-label">Match Details</label>
          <?php
 $matchList = selectMatchForInput();
 $selectedMatch = 0;
