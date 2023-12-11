@@ -18,7 +18,7 @@ function selectMatchbyPlayer($id) {
         if ($conn->connect_error) {
             throw new Exception("Error: " . $conn->connect_error);
         }
-        $sql = "SELECT P.PID, P.PName, MS.Goals_Scored, MS.Shoots, MS.Passes_Completed, MS.Chances_Created, MS.Miles_Run FROM Player P JOIN MatchStats MS ON P.PID = MS.PID WHERE P.PID = ? UNION ALL SELECT P.PID, P.PName, SUM(MS.Goals_Scored) AS Goals_Scored, SUM(MS.Shoots) AS Shoots, SUM(MS.Passes_Completed) AS Passes_Completed, SUM(MS.Chances_Created) AS Chances_Created, SUM(MS.Miles_Run) AS Miles_Run FROM Player P JOIN MatchStats MS ON P.PID = MS.PID WHERE P.PID = ? GROUP BY P.PID, P.PName UNION ALL SELECT P.PID, P.PName, SUM(MS.Goals_Scored) AS Goals_Scored, SUM(MS.Shoots) AS Shoots, SUM(MS.Passes_Completed) AS Passes_Completed, SUM(MS.Chances_Created) AS Chances_Created, SUM(MS.Miles_Run) AS Miles_Run FROM Player P JOIN MatchStats MS ON P.PID = MS.PID WHERE P.PID IN (SELECT PID FROM Player WHERE PName = ?) GROUP BY P.PID, P.PName;";
+        $sql = "SELECT MS.MSID, M.MID, M.MDetails, Goals_Scored, Shoots, Passes_Completed, Chances_Created, Miles_Run FROM MatchGame M JOIN MatchStats MS ON M.MID = MS.MID WHERE MS.PID = ?";
         $stmt = $conn->prepare($sql);
         if ($stmt === false) {
             throw new Exception("Error: " . $conn->error);
