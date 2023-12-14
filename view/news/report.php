@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Footballers Profile</title>
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-body {
+ h1 {
+  display: flex;
+  justify-content: center;
+}
+    body {
     font-family: Arial, sans-serif;
 }
 
@@ -68,6 +72,8 @@ body {
 </style>
 </head>
 <body>
+ <section>
+    <h1>Performance Reports</h1>
 
 <div class="sidenav">
  <a href="#" onclick="myAccordion('id01')">Rico Lewis</a>
