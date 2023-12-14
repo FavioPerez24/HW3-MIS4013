@@ -12,6 +12,44 @@ function selectPlayers() {
         throw $e;
     }
 }
+function selectAllStats() {
+    try {
+    $conn = get_db_connection();
+    $stmt = $conn->prepare("SELECT MS.MSID, M.MID, M.MDetails, Goals_Scored, Shoots, Passes_Completed, Chances_Created, Miles_Run FROM MatchGame M JOIN MatchStats MS ON M.MID = MS.MID");
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $conn->close();
+    return $result;
+    } catch (Exception $e) {
+    $conn->close();
+    throw $e;
+    }
+}
+
+function selectPlayerById($id) {
+    try {
+    $conn = get_db_connection();
+    $stmt = $conn->prepare("SELECT PID, PName FROM Player WHERE PID = ?");
+    $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectMatchById($id) {
+    $conn = get_db_connection();
+    $sql = "SELECT MID, MName, MType FROM Match WHERE MID = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result;
+}
+
 function selectMatchbyPlayer($id) {
     try {
         $conn = get_db_connection();
