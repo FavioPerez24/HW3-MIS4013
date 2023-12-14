@@ -7,10 +7,9 @@
 <section>
     <h1>Performance Reports</h1>
 <div class="w3-bar">
- <button class="w3-bar-item w3-button" onclick="myAccordion('Demo1')">Accordion 1</button>
- <button class="w3-bar-item w3-button" onclick="myAccordion('Demo2')">Accordion 2</button>
- <button class="w3-bar-item w3-button" onclick="myAccordion('Demo3')">Accordion 3</button>
- <button class="w3-bar-item w3-button" onclick="myAccordion('Demo4')">Accordion 4</button>
+ <button class="w3-bar-item w3-button" onclick="myAccordion('Demo1')">Newcastle United vs PSG</button>
+ <button class="w3-bar-item w3-button" onclick="myAccordion('Demo2')">Real Madrid vs Napoli</button>
+ <button class="w3-bar-item w3-button" onclick="myAccordion('Demo3')">RB Leipzig vs Manchester City</button>
 </div>
 
 <div id="Demo1" class="w3-container w3-hide">
@@ -46,9 +45,6 @@ Guardiola's trust in Lewis is a testament to the youngster's exceptional talent 
 Lewis' emergence as a first-team regular is also a reflection of Manchester City's well-run academy system, which has produced a string of talented young players in recent years. The club's investment in its youth setup has paid off, as players like Lewis are given the opportunity to develop their skills and showcase their talent at the highest level.
 In conclusion, Rico Lewis is a rising star in Manchester City's revolutionary full-back system, and his impressive performances this season have proven that he is more than capable of filling the void left by Oleksandr Zinchenko. With his exceptional talent, tactical understanding, and adaptability, Lewis is set to become a key player for City in the years to come. 
  </p>
-</div>
-
- <div id="Demo4" class="w3-container w3-hide">
  <h2>Jeremy Doku</h2>
  <p>
   <strong>Doku Delivers: A Bright Spark in Manchester City's Midfield. </strong> 
