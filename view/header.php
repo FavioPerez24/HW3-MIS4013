@@ -27,7 +27,7 @@ body {font-family: "Lato", sans-serif}
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
         <a href="analysis-chart.php" class="w3-bar-item w3-button">OUR ANALYSIS</a>
         <a href="data-chart.php" class="w3-bar-item w3-button">DATA CHARTS</a>
-        <a href="view/news/page1.php" class="w3-bar-item w3-button">NEWS</a>
+        <a href="view/news/section.php" class="w3-bar-item w3-button">NEWS</a>
       </div>
     </div>
     <div>
