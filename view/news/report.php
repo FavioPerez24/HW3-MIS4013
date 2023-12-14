@@ -2,6 +2,9 @@
 <html>
 <head>
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ h1 {
+            text-align: center;
+        }
 </head>
 <body>
 <section>
