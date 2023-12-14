@@ -47,6 +47,7 @@
         }
     </style>
 </head>
+    <h1 class="browsers">Weekly Highlights</h1>
 <body>
     <div class="container">
         <div class="news-card">
