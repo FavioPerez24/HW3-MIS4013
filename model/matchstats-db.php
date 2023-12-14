@@ -13,7 +13,7 @@ function selectPlayers() {
     }
 }
 
-<?php
+
 function selectMatchbyPlayer($id) {
     try {
         $conn = get_db_connection();
