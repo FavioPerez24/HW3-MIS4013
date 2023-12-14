@@ -56,9 +56,6 @@
         line-height: 1.5;
         }
     </style>
-    <?php
-    Include "view/header.php";
-?>
 </head>
     <h1 class="browsers">Weekly Highlights</h1>
 <body>
@@ -95,7 +92,4 @@
         </div>
     </div>
 </body>
-<?php
-    Include "view/footer.php";
-?>
 </html>
