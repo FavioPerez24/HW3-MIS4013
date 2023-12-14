@@ -56,7 +56,6 @@
                 <p>In an electrifying showdown between Paris Saint-Germain (PSG) and Newcastle United, the match unfolded with intense moments and a spectacular display of skill. Tino Livramento, the rising star from Newcastle, etched his name in the headlines by delivering a stunning performance. As the clock ticked down, Livramento seized an opportune moment and scored a breathtaking goal that left spectators in awe. His precise footwork and strategic play secured a memorable victory for Newcastle, and fans erupted in joy as they celebrated the young talent's prowess on the field. The PSG-Newcastle clash will be remembered as a thrilling encounter, showcasing Livramento's remarkable contribution to his team's triumph.</p>
             </div>
             <div class="card-footer">
-                <a href="#">Read More</a>
                  <a href="page1.php" class="btn btn-dark">Read More</a>
             </div>
         </div>
@@ -67,7 +66,7 @@
                 <p>In a riveting encounter between football giants Real Madrid and Napoli, the pitch became a battleground for an exhilarating clash. Victor Osimhen, the prolific striker for Napoli, showcased his goal-scoring prowess with a clinical finish that sent shockwaves through the Madrid defense. Not to be outdone, Jude Bellingham, the dynamic midfielder, added to the spectacle with a remarkable goal, displaying his technical finesse and football intelligence. The match unfolded as a symphony of skill and strategy, with both teams delivering a breathtaking performance. In the end, the goals by Osimhen and Bellingham proved decisive, etching their names into the annals of the match's history and securing a triumphant victory for Napoli against the formidable Real Madrid. The electrifying showdown left fans on the edge of their seats, savoring the brilliance of these two standout players.</p>
             </div>
             <div class="card-footer">
-                <a href="#">Read More</a>
+                 <a href="page1.php" class="btn btn-dark">Read More</a>
             </div>
         </div>
         <div class="news-card">
