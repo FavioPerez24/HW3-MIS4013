@@ -10,21 +10,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
     <style>
         .card {
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            transition: 0.3s;
-            width: 100%; 
-            border-radius: 5px;
-            margin: 10px;
-        }
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+}
 
-        .card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        }
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
-        .container {
-            padding: 2px 16px;
-        }
+.card-body {
+    padding: 2px 16px;
+}
 
+.table-bordered th, .table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover {
+    color: #212529;
+    background-color: rgba(0,0,0,0.075);
+}
+        
         .btn-add {
             background-color: #28a745;
             color: #fff;
