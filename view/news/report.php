@@ -18,8 +18,11 @@
  <button class="w3-bar-item w3-button" onclick="myAccordion('Demo3')">RB Leipzig vs Manchester City</button>
 </div>
 
-<div id="Demo1" class="w3-container w3-hide">
- <h2>Tino Livramento</h2>
+  <div class="w3-container">
+ <button onclick="myAccordion('Demo1')" class="w3-btn-block w3-left-align">
+    Tino Livramento
+ </button>
+ <div id="Demo1" class="w3-hide w3-container">
  <p><strong>Tino Livramento's Double Threat: A New Dynamic for Newcastle United. </strong>
  Tino Livramento has been a revelation for Newcastle United since his arrival from Southampton, bringing a unique set of skills that have added a new dimension to the team's attacking play. The 20-year-old right-back has shown an impressive ability to read the game, make incisive passes, and contribute to Newcastle's goal-scoring efforts, making him a valuable asset to the team. One of Livramento's standout qualities is his ability to find his teammates in dangerous areas. His weighted pass to Che Adams against Aston Villa is a prime example of this, bypassing two defenders and giving Adams a good opportunity on goal. 
 Livramento's passing ability is not limited to this type of play, however. He is also capable of playing more intricate passes, as evidenced by his assist to Theo Walcott against Athletic Bilbao in pre-season.
@@ -28,10 +31,13 @@ Defensively, Livramento is equally impressive. He averages 1.92 interceptions pe
 Livramento's style differs from that of Kieran Trippier, Newcastle's other starting full-back. While Trippier is known for his accurate crossing and ability to pick out a pass, Livramento is more direct and athletic. This diversity in attacking styles has allowed Newcastle to create different types of threats, making it difficult for opposing defenses to contain them.
 In summary, Tino Livramento has brought a new dynamic to Newcastle United's attack. His ability to find his teammates in dangerous areas, combined with his pace and athleticism, make him a valuable asset to the team. Defensively, his impressive interception and ball recovery numbers show that he is equally adept at winning the ball back for his team. With Livramento and Trippier forming a formidable full-back pairing, Newcastle United look poised for success in the coming seasons.
  </p>
-</div>
+ </div>
 
-<div id="Demo2" class="w3-container w3-hide">
- <h2>Jude Bellingham</h2>
+ <div class="w3-container">
+ <button onclick="myAccordion('Demo2')" class="w3-btn-block w3-center-align">
+  Jude Bellingham
+  </button>
+ <div id="Demo2" class="w3-hide w3-container">
  <p><strong>Rising Star: Jude Bellingham's Game-Changing Performances at Real Madrid FC. </strong>
  The incredible journey of Jude Bellingham, the young English midfielder who has quickly risen to the top at Real Madrid FC, has caught the world's attention. Born on March 20, 2003, Bellingham made his senior debut for Real Madrid on September 15, 2020. Since then, he has showcased a dazzling display of skills and made a significant impact on the club's success.
 <strong> Here is the Agenda: </strong>
@@ -42,8 +48,11 @@ In March 2021, Bellingham became the youngest player in La Liga history to score
  </p>
 </div>
 
- <div id="Demo3" class="w3-container w3-hide">
- <h2>Rico Lewis</h2>
+ <div class="w3-container">
+ <button onclick="myAccordion('Demo3')" class="w3-btn-block w3-left-align">
+ Rico Lewis
+   </button>
+ <div id="Demo3" class="w3-hide w3-container">
  <p><strong>Rico Lewis: The Rising Star of Manchester City's Revolutionary Full-Back System. </strong>
 Manchester City's 18-year-old full-back Rico Lewis has been making waves in the Premier League this season, with his impressive performances earning high praise from pundits and fans alike. The youngster, who has already played a game more than club captain Ilkay Gundogan this season, has become a crucial part of Pep Guardiola's tactical setup at the Etihad Stadium.
 In City's recent thrilling 4-2 comeback victory over Tottenham Hotspur, Lewis put in a mature and commanding performance, demonstrating his exceptional close control, game understanding, and defensive instincts. His crucial block on Ivan Perisic in the second half proved to be a turning point in the match, as City rallied to secure all three points and keep their title hopes alive.
@@ -51,7 +60,10 @@ Guardiola's trust in Lewis is a testament to the youngster's exceptional talent 
 Lewis' emergence as a first-team regular is also a reflection of Manchester City's well-run academy system, which has produced a string of talented young players in recent years. The club's investment in its youth setup has paid off, as players like Lewis are given the opportunity to develop their skills and showcase their talent at the highest level.
 In conclusion, Rico Lewis is a rising star in Manchester City's revolutionary full-back system, and his impressive performances this season have proven that he is more than capable of filling the void left by Oleksandr Zinchenko. With his exceptional talent, tactical understanding, and adaptability, Lewis is set to become a key player for City in the years to come. 
  </p>
- <h2>Jeremy Doku</h2>
+  
+Jeremy Doku
+   </button>
+ <div id="Demo3" class="w3-hide w3-container">
  <p>
   <strong>Doku Delivers: A Bright Spark in Manchester City's Midfield. </strong> 
   Jeremy Doku has made a strong start to his Manchester City career, showcasing his skills and potential in a series of impressive performances. The young Belgian winger, who joined the Citizens from Anderlecht in the summer, has quickly established himself as a key player in Pep Guardiola's squad.
