@@ -1,7 +1,7 @@
 <div class="col">
     <?php
     // Assuming $player is defined outside the loop
-    $matches = selectAllStats($player['PID']);
+    $matches = selectMatchbyPlayer($player['PID']);
     $firstIteration = true; // Flag to check the first iteration
     while ($match = $matches->fetch_assoc()) {
     ?>
