@@ -5,14 +5,6 @@
 </head>
 <body>
 <section>
-    <div>
-<h1 class="browsers">Weekly Highlights</h1>
-    </div>
-   <?php include "section.php"; ?>
-  </section>
-  <section>
-
-<section>
     <h1>Performance Reports</h1>
 <div class="w3-bar">
  <button class="w3-bar-item w3-button" onclick="myAccordion('Demo1')">Accordion 1</button>
