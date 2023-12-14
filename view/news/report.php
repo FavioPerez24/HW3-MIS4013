@@ -2,12 +2,17 @@
 <html>
 <head>
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
- h1 {
-            text-align: center;
-        }
+<style>
+ .centered-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ }
+</style>
 </head>
 <body>
-<section>
+  <section class="centered-section">
     <h1>Performance Reports</h1>
 <div class="w3-bar">
  <button class="w3-bar-item w3-button" onclick="myAccordion('Demo1')">Newcastle United vs PSG</button>
