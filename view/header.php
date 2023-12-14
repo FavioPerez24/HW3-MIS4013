@@ -26,7 +26,7 @@ body {font-family: "Lato", sans-serif}
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
         <a href="goals-chart.php" class="w3-bar-item w3-button">OUR ANALYSIS</a>
-        <a href="data-chart.php" class="w3-bar-item w3-button">DATA CHARTS</a>
+        <a href="demo-chart.php" class="w3-bar-item w3-button">OUR SCOUTING DEMOGRAPHICS</a>
         <a href="news.php" class="w3-bar-item w3-button">NEWS</a>
       </div>
     </div>
