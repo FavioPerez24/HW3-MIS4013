@@ -14,7 +14,7 @@
         if ($count % 2 == 0) {
             echo '<div class="row">';
         }
-        include "player1.php";
+        include "player.php";
         if ($count % 2 !== 0 || $players->num_rows % 2 !== 0) {
             echo '</div>';
         }
