@@ -67,7 +67,7 @@
                 <p>In an electrifying showdown between Paris Saint-Germain (PSG) and Newcastle United, the match unfolded with intense moments and a spectacular display of skill. Tino Livramento, the rising star from Newcastle, etched his name in the headlines by delivering a stunning performance. As the clock ticked down, Livramento seized an opportune moment and scored a breathtaking goal that left spectators in awe. His precise footwork and strategic play secured a memorable victory for Newcastle, and fans erupted in joy as they celebrated the young talent's prowess on the field. The PSG-Newcastle clash will be remembered as a thrilling encounter, showcasing Livramento's remarkable contribution to his team's triumph.</p>
             </div>
             <div class="card-footer">
-                 <a href="view/news/report.php" class="btn btn-dark">Read More</a>
+                 <a href="p-report.php" class="btn btn-dark">Read More</a>
             </div>
         </div>
         <div class="news-card">
@@ -77,7 +77,7 @@
                 <p>In a riveting encounter between football giants Real Madrid and Napoli, the pitch became a battleground for an exhilarating clash. Victor Osimhen, the prolific striker for Napoli, showcased his goal-scoring prowess with a clinical finish that sent shockwaves through the Madrid defense. Not to be outdone, Jude Bellingham, the dynamic midfielder, added to the spectacle with a remarkable goal, displaying his technical finesse and football intelligence. The match unfolded as a symphony of skill and strategy, with both teams delivering a breathtaking performance. In the end, the goals by Osimhen and Bellingham proved decisive, etching their names into the annals of the match's history and securing a triumphant victory for Napoli against the formidable Real Madrid. The electrifying showdown left fans on the edge of their seats, savoring the brilliance of these two standout players.</p>
             </div>
             <div class="card-footer">
-                 <a href="view/news/report.php" class="btn btn-dark">Read More</a>
+                 <a href="p-report.php" class="btn btn-dark">Read More</a>
             </div>
         </div>
         <div class="news-card">
@@ -87,7 +87,7 @@
                 <p>In a gripping encounter between RB Leipzig and Manchester City, the match unfolded with an exhilarating display of teamwork and individual brilliance. Rico Lewis, the maestro from RB Leipzig, took center stage as he orchestrated two impeccable assists that set the tone for his team's attacking prowess. With precision and vision, Lewis provided the perfect setups, leaving the Manchester City defense scrambling. Jeremy Doku, seizing the opportunities created by Lewis, showcased his clinical finishing with a remarkable goal that ignited the crowd. The match ended with RB Leipzig emerging victorious, their dynamic duo of Lewis and Doku leaving an indelible mark on the thrilling contest, and fans reveling in the team's stunning performance.</p>
             </div>
             <div class="card-footer">
-                 <a href="view/news/report.php" class="btn btn-dark">Read More</a>
+                 <a href="p-report.php" class="btn btn-dark">Read More</a>
             </div>
         </div>
     </div>
