@@ -12,7 +12,7 @@ body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
   body {
     display: flex;
-    min-height: 100vh;
+    min-height: 10vh;
 }
 
 main {
