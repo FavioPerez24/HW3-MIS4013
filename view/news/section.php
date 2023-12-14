@@ -45,6 +45,16 @@
                 margin-bottom: 30px;
             }
         }
+        .browsers {
+            background-color: black;
+            padding: 20px; 
+        margin: 10px; 
+        color: white;
+        font-family: 'Arial', sans-serif; 
+        font-size: 3em; 
+        text-align: center; 
+        line-height: 1.5;
+        }
     </style>
 </head>
     <h1 class="browsers">Weekly Highlights</h1>
