@@ -76,7 +76,7 @@
                 <p>In a gripping encounter between RB Leipzig and Manchester City, the match unfolded with an exhilarating display of teamwork and individual brilliance. Rico Lewis, the maestro from RB Leipzig, took center stage as he orchestrated two impeccable assists that set the tone for his team's attacking prowess. With precision and vision, Lewis provided the perfect setups, leaving the Manchester City defense scrambling. Jeremy Doku, seizing the opportunities created by Lewis, showcased his clinical finishing with a remarkable goal that ignited the crowd. The match ended with RB Leipzig emerging victorious, their dynamic duo of Lewis and Doku leaving an indelible mark on the thrilling contest, and fans reveling in the team's stunning performance.</p>
             </div>
             <div class="card-footer">
-                <a href="#">Read More</a>
+                 <a href="page1.php" class="btn btn-dark">Read More</a>
             </div>
         </div>
     </div>
