@@ -12,10 +12,11 @@ function selectPlayers() {
         throw $e;
     }
 }
+
 function selectAllStats() {
     try {
     $conn = get_db_connection();
-    $stmt = $conn->prepare("SELECT MS.MSID, M.MID, M.MDetails, Goals_Scored, Shoots, Passes_Completed, Chances_Created, Miles_Run FROM MatchGame M JOIN MatchStats MS ON M.MID = MS.MID");
+    $stmt = $conn->prepare("SELECT P.PID, PName, M.MID, MS.Goals_Scored, MS.Shoots, MS.Passes_Completed, MS.Chances_Created, MS.Miles_Run FROM `Player` JOIN MatchStats ON P.PID = MS.PID JOIN `MatchGame` M ON MS.MID = M.MID WHERE P.PID = ?");
     $stmt->execute();
     $result = $stmt->get_result();
     $conn->close();
@@ -23,57 +24,6 @@ function selectAllStats() {
     } catch (Exception $e) {
     $conn->close();
     throw $e;
-    }
-}
-
-function selectPlayerById($id) {
-    try {
-    $conn = get_db_connection();
-    $stmt = $conn->prepare("SELECT PID, PName FROM Player WHERE PID = ?");
-    $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-
-function selectMatchById($id) {
-    try {
-    $conn = get_db_connection();
-    $stmt = $conn->prepare("SELECT MID, MName, MType FROM Match WHERE MID = ?");
-    $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-function selectMatchbyPlayer($id) {
-    try {
-        $conn = get_db_connection();
-        if ($conn->connect_error) {
-            throw new Exception("Error: " . $conn->connect_error);
-        }
-        $sql = "SELECT MS.MSID, M.MID, M.MDetails, Goals_Scored, Shoots, Passes_Completed, Chances_Created, Miles_Run FROM MatchGame M JOIN MatchStats MS ON M.MID = MS.MID WHERE MS.PID = ?";
-        $stmt = $conn->prepare($sql);
-        if ($stmt === false) {
-            throw new Exception("Error: " . $conn->error);
-        }
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
     }
 }
 
