@@ -30,7 +30,8 @@ function selectPlayerById($id) {
     try {
     $conn = get_db_connection();
     $stmt = $conn->prepare("SELECT PID, PName FROM Player WHERE PID = ?");
-    $stmt->execute();
+    $stmt->bind_param("i", $id);
+        $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
         return $result;
@@ -41,15 +42,19 @@ function selectPlayerById($id) {
 }
 
 function selectMatchById($id) {
+    try {
     $conn = get_db_connection();
-    $sql = "SELECT MID, MName, MType FROM Match WHERE MID = ?";
-    $stmt = $conn->prepare($sql);
+    $stmt = $conn->prepare("SELECT MID, MName, MType FROM Match WHERE MID = ?");
     $stmt->bind_param("i", $id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    return $result;
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
 }
-
 function selectMatchbyPlayer($id) {
     try {
         $conn = get_db_connection();
