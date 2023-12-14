@@ -5,7 +5,15 @@
 </head>
     <h1>Performance Reports</h1>
 <body>
+<section>
+    <div>
+<h1 class="browsers">Weekly Highlights</h1>
+    </div>
+   <?php include "section.php"; ?>
+  </section>
+  <section>
 
+<section>
 <div class="w3-bar">
  <button class="w3-bar-item w3-button" onclick="myAccordion('Demo1')">Accordion 1</button>
  <button class="w3-bar-item w3-button" onclick="myAccordion('Demo2')">Accordion 2</button>
@@ -37,7 +45,7 @@
 In summary, while Pedri displayed exceptional skills and promise during the 2020-2021 season, his 2021-2022 season has been a letdown thus far. With increased scrutiny and expectations, it will be crucial for Pedri to regain his form and contribute significantly to Barcelona's success in the coming season.
  </p>
 </div>
-       
+</section>
 
 <script>
  function myAccordion(id) {
