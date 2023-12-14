@@ -25,8 +25,8 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="goals-chart.php" class="w3-bar-item w3-button">DATA COMPARISON</a>
-        <a href="demo-chart.php" class="w3-bar-item w3-button">PLAYERS DEMOGRAPHICS</a>
+        <a href="analysis-chart.php" class="w3-bar-item w3-button">OUR ANALYSIS</a>
+        <a href="data-chart.php" class="w3-bar-item w3-button">DATA CHARTS</a>
         <a href="news/page.php" class="w3-bar-item w3-button">NEWS</a>
       </div>
     </div>
@@ -40,7 +40,7 @@ body {font-family: "Lato", sans-serif}
 </div>
   
   <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="players.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">OUR GEMS</a>
+  <a href="players.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">OUR PLAYERS</a>
   <a href="matches.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MATCHES</a>
   <a href="matchstats.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">STATS</a>
   <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MORE</a>
