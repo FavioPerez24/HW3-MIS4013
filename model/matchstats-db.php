@@ -16,7 +16,7 @@ function selectPlayers() {
 function selectAllStats() {
     try {
     $conn = get_db_connection();
-    $stmt = $conn->prepare("SELECT P.PID, PName, M.MID, MS.Goals_Scored, MS.Shoots, MS.Passes_Completed, MS.Chances_Created, MS.Miles_Run FROM `Player` JOIN MatchStats ON P.PID = MS.PID JOIN `MatchGame` M ON MS.MID = M.MID WHERE P.PID = ?");
+    $stmt = $conn->prepare("SELECT P.PID, P.PName, M.MID, Goals_Scored, Shoots, Passes_Completed, Chances_Created, Miles_Run FROM Player P JOIN MatchStats MS ON P.PID = MS.PID JOIN MatchGame M ON MS.MID = M.MID WHERE P.PID = ? GROUP BY P.PID, P.PName");
     $stmt->execute();
     $result = $stmt->get_result();
     $conn->close();
