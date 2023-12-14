@@ -67,7 +67,7 @@ while ($player = $players->fetch_assoc()) {
 ?>
     <div class="card">
         <div class="card-header">
-            Player Name: <?php echo $player['Pname']; ?>
+            Player Name: <?php echo $player['PName']; ?>
         </div>
         <div class="card-body">
             <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStats<?php echo $player['PID']; ?>" aria-expanded="false" aria-controls="collapseStats<?php echo $player['PID']; ?>">
