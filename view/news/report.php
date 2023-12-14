@@ -13,8 +13,9 @@
 </head>
 <body>
   <section class="centered-section">
- <section>
     <h1>Performance Reports</h1>
+  </section>
+<section>
 <div class="w3-bar">
  <button class="w3-bar-item w3-button" onclick="myAccordion('Demo1')">Newcastle United vs PSG</button>
  <button class="w3-bar-item w3-button" onclick="myAccordion('Demo2')">Real Madrid vs Napoli</button>
