@@ -13,26 +13,30 @@
                     $firstIteration = false; // Set the flag to false after the first iteration
                 }
                 ?>
-                <table class="table">
-                    <thead>
-                        <tr>
-            <th>Match ID</th>
-            <th>Goals</th>
-            <th>Shoots On Target</th>
-            <th>Passes Completed</th>
-            <th>Chances Created</th>
-            <th>Miles Run</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-            <td><?php echo $match['MID']; ?></td>
-            <td><?php echo $match['Goals_Scored']; ?></td>
-            <td><?php echo $match['Shoots']; ?></td>
-            <td><?php echo $match['Passes_Completed']; ?></td>
-            <td><?php echo $match['Chances_Created']; ?></td>
-            <td><?php echo $match['Miles_Run']; ?></td>
-                            <td>
+
+                <div class="container">
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Match ID</th>
+                        <th scope="col">Goals</th>
+                        <th scope="col">Shoots On Target</th>
+                        <th scope="col">Passes Completed</th>
+                        <th scope="col">Chances Created</th>
+                        <th scope="col">Miles Run</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><?php echo $match['MID']; ?></th>
+                        <td><?php echo $match['Goals_Scored']; ?></td>
+                        <td><?php echo $match['Shoots']; ?></td>
+                        <td><?php echo $match['Passes_Completed']; ?></td>
+                        <td><?php echo $match['Chances_Created']; ?></td>
+                        <td><?php echo $match['Miles_Run']; ?></td>
+                         <td>
                                 <?php include "edit-form1.php"; ?>
                             </td>
                             <td>
@@ -47,10 +51,14 @@
                                                     </button>
                                 </form>
                             </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    <?php } ?>
+    </div>
 </div>
+<?php 
+    }
+}
+?>
+                           
