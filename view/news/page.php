@@ -5,12 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Top Stories</title>
   <link rel="stylesheet" href="styles.css">
-<!-- Include jQuery first (you can use a CDN link or download and host locally) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-KJ3o2DKtIq6Pnpbh4+tz9+7ZYAdW/1BEyExcpktqFM/8=" crossorigin="anonymous"></script>
-
-<!-- Then include Bootstrap JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <?php include "view/header.php"; ?>
   <style>
         .all-browsers {
             background-color: black;
