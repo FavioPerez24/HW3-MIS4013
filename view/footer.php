@@ -10,14 +10,6 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
-  body {
-    display: flex;
-    min-height: 10vh;
-}
-
-main {
-    flex: 1;
-}
 </style>
 </head>
 <body>
