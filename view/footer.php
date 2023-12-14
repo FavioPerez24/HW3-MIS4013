@@ -13,7 +13,6 @@ body {font-family: "Lato", sans-serif}
   body {
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
 }
 
 main {
