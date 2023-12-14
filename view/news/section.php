@@ -57,6 +57,7 @@
             </div>
             <div class="card-footer">
                 <a href="#">Read More</a>
+                 <a href="page1.php" class="btn btn-dark">Read More</a>
             </div>
         </div>
         <div class="news-card">
