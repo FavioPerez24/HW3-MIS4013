@@ -3,20 +3,16 @@
 <head>
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
- .centered-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vh;
- }
+ h1 {
+  display: flex;
+  justify-content: center;
+}
 </style>
 </head>
 <body>
-  <section class="centered-section">
+ <section>
     <h1>Performance Reports</h1>
-  </section>
-<section>
-<div class="w3-bar">
+ <div class="w3-bar">
  <button class="w3-bar-item w3-button" onclick="myAccordion('Demo1')">Newcastle United vs PSG</button>
  <button class="w3-bar-item w3-button" onclick="myAccordion('Demo2')">Real Madrid vs Napoli</button>
  <button class="w3-bar-item w3-button" onclick="myAccordion('Demo3')">RB Leipzig vs Manchester City</button>
