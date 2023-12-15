@@ -27,11 +27,11 @@ function selectTeamsForInput() {
     }
 }
 
-function insertPlayer($Pname, $Pdob, $Pnat, $Ppos, $Tid) {
+function insertPlayer($Pname, $Pdob, $Pnat, $Ppos, $Pim, $Tid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Player` (`PName`, `PDOB`, `PNationality`, `PPosition`, `TID`) VALUES (?, ?, ?,?,?)");
-        $stmt->bind_param("ssssi", $Pname, $Pdob, $Pnat, $Ppos, $Tid);
+        $stmt = $conn->prepare("INSERT INTO `Player` (`PName`, `PDOB`, `PNationality`, `PPosition`, `PImage`, `TID`) VALUES (?, ?, ?, ?,?,?)");
+        $stmt->bind_param("sssssi", $Pname, $Pdob, $Pnat, $Ppos, $Pim, $Tid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -41,11 +41,11 @@ function insertPlayer($Pname, $Pdob, $Pnat, $Ppos, $Tid) {
     }
 }
 
-function updatePlayer($Pname,$Pdob, $Pnat, $Ppos, $Tid, $Pid) {
+function updatePlayer($Pname,$Pdob, $Pnat, $Ppos, $Pim, $Tid, $Pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `Player` set `PName` = ?, `PDOB` = ?, `PNationality` = ?, `PPosition` = ?, `TID` = ? where PID = ?");
-        $stmt->bind_param("ssssii", $Pname, $Pdob, $Pnat, $Ppos, $Tid, $Pid);
+        $stmt = $conn->prepare("update `Player` set `PName` = ?, `PDOB` = ?, `PNationality` = ?, `PPosition` = ?, `PImage` = ?, `TID` = ? where PID = ?");
+        $stmt->bind_param("sssssii", $Pname, $Pdob, $Pnat, $Ppos, $Pim, $Tid, $Pid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
