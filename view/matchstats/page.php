@@ -79,7 +79,7 @@ while ($player = $players->fetch_assoc()) {
                     while ($match = $matches->fetch_assoc()) { ?>
                         <div class="mb-3">
                             <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMatch<?php echo $match['MSID']; ?>" aria-expanded="false" aria-controls="collapseMatch<?php echo $match['MSID']; ?>">
-                                Match Number: <?php echo $match['MSID']; ?>
+                                Match ID: <?php echo $match['MSID']; ?>
                             </button>
                             <div class="collapse" id="collapseMatch<?php echo $match['MSID']; ?>">
                                 <div class="card card-body">
