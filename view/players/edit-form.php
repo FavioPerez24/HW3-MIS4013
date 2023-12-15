@@ -42,6 +42,10 @@
             <label for="Ppos<?php echo $player['PID']; ?>" class="form-label">Position</label>
             <input type="text" class="form-control" id="Ppos<?php echo $player['PID']; ?>" name="Ppos" value="<?php echo $player['PPosition']; ?>">
           </div>
+           <div class="mb-3">
+            <label for="Pim<?php echo $player['PID']; ?>" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="Pim<?php echo $player['PID']; ?>" name="Pim" value="<?php echo $player['PImage']; ?>">
+          </div>
             <div class="mb-3">
             <label for="Tid<?php echo $player['TID']; ?>" class="form-label">Team</label>
 <?php
