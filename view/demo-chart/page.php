@@ -45,8 +45,8 @@
           beginAtZero: true
         }
       },
-      width: 400, // set the width
-      height: 400, // set the height
+      width: 100, // set the width
+      height: 100, // set the height
     }
   });
 </script>
