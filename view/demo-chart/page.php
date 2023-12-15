@@ -39,8 +39,15 @@
         backgroundColor: [<?php echo implode(', ', $colors); ?>],
       }],
     },
-    width: 200,
-      height: 200,
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      width: 400, // set the width
+      height: 400, // set the height
+    }
   });
 </script>
      
