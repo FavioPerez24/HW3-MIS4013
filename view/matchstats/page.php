@@ -55,7 +55,7 @@
             <h1>Statistics by Player</h1>
         </div>
         <div class="col-auto">
-            <?php include "new-form1.php"; ?>
+            <?php include "new-form.php"; ?>
         </div>
     </div>
 </div>
@@ -88,7 +88,7 @@ while ($player = $players->fetch_assoc()) {
                                             <p>Passes Completed: <?php echo $match['Passes_Completed']; ?></p>
                                             <p>Chances Created: <?php echo $match['Chances_Created']; ?></p>
                                             <p>Miles Run: <?php echo $match['Miles_Run']; ?></p>
-                                            <?php include "edit-form1.php"; ?>
+                                            <?php include "edit-form.php"; ?>
                                             <form method="post" action="">
                                                 <input type="hidden" name="Msid" value="<?php echo $match['MSID']; ?>">
                                                 <input type="hidden" name="actionType" value="Delete">
