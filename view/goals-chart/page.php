@@ -20,10 +20,12 @@
   $stats = selectStats();
   $labels = [];
   $data = [];
+$colors = [];
 
   while ($stat = $stats->fetch_assoc()) {
     $labels[] = "'" . $stat['Player_Name'] . "'";
     $data[] = $stat['Total_goals'];
+        $colors[] = "'rgba(" . rand(0, 255) . ", " . rand(0, 255) . ", " . rand(0, 255) . ", 0.6)'";
   }
   ?>
 
@@ -34,6 +36,7 @@
       datasets: [{
         label: 'Total Goals per Player',
         data: [<?php echo implode(', ', $data); ?>],
+                backgroundColor: [<?php echo implode(', ', $colors); ?>],
       }],
     },
   });
