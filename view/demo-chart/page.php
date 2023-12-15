@@ -39,8 +39,8 @@
         backgroundColor: [<?php echo implode(', ', $colors); ?>],
       }],
     },
-    width: 400, // set the width
-      height: 400,
+    width: 200,
+      height: 200,
   });
 </script>
      
