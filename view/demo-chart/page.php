@@ -29,7 +29,7 @@
   ?>
 
   new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
       labels: [<?php echo implode(', ', $labels); ?>],
       datasets: [{
