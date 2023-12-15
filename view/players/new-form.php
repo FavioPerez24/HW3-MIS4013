@@ -43,6 +43,10 @@
             <input type="text" class="form-control" id="Ppos" name="Ppos">
           </div>
            <div class="mb-3">
+            <label for="Pim" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="Pim" name="Pim">
+          </div>
+           <div class="mb-3">
             <label for="Tid<?php echo $player['TID']; ?>" class="form-label">Team</label>
 <?php
 $teamList = selectTeamsForInput();
